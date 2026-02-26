@@ -1,0 +1,111 @@
+
+export const projects = [
+  {
+    id: 1,
+    name: 'Casino',
+    location: 'Cebu City',
+    category: 'Entertainment',
+    clientType: 'Entertainment',
+    tagline: 'Casino Filipino',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1bde2596bb1c0288d9bf15363d257139.png',
+    description:
+      'The casino exterior at the resort seamlessly blends grandeur and craftsmanship with its fiberglass architectural accents. Majestic columns, molded to mimic the texture of natural stone, frame the entrance, while the textured facade exudes a refined elegance, all achieved through lightweight yet durable fiberglass. This innovative use of material ensures both aesthetic appeal and structural resilience, welcoming guests with a touch of classic opulence.',
+    year: '2024',
+    scope: 'Interior & Exterior Cladding',
+    gallery: [
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1bde2596bb1c0288d9bf15363d257139.png',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/830b2cbc0d301f65c20358c9efe748fa.png',
+    ],
+  },
+  {
+    id: 2,
+    name: 'Wang Shan Lo Restaurant',
+    location: 'Crown Regency Hotel & Towers, Cebu',
+    category: 'Hospitality',
+    clientType: 'HoReCa',
+    tagline: 'Wang Shan Lo',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/bd3e27b8120a8dc1c033741ca658b7c7.png',
+    description:
+      'At Wang Shan Lo Chinese Restaurant, bespoke fiberglass chandeliers illuminate the interiors with a warm, ambient glow, evoking the timeless beauty of traditional Chinese lanterns. Thoughtfully crafted fiberglass partitions introduce rich texture and refinement, seamlessly blending artisanal craftsmanship with cultural legacy.',
+    year: '2006',
+    status: 'Completed',
+    projectType: 'Design / Fabrication / Installation',
+    scope: 'Fiberglass Chandeliers / Wall Partitions',
+    gallery: [
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/bd3e27b8120a8dc1c033741ca658b7c7.png',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7cb5089f23e6a1283347272ab46e63dd.png',
+    ],
+  },
+  {
+    id: 3,
+    name: 'Happy Play Cafe',
+    location: 'Cebu City',
+    category: 'Commercial',
+    clientType: 'HoReCa',
+    tagline: 'Happy Play',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e71792c5fcac3442be03c11ff24eb609.png',
+    description:
+      "A playful yet sophisticated cafe interior using lightweight fiberglass panels for wall accents and counter finishes. The material allowed for organic shapes that complement the brand's creative identity.",
+    year: '2024',
+    scope: 'Interior Wall Panels & Counters',
+    gallery: [
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e71792c5fcac3442be03c11ff24eb609.png',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7e179eebd29893656cf0945ebfc0e2ca.png',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/067c25688bdfb178a6630a7965a8b294.png',
+    ],
+  },
+  {
+    id: 4,
+    name: 'Resort',
+    location: 'Mactan',
+    category: 'Hospitality',
+    clientType: 'Hospitality',
+    tagline: 'Crown Regency',
+    image: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20luxury%20resort%20pool%20area%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-resort-bw-001&orientation=landscape',
+    description:
+      "Premium resort facades and poolside structures crafted from weather-resistant fiberglass. The material's versatility enabled a tropical modern aesthetic that withstands coastal conditions.",
+    year: '2023',
+    scope: 'Exterior Facades & Pool Structures',
+    gallery: [
+      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20luxury%20resort%20pool%20area%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-resort-bw-001&orientation=landscape',
+      'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20resort%20exterior%20facade%20fiberglass%20cladding%20panels%20tropical%20modern%20architecture%20dramatic%20perspective%20clean%20background&width=600&height=400&seq=inspire-resort-bw-002&orientation=landscape',
+      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20poolside%20cabana%20structure%20fiberglass%20material%20weather%20resistant%20coastal%20architecture%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-resort-bw-003&orientation=landscape',
+    ],
+  },
+  {
+    id: 5,
+    name: 'Dosage',
+    location: 'Cebu City',
+    category: 'Retail',
+    clientType: 'Retail',
+    tagline: 'Dosage Store',
+    image: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20modern%20commercial%20building%20storefront%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-dosage-bw-001&orientation=landscape',
+    description:
+      "A modern retail storefront with clean fiberglass panel cladding that creates a sleek, contemporary look. The seamless finish and precise detailing elevate the brand's street presence.",
+    year: '2024',
+    scope: 'Storefront Cladding',
+    gallery: [
+      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20modern%20commercial%20building%20storefront%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-dosage-bw-001&orientation=landscape',
+      'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20retail%20store%20exterior%20fiberglass%20panel%20cladding%20detail%20seamless%20finish%20modern%20architecture%20dramatic%20shadows%20clean%20background&width=600&height=400&seq=inspire-dosage-bw-002&orientation=landscape',
+      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20storefront%20signage%20area%20with%20fiberglass%20composite%20panels%20sleek%20contemporary%20retail%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-dosage-bw-003&orientation=landscape',
+    ],
+  },
+  {
+    id: 6,
+    name: 'Commercial',
+    location: 'Lapu-Lapu',
+    category: 'Commercial',
+    clientType: 'Commercial',
+    tagline: 'FS Architects',
+    image: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20contemporary%20commercial%20building%20exterior%20architectural%20design%20modern%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-commercial-bw-001&orientation=landscape',
+    description:
+      "Large-scale commercial building exterior wrapped in fiberglass composite panels. The project showcases HULMA's capability to deliver consistent quality across expansive surface areas.",
+    year: '2023',
+    scope: 'Full Exterior Cladding',
+    gallery: [
+      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20contemporary%20commercial%20building%20exterior%20architectural%20design%20modern%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-commercial-bw-001&orientation=landscape',
+      'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20commercial%20building%20fiberglass%20composite%20panel%20detail%20large%20scale%20cladding%20modern%20architecture%20dramatic%20perspective%20clean%20background&width=600&height=400&seq=inspire-commercial-bw-002&orientation=landscape',
+      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20commercial%20building%20corner%20detail%20fiberglass%20exterior%20panels%20expansive%20surface%20area%20contemporary%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-commercial-bw-003&orientation=landscape',
+    ],
+  },
+];
