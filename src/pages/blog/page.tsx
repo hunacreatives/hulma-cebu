@@ -1,99 +1,116 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { blogs } from "../../mocks/blogs";
 import Header from "../home/components/Header";
 import Footer from "../home/components/Footer";
 
 export default function BlogPage() {
+  const [visible, setVisible] = useState(false);
+
   useEffect(() => {
-    document.title = "Fiberglass Insights & Ideas | Expert Articles on Architectural Fiberglass";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore expert insights on fiberglass cladding, fiberglass panels, and architectural fiberglass. Stay updated with the latest trends, tips, and innovations in fiberglass construction materials.');
-    }
-    
-    const metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (metaKeywords) {
-      metaKeywords.setAttribute('content', 'fiberglass blog, fiberglass cladding, fiberglass panels, architectural fiberglass, building materials, construction insights');
-    }
+    document.title = "Journal | HULMA Fiberglass Cebu";
+    window.scrollTo(0, 0);
+    const t = setTimeout(() => setVisible(true), 80);
+    return () => clearTimeout(t);
   }, []);
 
   return (
-    <>
-      <div className="min-h-screen bg-white">
-        <Header forceDark={true} />
-        
-        {/* Hero Section */}
-        <section className="relative pt-32 pb-20 px-6">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Fiberglass Insights & Ideas
+    <div className="min-h-screen" style={{ background: '#FAFAF8' }}>
+      <Header forceDark={true} />
+
+      {/* ── Page header ── */}
+      <section className="pt-36 pb-14 px-6 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          <div
+            className={`transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+          >
+            <div className="mb-7">
+              <span className="font-serif font-light text-hulma-green text-base tracking-wide">
+                Journal
+              </span>
+            </div>
+            <h1
+              className="font-serif font-light text-hulma-green leading-tight mb-3"
+              style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.4rem)' }}
+            >
+              Insights &amp; <em className="italic text-hulma-brown">ideas.</em>
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Expert articles on fiberglass cladding, architectural panels, and innovative building materials. Stay informed with the latest trends and best practices.
+            <p
+              className="text-sm text-hulma-brown/55 leading-relaxed"
+            >
+              Thoughts on fiberglass craft, material innovation, and the spaces we help shape.
             </p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Blog Grid */}
-        <section className="pb-24 px-6">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-              {blogs.map((blog) => (
-                <article key={blog.id} className="group bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300">
-                  <Link to={`/blog/${blog.slug}`} className="block">
-                    <div className="relative w-full h-80 overflow-hidden">
-                      <img 
-                        src={blog.coverImage} 
-                        alt={blog.title}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className="inline-block px-3 py-1 bg-teal-600 text-white text-sm font-medium rounded-full whitespace-nowrap">
-                          {blog.tags[0]}
-                        </span>
-                      </div>
-                    </div>
-                    
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 text-sm text-gray-500 mb-3">
-                        <time dateTime={blog.date}>
-                          {new Date(blog.date).toLocaleDateString('en-US', { 
-                            month: 'long', 
-                            day: 'numeric', 
-                            year: 'numeric' 
-                          })}
-                        </time>
-                        <span>•</span>
-                        <span>{blog.readTime}</span>
-                      </div>
-                      
-                      <h2 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
-                        {blog.title}
-                      </h2>
-                      
-                      <p className="text-gray-600 mb-4 line-clamp-3">
-                        {blog.excerpt}
-                      </p>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-gray-500">By {blog.author}</span>
-                        <span className="inline-flex items-center gap-2 text-teal-600 font-medium group-hover:gap-3 transition-all whitespace-nowrap cursor-pointer">
-                          Read More
-                          <i className="ri-arrow-right-line"></i>
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                </article>
-              ))}
-            </div>
+      {/* ── 4-column grid ── */}
+      <section className="px-6 lg:px-16 pb-28">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+            {blogs.map((blog, i) => (
+              <Link
+                key={blog.id}
+                to={`/blog/${blog.slug}`}
+                className={`group flex flex-col cursor-pointer transition-all duration-700 ${
+                  visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+                }`}
+                style={{ transitionDelay: `${120 + i * 80}ms` }}
+              >
+                {/* Image */}
+                <div
+                  className="w-full overflow-hidden rounded-lg mb-4"
+                  style={{ aspectRatio: '4/3' }}
+                >
+                  <img
+                    src={blog.coverImage}
+                    alt={blog.title}
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                {/* Meta */}
+                <span
+                  className="text-[10px] font-medium text-hulma-brown/40 tracking-widest uppercase mb-2"
+                  style={{ letterSpacing: '0.13em' }}
+                >
+                  {blog.tags[0]}
+                </span>
+
+                {/* Title */}
+                <h2
+                  className="font-serif font-light text-hulma-green leading-snug mb-2.5 group-hover:text-hulma-brown transition-colors"
+                  style={{ fontSize: 'clamp(0.95rem, 1.2vw, 1.05rem)' }}
+                >
+                  {blog.title}
+                </h2>
+
+                {/* Excerpt */}
+                <p className="text-xs text-hulma-brown/50 leading-relaxed line-clamp-3 mb-4 flex-1">
+                  {blog.excerpt}
+                </p>
+
+                {/* Footer */}
+                <div className="flex items-center justify-between pt-3 border-t border-hulma-green/8">
+                  <span className="text-[10px] text-hulma-brown/35">
+                    {new Date(blog.date).toLocaleDateString('en-US', {
+                      month: 'short',
+                      day: 'numeric',
+                      year: 'numeric',
+                    })}
+                    {' · '}{blog.readTime}
+                  </span>
+                  <span className="text-[11px] font-medium text-hulma-orange group-hover:text-hulma-brown transition-colors whitespace-nowrap">
+                    Read →
+                  </span>
+                </div>
+              </Link>
+            ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 }

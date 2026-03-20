@@ -17,7 +17,7 @@ export default function RequestSamplesPage() {
 
   return (
     <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <Header />
+      <Header forceDark={true} />
       <main>
         <SamplesHero />
         <SamplesForm />

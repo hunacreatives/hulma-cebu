@@ -28,11 +28,10 @@ const productMenuData = {
 
 const inspiredCategories = [
   'Entertainment',
-  'Leisure',
-  'Commercial',
   'Hospitality',
+  'Commercial',
   'Retail',
-  'Residential',
+  'Government',
 ];
 
 type DropdownType = 'products' | 'inspired' | 'about' | 'contact' | null;
@@ -181,7 +180,7 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
           hidden && !mobileMenuOpen ? '-translate-y-full' : 'translate-y-0'
         }`}
       >
-        <div className="mx-auto px-4 pt-4 max-w-6xl">
+        <div className="mx-auto px-4 pt-4 max-w-7xl">
           <div
             className="flex items-center justify-between h-16 px-6 rounded-full transition-all duration-500"
             style={mobileMenuOpen ? {
@@ -210,7 +209,7 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-2">
+            <nav className="hidden md:flex items-center space-x-10">
               <a
                 href="/"
                 onClick={(e) => handleNavClick(e, '/')}
@@ -244,8 +243,8 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
                 onMouseLeave={handleMouseLeave}
               >
                 <a
-                  href="/#inspiration"
-                  onClick={(e) => handleNavClick(e, '/', '#inspiration')}
+                  href="/projects"
+                  onClick={(e) => handleNavClick(e, '/projects')}
                   className={`text-xs font-medium ${textColor} ${textHover} ${activeTextClass('inspired')} transition-colors whitespace-nowrap cursor-pointer flex items-center gap-0.5`}
                 >
                   Get Inspired
@@ -260,7 +259,7 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
                 onClick={(e) => handleNavClick(e, '/about')}
                 className={`text-xs font-medium ${textColor} ${textHover} transition-colors whitespace-nowrap cursor-pointer flex items-center gap-0.5`}
               >
-                About
+                About Us
               </a>
 
               <a
@@ -320,7 +319,7 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
           onMouseEnter={handleDropdownEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <div className="mx-auto max-w-6xl px-4">
+          <div className="mx-auto max-w-7xl px-4">
             <div
               className="rounded-2xl overflow-hidden"
               style={{
@@ -441,8 +440,13 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
                   {inspiredCategories.map((cat) => (
                     <a
                       key={cat}
-                      href="/#inspiration"
-                      onClick={(e) => handleNavClick(e, '/', '#inspiration')}
+                      href={`/projects?category=${encodeURIComponent(cat)}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setMobileMenuOpen(false);
+                        setMobileSubmenu(null);
+                        navigate(`/projects?category=${encodeURIComponent(cat)}`);
+                      }}
                       className="block py-2 text-sm text-hulma-green/80 hover:text-hulma-orange transition-colors cursor-pointer"
                     >
                       {cat}
@@ -457,7 +461,7 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
               onClick={(e) => handleNavClick(e, '/about')}
               className="flex items-center px-6 py-3.5 text-sm font-medium text-hulma-green hover:bg-hulma-ghost transition-colors cursor-pointer"
             >
-              About
+              About Us
             </a>
 
             <a
@@ -664,19 +668,22 @@ function ProductsDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
 function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof useNavigate>; onClose: () => void }) {
   const featuredProjects = projects.slice(0, 4);
 
-  const handleProjectClick = (e: React.MouseEvent<HTMLAnchorElement>, projectId: number) => {
+  const handleProjectClick = (e: React.MouseEvent<HTMLAnchorElement>, projectSlug: string) => {
     e.preventDefault();
     onClose();
-    navigate(`/project/${projectId}`);
+    navigate(`/project/${projectSlug}`);
   };
 
   const handleInspirationClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     onClose();
-    navigate('/');
-    setTimeout(() => {
-      document.querySelector('#inspiration')?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    navigate('/projects');
+  };
+
+  const handleCategoryClick = (e: React.MouseEvent<HTMLAnchorElement>, category: string) => {
+    e.preventDefault();
+    onClose();
+    navigate(`/projects?category=${encodeURIComponent(category)}`);
   };
 
   return (
@@ -686,7 +693,7 @@ function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
         <div className="w-48 flex-shrink-0">
           <h4 className="text-xs font-semibold uppercase tracking-widest text-hulma-brown mb-4">
             <a 
-              href="/#inspiration" 
+              href="/projects" 
               onClick={handleInspirationClick}
               className="cursor-pointer hover:text-hulma-orange transition-colors"
             >
@@ -697,8 +704,8 @@ function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
             {inspiredCategories.map((cat) => (
               <li key={cat}>
                 <a
-                  href="/#inspiration"
-                  onClick={handleInspirationClick}
+                  href={`/projects?category=${encodeURIComponent(cat)}`}
+                  onClick={(e) => handleCategoryClick(e, cat)}
                   className="text-sm text-hulma-green/80 hover:text-hulma-orange transition-colors cursor-pointer"
                 >
                   {cat}
@@ -707,7 +714,7 @@ function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
             ))}
           </ul>
           <a
-            href="/#inspiration"
+            href="/projects"
             onClick={handleInspirationClick}
             className="inline-block mt-5 text-xs font-semibold uppercase tracking-wider text-hulma-orange hover:text-hulma-brown transition-colors cursor-pointer"
           >
@@ -724,8 +731,8 @@ function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
             {featuredProjects.map((project) => (
               <a
                 key={project.id}
-                href={`/project/${project.id}`}
-                onClick={(e) => handleProjectClick(e, project.id)}
+                href={`/project/${project.slug}`}
+                onClick={(e) => handleProjectClick(e, project.slug)}
                 className="group cursor-pointer"
               >
                 <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden">

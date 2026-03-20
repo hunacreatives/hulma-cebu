@@ -10,7 +10,7 @@ export default function ContactPage() {
   const [isVisible, setIsVisible] = useState(false);
 
   useSEO({
-    title: 'Contact HULMA Cebu - Get in Touch for Fiberglass Solutions',
+    title: 'HULMA - Contact Us',
     description: 'Contact HULMA for premium fiberglass architectural materials in Cebu. Reach out to discuss your project needs, request samples, or schedule a consultation with our design team.',
     keywords: 'contact HULMA, fiberglass supplier Cebu, architectural materials inquiry, building materials consultation',
     canonical: '/contact',
@@ -45,7 +45,7 @@ export default function ContactPage() {
 
   return (
     <div className={`transition-opacity duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-      <Header />
+      <Header forceDark={true} />
       <main>
         <ContactHero />
         <ContactSection />

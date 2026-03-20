@@ -37,7 +37,7 @@ const routes: RouteObject[] = [
     element: <ComingSoonPage />,
   },
   {
-    path: "/project/:id",
+    path: "/project/:slug",
     element: <ProjectDetail />,
   },
   {
@@ -45,7 +45,7 @@ const routes: RouteObject[] = [
     element: <AboutPage />,
   },
   {
-    path: "/inspiration",
+    path: "/projects",
     element: <InspirationPage />,
   },
   {

@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { projects } from '../../../mocks/projects';
@@ -16,18 +15,21 @@ function StyleOneCard({
   isVisible: boolean;
 }) {
   const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <a
-      href={`/project/${project.id}`}
+      href={`/project/${project.slug}`}
       onClick={(e) => {
         e.preventDefault();
-        navigate(`/project/${project.id}`);
+        navigate(`/project/${project.slug}`);
       }}
       className={`group relative flex flex-col overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-12'
       }`}
       style={{ transitionDelay: `${index * 120}ms` }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative w-full h-72 overflow-hidden rounded-2xl">
         <img
@@ -35,8 +37,10 @@ function StyleOneCard({
           alt={project.name}
           className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
         />
-        {/* Gradient overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10 rounded-2xl" />
+        {/* Gradient overlay with wipe effect */}
+        <div className={`absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10 rounded-2xl transition-all duration-500 ${
+          isHovered ? 'from-black/80' : ''
+        }`} />
 
         {/* Category label top-left */}
         <div className="absolute top-4 left-4 z-10">
@@ -56,7 +60,7 @@ function StyleOneCard({
 
         {/* Bottom text */}
         <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-          <p className="text-white/90 text-[13px] font-sans leading-relaxed line-clamp-2 mb-2">
+          <p className="text-white/90 text-[12px] font-sans leading-relaxed line-clamp-2 mb-2">
             {project.description}
           </p>
           <span className="text-hulma-orange text-[11px] font-sans font-medium">
@@ -78,19 +82,22 @@ function StyleTwoCard({
   isVisible: boolean;
 }) {
   const navigate = useNavigate();
+  const [isHovered, setIsHovered] = useState(false);
   const num = String(index + 1).padStart(2, '0');
 
   return (
     <a
-      href={`/project/${project.id}`}
+      href={`/project/${project.slug}`}
       onClick={(e) => {
         e.preventDefault();
-        navigate(`/project/${project.id}`);
+        navigate(`/project/${project.slug}`);
       }}
       className={`group relative flex flex-col overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+        isVisible ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 translate-y-12'
       }`}
       style={{ transitionDelay: `${(index + 3) * 120}ms` }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative w-full h-72 overflow-hidden rounded-2xl">
         <img
@@ -98,8 +105,10 @@ function StyleTwoCard({
           alt={project.name}
           className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
         />
-        {/* Darker overlay for style 2 */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-black/25 rounded-2xl" />
+        {/* Darker overlay with wipe effect */}
+        <div className={`absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-black/25 rounded-2xl transition-all duration-500 ${
+          isHovered ? 'from-black/85' : ''
+        }`} />
 
         {/* Large number */}
         <div className="absolute top-4 left-5 z-10">
@@ -116,7 +125,7 @@ function StyleTwoCard({
                 {project.location}
               </span>
               <div className="flex items-center gap-2 mt-0.5">
-                <span className="text-sm text-white font-sans font-medium">
+                <span className="text-xs text-white font-sans font-medium">
                   {project.name}
                 </span>
               </div>
@@ -135,7 +144,7 @@ function StyleTwoCard({
 
         {/* Bottom description */}
         <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
-          <p className="text-white/85 text-[13px] font-sans leading-relaxed line-clamp-2">
+          <p className="text-white/85 text-[12px] font-sans leading-relaxed line-clamp-2">
             {project.description}
           </p>
         </div>
@@ -179,20 +188,20 @@ export default function TrustedLeaders() {
     <section
       id="inspiration"
       ref={sectionRef}
-      className="py-24 px-6 lg:px-12 bg-white"
+      className="py-14 md:py-24 px-6 lg:px-12 bg-white"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="flex items-end justify-between mb-14">
+        <div className="flex items-end justify-between mb-8 md:mb-14">
           <div
             className={`transition-all duration-1000 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <h2 className="text-2xl md:text-3xl font-serif font-light text-hulma-green leading-tight">
+            <h2 className="text-xl md:text-2xl font-serif font-light text-hulma-green leading-tight">
               Trusted by
             </h2>
-            <h2 className="text-2xl md:text-3xl font-serif font-light text-hulma-brown/60 leading-tight">
+            <h2 className="text-xl md:text-2xl font-serif font-light text-hulma-brown/60 leading-tight">
               Industry Leaders
             </h2>
           </div>
@@ -250,7 +259,7 @@ export default function TrustedLeaders() {
           }`}
         >
           <button
-            onClick={() => navigate('/inspiration')}
+            onClick={() => navigate('/projects')}
             className="px-6 py-2.5 rounded-full border border-hulma-taupe text-hulma-brown text-xs font-sans tracking-wide hover:bg-hulma-taupe/20 transition-all whitespace-nowrap cursor-pointer"
           >
             VIEW MORE PROJECTS

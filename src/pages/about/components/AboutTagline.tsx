@@ -16,26 +16,41 @@ export default function AboutTagline() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 lg:px-12 bg-white">
+    <section ref={sectionRef} className="py-14 md:py-24 px-6 lg:px-12 bg-white">
       <div
         className={`max-w-3xl mx-auto text-center transition-all duration-1000 ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
         }`}
       >
-        <p className="text-lg md:text-xl text-hulma-brown leading-relaxed mb-4">
+        <p
+          className="font-serif text-hulma-brown/70 leading-relaxed mb-3"
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+        >
           Most materials ask you to compromise.
         </p>
-        <p className="text-lg md:text-xl text-hulma-green leading-relaxed mb-4">
-          <strong className="font-semibold">Fiberglass doesn&apos;t.</strong>
+        <p
+          className="font-serif font-semibold text-hulma-green leading-relaxed mb-6"
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+        >
+          Fiberglass doesn&apos;t.
         </p>
-        <p className="text-base md:text-lg text-hulma-brown/80 leading-relaxed mb-2">
+        <p
+          className="font-serif text-hulma-brown/75 leading-relaxed mb-2"
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+        >
           At Hulma, fiberglass is not a substitute—it&apos;s a design tool.
         </p>
-        <p className="text-base md:text-lg text-hulma-brown/80 leading-relaxed mb-6">
+        <p
+          className="font-serif text-hulma-brown/75 leading-relaxed mb-8"
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+        >
           One that gives form, control, and durability without limits.
         </p>
-        <p className="text-base md:text-lg text-hulma-green font-medium">
-          This is where <strong>vision meets craft.</strong>
+        <p
+          className="font-serif font-semibold text-hulma-green leading-relaxed"
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+        >
+          This is where vision meets craft.
         </p>
       </div>
     </section>

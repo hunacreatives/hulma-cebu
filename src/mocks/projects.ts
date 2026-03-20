@@ -1,30 +1,52 @@
-
 export const projects = [
   {
     id: 1,
-    name: 'Casino',
-    location: 'Cebu City',
+    slug: 'jpark-island-resort-waterpark-casino',
+    name: 'Jpark Island Resort & Waterpark - Casino',
+    location: 'Cordova, Cebu',
     category: 'Entertainment',
     clientType: 'Entertainment',
     tagline: 'Casino Filipino',
-    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1bde2596bb1c0288d9bf15363d257139.png',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7aa1514139808766c8a5947fd5e9846b.jpeg',
+    imagePosition: 'object-[center_30%]',
     description:
       'The casino exterior at the resort seamlessly blends grandeur and craftsmanship with its fiberglass architectural accents. Majestic columns, molded to mimic the texture of natural stone, frame the entrance, while the textured facade exudes a refined elegance, all achieved through lightweight yet durable fiberglass. This innovative use of material ensures both aesthetic appeal and structural resilience, welcoming guests with a touch of classic opulence.',
     year: '2024',
+    status: 'Completed',
+    projectType: 'Fiberglass Columns / Architectural Cladding',
     scope: 'Interior & Exterior Cladding',
     gallery: [
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1bde2596bb1c0288d9bf15363d257139.png',
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/830b2cbc0d301f65c20358c9efe748fa.png',
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7aa1514139808766c8a5947fd5e9846b.jpeg',
+        caption: 'Exterior View',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/598eb7a905b433e1baac5b9dae69bee7.jpeg',
+        caption: 'Casino Entrance',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d9ff6b6d9266051598e56af3bbed5bb2.jpeg',
+        caption: 'Architectural Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ae944a002f04e61d84597b1edc8bdbf6.jpeg',
+        caption: 'Casino Signage',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7ea8c27012d329eb90d74bc4a63c19d4.jpeg',
+        caption: 'Casino Facade',
+      },
     ],
   },
   {
     id: 2,
-    name: 'Wang Shan Lo Restaurant',
+    slug: 'wang-shan-lo-restaurant',
+    name: 'Wang Shang Lo Chinese Restaurant',
     location: 'Crown Regency Hotel & Towers, Cebu',
     category: 'Hospitality',
     clientType: 'HoReCa',
     tagline: 'Wang Shan Lo',
-    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/bd3e27b8120a8dc1c033741ca658b7c7.png',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c066dcdf6681da5b5b233748b920fe43.png',
     description:
       'At Wang Shan Lo Chinese Restaurant, bespoke fiberglass chandeliers illuminate the interiors with a warm, ambient glow, evoking the timeless beauty of traditional Chinese lanterns. Thoughtfully crafted fiberglass partitions introduce rich texture and refinement, seamlessly blending artisanal craftsmanship with cultural legacy.',
     year: '2006',
@@ -32,12 +54,49 @@ export const projects = [
     projectType: 'Design / Fabrication / Installation',
     scope: 'Fiberglass Chandeliers / Wall Partitions',
     gallery: [
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/bd3e27b8120a8dc1c033741ca658b7c7.png',
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7cb5089f23e6a1283347272ab46e63dd.png',
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c066dcdf6681da5b5b233748b920fe43.png',
+        caption: 'Interior View',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7cb5089f23e6a1283347272ab46e63dd.png',
+        caption: 'Chandelier Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de9700baf243b74d1800b89e15a878ed.png',
+        caption: 'Partition Detail',
+      },
     ],
   },
   {
     id: 3,
+    slug: 'crown-regency-edge-coaster-seat',
+    name: 'Crown Regency Hotel & Towers - Edge Coaster Seat',
+    location: 'Osmeña Blvd, Cebu City',
+    category: 'Entertainment',
+    clientType: 'Entertainment',
+    tagline: 'Edge Coaster Seat',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c3b2938acdd9cd7e64c0852f947b6842.png',
+    description:
+      'Custom-fabricated fiberglass chairs for the iconic Edge Coaster ride at Crown Regency Hotel & Towers. HULMA crafted these high-performance fiberglass seats designed to withstand the demands of an outdoor thrill ride while maintaining comfort and structural integrity. The vibrant yellow fiberglass shells were precision-molded to fit the ride\'s mechanical system, combining durability with bold aesthetic appeal.',
+    year: '2011',
+    status: 'Completed',
+    projectType: 'Fiberglass Chair',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c3b2938acdd9cd7e64c0852f947b6842.png',
+        caption: 'Chair Design',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0daa0d7dd2e487ad8b21d0b4ad8895fb.png',
+        caption: 'Installation',
+      },
+    ],
+  },
+  {
+    id: 4,
+    slug: 'happy-play-cafe',
     name: 'Happy Play Cafe',
     location: 'Cebu City',
     category: 'Commercial',
@@ -47,33 +106,91 @@ export const projects = [
     description:
       "A playful yet sophisticated cafe interior using lightweight fiberglass panels for wall accents and counter finishes. The material allowed for organic shapes that complement the brand's creative identity.",
     year: '2024',
+    status: 'Completed',
+    projectType: 'Fiberglass Wall Panels / Counter Finish',
     scope: 'Interior Wall Panels & Counters',
     gallery: [
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e71792c5fcac3442be03c11ff24eb609.png',
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7e179eebd29893656cf0945ebfc0e2ca.png',
-      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/067c25688bdfb178a6630a7965a8b294.png',
-    ],
-  },
-  {
-    id: 4,
-    name: 'Resort',
-    location: 'Mactan',
-    category: 'Hospitality',
-    clientType: 'Hospitality',
-    tagline: 'Crown Regency',
-    image: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20luxury%20resort%20pool%20area%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-resort-bw-001&orientation=landscape',
-    description:
-      "Premium resort facades and poolside structures crafted from weather-resistant fiberglass. The material's versatility enabled a tropical modern aesthetic that withstands coastal conditions.",
-    year: '2023',
-    scope: 'Exterior Facades & Pool Structures',
-    gallery: [
-      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20luxury%20resort%20pool%20area%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-resort-bw-001&orientation=landscape',
-      'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20resort%20exterior%20facade%20fiberglass%20cladding%20panels%20tropical%20modern%20architecture%20dramatic%20perspective%20clean%20background&width=600&height=400&seq=inspire-resort-bw-002&orientation=landscape',
-      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20poolside%20cabana%20structure%20fiberglass%20material%20weather%20resistant%20coastal%20architecture%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-resort-bw-003&orientation=landscape',
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e71792c5fcac3442be03c11ff24eb609.png',
+        caption: 'Interior View',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7e179eebd29893656cf0945ebfc0e2ca.png',
+        caption: 'Wall Panel Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/067c25688bdfb178a6630a7965a8b294.png',
+        caption: 'Counter Finish',
+      },
     ],
   },
   {
     id: 5,
+    slug: 'city-hall-of-justice',
+    name: 'City Hall of Justice',
+    location: 'Lapu-Lapu City',
+    category: 'Government',
+    clientType: 'Government',
+    tagline: 'Hall of Justice',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4d107e7fc143d65ca68e7af6f05b2084.png',
+    description:
+      'A landmark government building adorned with meticulously crafted fiberglass architectural elements. Majestic Corinthian columns, ornate pediments, and classical facade details were fabricated using lightweight yet durable fiberglass — faithfully replicating the grandeur of traditional stone masonry while ensuring structural efficiency and longevity.',
+    year: '2011',
+    status: 'Completed',
+    projectType: 'Fiberglass Columns / Moldings / Statue',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/262e81a4b76c14f61e248c2c3589f6fc.png',
+        caption: 'Facade View',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/b63a23cbffc0a4c0c6ad4418daab9864.png',
+        caption: 'Column Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4be4b8ed36d2bcdee2ae7837f8eb59ac.png',
+        caption: 'Pediment',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4d107e7fc143d65ca68e7af6f05b2084.png',
+        caption: 'Main Entrance',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/f311a67df0705a4f2f046300a30cb78e.png',
+        caption: 'Interior View',
+      },
+    ],
+  },
+  {
+    id: 6,
+    slug: 'jsu-psu-mariners-court',
+    name: "JSU-PSU Mariners' Court",
+    location: 'Pier 1, Cebu City',
+    category: 'Hospitality',
+    clientType: 'Hospitality',
+    tagline: "Mariners' Court",
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/83261685db07c5e117a326ace8fddfbc.png',
+    description:
+      "A landmark maritime building at Pier 1, Cebu City, featuring custom-fabricated fiberglass anchors and large-scale dimensional letters. HULMA crafted and installed these iconic fiberglass elements that define the building's nautical identity, combining durability with bold visual impact suited for a coastal environment.",
+    year: '2009',
+    status: 'Completed',
+    projectType: 'Fiberglass Anchor / Letters',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/83261685db07c5e117a326ace8fddfbc.png',
+        caption: 'Building Exterior',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/a6edd2093b7fcc11e929439797b4e8b7.png',
+        caption: 'Anchor Detail',
+      },
+    ],
+  },
+  {
+    id: 7,
+    slug: 'dosage',
     name: 'Dosage',
     location: 'Cebu City',
     category: 'Retail',
@@ -83,29 +200,218 @@ export const projects = [
     description:
       "A modern retail storefront with clean fiberglass panel cladding that creates a sleek, contemporary look. The seamless finish and precise detailing elevate the brand's street presence.",
     year: '2024',
+    status: 'Completed',
+    projectType: 'Fiberglass Storefront Cladding',
     scope: 'Storefront Cladding',
     gallery: [
-      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20modern%20commercial%20building%20storefront%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-dosage-bw-001&orientation=landscape',
-      'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20retail%20store%20exterior%20fiberglass%20panel%20cladding%20detail%20seamless%20finish%20modern%20architecture%20dramatic%20shadows%20clean%20background&width=600&height=400&seq=inspire-dosage-bw-002&orientation=landscape',
-      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20storefront%20signage%20area%20with%20fiberglass%20composite%20panels%20sleek%20contemporary%20retail%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-dosage-bw-003&orientation=landscape',
+      {
+        src: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20modern%20commercial%20building%20storefront%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-dosage-bw-001&orientation=landscape',
+        caption: 'Storefront View',
+      },
+      {
+        src: 'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20retail%20store%20exterior%20fiberglass%20panel%20cladding%20detail%20seamless%20finish%20modern%20architecture%20dramatic%20shadows%20clean%20background&width=600&height=400&seq=inspire-dosage-bw-002&orientation=landscape',
+        caption: 'Panel Detail',
+      },
+      {
+        src: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20storefront%20signage%20area%20with%20fiberglass%20composite%20panels%20sleek%20contemporary%20retail%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-dosage-bw-003&orientation=landscape',
+        caption: 'Signage',
+      },
     ],
   },
   {
-    id: 6,
-    name: 'Commercial',
-    location: 'Lapu-Lapu',
-    category: 'Commercial',
-    clientType: 'Commercial',
-    tagline: 'FS Architects',
-    image: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20contemporary%20commercial%20building%20exterior%20architectural%20design%20modern%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-commercial-bw-001&orientation=landscape',
+    id: 8,
+    slug: 'kenjelo-farm-recreations-resorts',
+    name: 'Kenjelo Farm & Recreations Resorts Corp.',
+    location: 'Oroquieta, Misamis Occidental',
+    category: 'Hospitality',
+    clientType: 'Hospitality',
+    tagline: 'Kenjelo Farm',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de51823d9b4553eb65cadf5dfdb1c249.png',
+    imagePosition: 'object-center',
     description:
-      "Large-scale commercial building exterior wrapped in fiberglass composite panels. The project showcases HULMA's capability to deliver consistent quality across expansive surface areas.",
-    year: '2023',
-    scope: 'Full Exterior Cladding',
+      'A custom-fabricated fiberglass fountain installed at Kenjelo Farm & Recreations Resorts Corp. in Oroquieta, Misamis Occidental. HULMA crafted this distinctive fountain piece featuring a woven-texture fiberglass body with a sculptural base, seamlessly blending cultural artistry with durable outdoor-grade fiberglass construction. The fountain serves as a striking centerpiece for the resort\'s landscape, combining aesthetic elegance with long-lasting performance.',
+    year: '2024',
+    status: 'Completed',
+    projectType: 'Fiberglass Fountain',
+    scope: 'Fabrication / Installation',
     gallery: [
-      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20contemporary%20commercial%20building%20exterior%20architectural%20design%20modern%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-commercial-bw-001&orientation=landscape',
-      'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20commercial%20building%20fiberglass%20composite%20panel%20detail%20large%20scale%20cladding%20modern%20architecture%20dramatic%20perspective%20clean%20background&width=600&height=400&seq=inspire-commercial-bw-002&orientation=landscape',
-      'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20commercial%20building%20corner%20detail%20fiberglass%20exterior%20panels%20expansive%20surface%20area%20contemporary%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-commercial-bw-003&orientation=landscape',
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de51823d9b4553eb65cadf5dfdb1c249.png',
+        caption: 'Fiberglass Fountain',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/12df40d70231537fd6d8ad65602e1a0d.png',
+        caption: 'Fountain Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0cd03e5c78941a4a497445cdd2515715.png',
+        caption: 'Resort Grounds',
+      },
+    ],
+  },
+  {
+    id: 9,
+    slug: 'crown-regency-melvins-reef-mini-golf',
+    name: "Crown Regency Hotel & Towers - Melvin's Reef Black Light Mini Golf",
+    location: 'Osmeña Blvd, Cebu City',
+    category: 'Entertainment',
+    clientType: 'Entertainment',
+    tagline: "Melvin's Reef",
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/350f792f56b4b82c8b43ab9858c87a68.png',
+    description:
+      "A vibrant black light mini golf attraction at Crown Regency Hotel & Towers, featuring custom-fabricated fiberglass signage, themed golf decors, and immersive setups. HULMA brought the underwater world of Melvin's Reef to life through intricately crafted fiberglass sea creatures, signage, and decorative elements — all designed to glow brilliantly under black light, creating a one-of-a-kind entertainment experience.",
+    year: '2011',
+    status: 'Completed',
+    projectType: 'Fiberglass Signage, Golf Decors, Setups',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/350f792f56b4b82c8b43ab9858c87a68.png',
+        caption: 'Mini Golf Area',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ef6af6babb11c290c360d3c998fffaff.png',
+        caption: 'Signage',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1d25de3ff99af2bcc5e61b2a2064228c.png',
+        caption: 'Decorative Elements',
+      },
+    ],
+  },
+  {
+    id: 10,
+    slug: 'solea-mactan-resort',
+    name: 'Solea Mactan Resort',
+    location: 'Cordova, Cebu',
+    category: 'Hospitality',
+    clientType: 'Hospitality',
+    tagline: 'Solea Mactan Resort',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac9d3589e8bab1f6d21439975cca2b0d.png',
+    imagePosition: 'object-bottom',
+    description:
+      'Custom-fabricated fiberglass elements for Solea Mactan Resort in Cordova, Cebu, including a vibrant water slide, oversized chess set, and decorative pool accents. HULMA crafted these durable, resort-grade fiberglass pieces designed to withstand the coastal environment while enhancing the resort\'s recreational areas with bold color and playful design.',
+    year: '2015',
+    status: 'Completed',
+    projectType: 'Fiberglass Slide / Chess Set / Pool Accents',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac9d3589e8bab1f6d21439975cca2b0d.png',
+        caption: 'Fiberglass Slide',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1262736a01f2ef08f760dcef7043410f.png',
+        caption: 'Chess Set',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1f39e11f42bc08f0e1f81e7c85cc8674.png',
+        caption: 'Pool Accents',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/26cd41ccba9f4efbf14a9e5814fc8ef0.png',
+        caption: 'Fiberglass Rocks',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c723f302cba60731442edf47ff090dfa.png',
+        caption: 'Water Slide Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/befe7b3777246215d39a66d25b60eddc.png',
+        caption: 'Chess Set',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/f5ff6968e135448e6a1db54e7012b10b.png',
+        caption: 'Water Slide',
+      },
+    ],
+  },
+  {
+    id: 11,
+    slug: 'jpark-island-resort-waterpark',
+    name: 'Jpark Island Resort & Waterpark',
+    location: 'Cordova, Cebu',
+    category: 'Entertainment',
+    clientType: 'Entertainment',
+    tagline: 'Jpark Island Resort',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg',
+    description:
+      'A large-scale fiberglass fabrication project for Jpark Island Resort & Waterpark in Cordova, Cebu. HULMA crafted and installed a wide range of custom fiberglass elements including vibrant pool accents, whimsical cartoon characters, dramatic rock fall formations, an oversized chess set, and detailed exterior mouldings and bricks — all designed to enhance the resort\'s immersive tropical theme and withstand the demands of a high-traffic waterpark environment.',
+    year: '2016',
+    status: 'Completed',
+    projectType: 'Fiberglass Chess Set',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg',
+        caption: 'Amazon River',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d93853705b68edd9ade5a273d45a6bca.jpeg',
+        caption: 'Amazon River',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0bc996f7ee802ab405ec87a23b343eeb.jpeg',
+        caption: "Toddler's Pool",
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c768494704e36d0a100613260bd5193d.jpeg',
+        caption: "Toddler's Pool",
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/a186a005db99a3ed8c3975f266ebf780.jpeg',
+        caption: 'Wave Pool',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d4398baff2fe06303ecd9ddb9120e1fa.jpeg',
+        caption: 'Wave Pool',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9bfdaa96471b3beb748a56ee752b2b89.jpeg',
+        caption: 'Exterior Moulding',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/739333a154336e6f614e4c29073a477d.jpeg',
+        caption: 'Exterior Moulding',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e23d5211dce66ccd57b162670ed66653.jpeg',
+        caption: 'Outdoor Chess Area',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9c59c9bfe7abec023ada5c6a2be3eb51.jpeg',
+        caption: 'Outdoor Chess Area',
+      },
+    ],
+  },
+  {
+    id: 12,
+    slug: 'beast-crew',
+    name: 'Beast Crew',
+    location: 'Elizabeth Mall (E-Mall), Cebu City',
+    category: 'Retail',
+    clientType: 'Retail',
+    tagline: 'Beast Crew',
+    image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d68124ba1ae666388b243f7ae597eaa0.jpeg',
+    description:
+      'Custom-fabricated fiberglass travertine pedestals for Beast Crew at Elizabeth Mall (E-Mall), Cebu City. HULMA crafted these refined display pedestals with a travertine stone finish, providing a premium surface for product merchandising while adding an architectural quality to the retail interior. The lightweight yet durable fiberglass construction ensures easy repositioning without compromising the sophisticated stone aesthetic.',
+    year: '2026',
+    status: 'Completed',
+    projectType: 'Fiberglass Travertine Pedestal',
+    scope: 'Fabrication / Installation',
+    gallery: [
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d68124ba1ae666388b243f7ae597eaa0.jpeg',
+        caption: 'Store Interior',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c4a85b65506f4729b2b0e2f83dd0da25.jpeg',
+        caption: 'Travertine Pedestal Detail',
+      },
+      {
+        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac39a42f3ea611821548d18df64a9d77.jpeg',
+        caption: 'Pedestal Display Setup',
+      },
     ],
   },
 ];

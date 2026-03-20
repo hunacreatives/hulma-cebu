@@ -7,13 +7,21 @@ import Footer from '../home/components/Footer';
 import PhotoGallery from './components/PhotoGallery';
 
 export default function ProjectDetail() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
+  const [moreProjectsPage, setMoreProjectsPage] = useState(0);
 
-  const project = projects.find((p) => p.id === Number(id));
-  const currentIndex = projects.findIndex((p) => p.id === Number(id));
-  const otherProjects = projects.filter((p) => p.id !== Number(id));
+  const project = projects.find((p) => p.slug === slug);
+  const currentIndex = projects.findIndex((p) => p.slug === slug);
+  const otherProjects = projects.filter((p) => p.slug !== slug);
+
+  const ITEMS_PER_PAGE = 6;
+  const totalPages = Math.ceil(otherProjects.length / ITEMS_PER_PAGE);
+  const visibleProjects = otherProjects.slice(
+    moreProjectsPage * ITEMS_PER_PAGE,
+    (moreProjectsPage + 1) * ITEMS_PER_PAGE
+  );
 
   useSEO({
     title: project
@@ -25,7 +33,7 @@ export default function ProjectDetail() {
     keywords: project
       ? `${project.name}, HULMA project, ${project.category}, ${project.location}, fiberglass architecture`
       : '',
-    canonical: `/project/${id}`,
+    canonical: `/project/${slug}`,
     schema: project
       ? {
           '@context': 'https://schema.org',
@@ -51,7 +59,7 @@ export default function ProjectDetail() {
     setIsVisible(false);
     const timer = setTimeout(() => setIsVisible(true), 100);
     return () => clearTimeout(timer);
-  }, [id]);
+  }, [slug]);
 
   if (!project) {
     return (
@@ -59,15 +67,17 @@ export default function ProjectDetail() {
         <div className="text-center">
           <p className="text-hulma-brown text-lg mb-4">Project not found</p>
           <a
-            href="/#inspiration"
+            href="/projects"
             className="text-hulma-orange hover:underline cursor-pointer"
           >
-            Back to projects
+            All Inspirations
           </a>
         </div>
       </div>
     );
   }
+
+  const titleWords = project.name.split(' ');
 
   return (
     <div className="bg-white min-h-screen">
@@ -78,45 +88,86 @@ export default function ProjectDetail() {
         <img
           src={project.image}
           alt={project.name}
-          className={`w-full h-full object-cover object-top transition-all duration-1000 ${
-            isVisible ? 'scale-100' : 'scale-110'
-          }`}
+          className={`w-full h-full object-cover ${project.imagePosition ?? 'object-top'} animate-ken-burns`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
 
-        {/* Back Button */}
-        <button
-          onClick={() => navigate('/')}
-          className="absolute top-28 left-8 z-10 flex items-center gap-2 text-white/80 hover:text-white transition-colors cursor-pointer"
-        >
-          <span className="w-5 h-5 flex items-center justify-center">
-            <i className="ri-arrow-left-line text-lg"></i>
-          </span>
-          <span className="text-sm font-sans">Back</span>
-        </button>
-
-        {/* Project Info Overlay */}
+        {/* Breadcrumb */}
         <div
-          className={`absolute bottom-0 left-0 right-0 p-8 lg:p-16 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          className={`absolute top-28 left-0 right-0 z-10 px-8 lg:px-16 opacity-0-init ${
+            isVisible ? 'animate-slide-in-left' : ''
           }`}
         >
-          <div className="max-w-7xl mx-auto">
-            <span className="inline-block px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white/90 text-xs font-sans mb-4">
-              {project.category}
-            </span>
-            <h1 className="text-5xl md:text-7xl font-serif font-light text-white mb-3">
+          <div className="max-w-7xl mx-auto flex items-center gap-2">
+            <a
+              href="/projects"
+              onClick={(e) => { e.preventDefault(); navigate('/projects'); }}
+              className="text-white/60 hover:text-white text-xs font-sans tracking-wide transition-colors cursor-pointer"
+            >
+              Projects
+            </a>
+            <span className="text-white/30 text-xs">/</span>
+            <a
+              href={`/project/${project.slug}`}
+              onClick={(e) => e.preventDefault()}
+              className="text-white/90 text-xs font-sans tracking-wide truncate max-w-xs cursor-default"
+            >
               {project.name}
-            </h1>
-            <div className="flex items-center gap-4 text-white/70 text-sm font-sans">
-              <span className="flex items-center gap-1.5">
-                <span className="w-4 h-4 flex items-center justify-center">
-                  <i className="ri-map-pin-line text-sm"></i>
+            </a>
+          </div>
+        </div>
+
+        {/* Project Info Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-end justify-between gap-4">
+              {/* Left: title + location */}
+              <div>
+                <h1 className="text-2xl md:text-4xl font-serif font-light text-white mb-3">
+                  {titleWords.map((word, i) => (
+                    <span
+                      key={i}
+                      className={`inline-block opacity-0-init ${
+                        isVisible ? 'animate-fade-up' : ''
+                      }`}
+                      style={{ animationDelay: `${300 + i * 100}ms` }}
+                    >
+                      {word}
+                      {i < titleWords.length - 1 ? '\u00A0' : ''}
+                    </span>
+                  ))}
+                </h1>
+                <div
+                  className={`flex items-center gap-4 text-white/70 text-sm font-sans opacity-0-init ${
+                    isVisible ? 'animate-fade-in animation-delay-800' : ''
+                  }`}
+                >
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-4 h-4 flex items-center justify-center">
+                      <i className="ri-map-pin-line text-sm"></i>
+                    </span>
+                    {project.location}
+                  </span>
+                  <span className="w-1 h-1 rounded-full bg-white/40" />
+                  <span>{project.year}</span>
+                </div>
+              </div>
+
+              {/* Right: category + status tags */}
+              <div
+                className={`flex flex-row items-end gap-2 flex-shrink-0 opacity-0-init ${
+                  isVisible ? 'animate-fade-in animation-delay-400' : ''
+                }`}
+              >
+                <span className="px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white/90 text-xs font-sans">
+                  {project.category}
                 </span>
-                {project.location}
-              </span>
-              <span className="w-1 h-1 rounded-full bg-white/40" />
-              <span>{project.year}</span>
+                {project.status && (
+                  <span className="px-3 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white/90 text-xs font-sans">
+                    {project.status}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -125,49 +176,85 @@ export default function ProjectDetail() {
       {/* Project Details */}
       <section className="py-20 px-6 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div
-            className={`grid grid-cols-1 lg:grid-cols-2 gap-16 transition-all duration-1000 delay-200 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-            }`}
-          >
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Left - Description */}
-            <div>
+            <div
+              className={`opacity-0-init ${
+                isVisible ? 'animate-slide-in-left animation-delay-200' : ''
+              }`}
+            >
               <h2 className="text-3xl font-serif font-light text-hulma-green mb-6">
                 About the Project
               </h2>
               <p className="text-hulma-brown text-base leading-relaxed font-sans mb-8">
                 {project.description}
               </p>
-              <p className="text-hulma-brown/70 text-sm leading-relaxed font-sans">
-                This project demonstrates HULMA&apos;s commitment to delivering architectural fiberglass solutions that combine aesthetic excellence with structural durability. Every panel and element was precision-crafted to meet the unique demands of the space.
-              </p>
+
+              {/* Google Map */}
+              <div className="rounded-xl overflow-hidden border border-stone-100">
+                <div className="flex items-center gap-2 px-4 py-2.5 bg-stone-50 border-b border-stone-100">
+                  <span className="w-4 h-4 flex items-center justify-center text-hulma-brown/50">
+                    <i className="ri-map-pin-2-line text-sm"></i>
+                  </span>
+                  <span className="text-xs text-hulma-brown/60 font-sans">{project.location}</span>
+                </div>
+                <iframe
+                  title={`Map of ${project.location}`}
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(project.location)}&z=15&output=embed`}
+                  width="100%"
+                  height="260"
+                  style={{ border: 0, display: 'block' }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
             </div>
 
             {/* Right - Details Card */}
-            <div className="bg-hulma-ghost rounded-2xl p-8">
+            <div
+              className={`bg-hulma-ghost rounded-2xl p-8 opacity-0-init ${
+                isVisible ? 'animate-slide-in-right animation-delay-300' : ''
+              }`}
+            >
               <h3 className="text-lg font-serif font-medium text-hulma-green mb-6">
                 Project Details
               </h3>
-              <div className="space-y-5">
-                <div className="flex justify-between items-start border-b border-hulma-taupe/30 pb-4">
+              <div className="space-y-3">
+                {/* Project Name */}
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-400' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Project Name</span>
-                  <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.name}</span>
+                  <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.name}</span>
                 </div>
-                <div className="flex justify-between items-start border-b border-hulma-taupe/30 pb-4">
+                {/* Location */}
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-500' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Location</span>
-                  <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.location}</span>
+                  <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.location}</span>
                 </div>
-                <div className="flex justify-between items-start border-b border-hulma-taupe/30 pb-4">
+                {/* Category */}
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-600' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Category</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.category}</span>
                 </div>
-                <div className="flex justify-between items-start border-b border-hulma-taupe/30 pb-4">
+                {/* Project Type */}
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-700' : ''}`}>
+                  <span className="text-sm text-hulma-brown/60 font-sans">Project Type</span>
+                  <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.projectType}</span>
+                </div>
+                {/* Scope of Work */}
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-800' : ''}`}>
+                  <span className="text-sm text-hulma-brown/60 font-sans">Scope of Work</span>
+                  <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.scope}</span>
+                </div>
+                {/* Status */}
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-900' : ''}`}>
+                  <span className="text-sm text-hulma-brown/60 font-sans">Status</span>
+                  <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.status}</span>
+                </div>
+                {/* Year */}
+                <div className={`flex justify-between items-start opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-1000' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Year</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.year}</span>
-                </div>
-                <div className="flex justify-between items-start">
-                  <span className="text-sm text-hulma-brown/60 font-sans">Scope</span>
-                  <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.scope}</span>
                 </div>
               </div>
             </div>
@@ -181,12 +268,12 @@ export default function ProjectDetail() {
       )}
 
       {/* Navigation Between Projects */}
-      <section className="py-4 px-6 lg:px-16">
-        <div className="max-w-7xl mx-auto flex items-center justify-between border-t border-b border-hulma-taupe/30 py-6">
+      <section className="py-4 px-6 lg:px-16 bg-hulma-ghost">
+        <div className="max-w-7xl mx-auto flex items-center justify-between border-t border-hulma-taupe/20 py-6">
           <button
             onClick={() => {
               const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-              navigate(`/project/${projects[prevIndex].id}`);
+              navigate(`/project/${projects[prevIndex].slug}`);
             }}
             className="flex items-center gap-3 text-hulma-brown hover:text-hulma-green transition-colors cursor-pointer group"
           >
@@ -204,7 +291,7 @@ export default function ProjectDetail() {
           <button
             onClick={() => {
               const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
-              navigate(`/project/${projects[nextIndex].id}`);
+              navigate(`/project/${projects[nextIndex].slug}`);
             }}
             className="flex items-center gap-3 text-hulma-brown hover:text-hulma-green transition-colors cursor-pointer group"
           >
@@ -222,71 +309,79 @@ export default function ProjectDetail() {
       </section>
 
       {/* Other Projects Grid */}
-      <section className="py-20 px-6 lg:px-16 bg-hulma-ghost">
+      <section className="py-12 px-6 lg:px-16 bg-hulma-ghost">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-light text-hulma-green mb-12">
-            More Projects
-          </h2>
+          <div className="flex items-center justify-between mb-8">
+            <h2
+              className={`text-2xl font-serif font-light text-hulma-green opacity-0-init ${
+                isVisible ? 'animate-fade-up' : ''
+              }`}
+            >
+              More Projects
+            </h2>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setMoreProjectsPage((p) => Math.max(0, p - 1))}
+                disabled={moreProjectsPage === 0}
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-hulma-taupe/60 text-hulma-brown hover:bg-white hover:border-hulma-green transition-all cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                <i className="ri-arrow-left-s-line text-lg"></i>
+              </button>
+              <button
+                onClick={() => setMoreProjectsPage((p) => Math.min(totalPages - 1, p + 1))}
+                disabled={moreProjectsPage === totalPages - 1}
+                className="w-9 h-9 flex items-center justify-center rounded-full border border-hulma-taupe/60 text-hulma-brown hover:bg-white hover:border-hulma-green transition-all cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed"
+              >
+                <i className="ri-arrow-right-s-line text-lg"></i>
+              </button>
+            </div>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {otherProjects.map((proj, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {visibleProjects.map((proj, index) => (
               <a
                 key={proj.id}
-                href={`/project/${proj.id}`}
+                href={`/project/${proj.slug}`}
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate(`/project/${proj.id}`);
+                  navigate(`/project/${proj.slug}`);
                 }}
-                className={`group relative overflow-hidden rounded-2xl cursor-pointer transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                className={`group relative overflow-hidden rounded-xl cursor-pointer opacity-0-init ${
+                  isVisible ? 'animate-fade-up' : ''
                 }`}
-                style={{ transitionDelay: `${index * 80}ms` }}
+                style={{ animationDelay: `${index * 80}ms` }}
               >
-                <div className="relative w-full h-64 overflow-hidden">
+                <div className="relative w-full h-44 overflow-hidden rounded-xl">
                   <img
                     src={proj.image}
                     alt={proj.name}
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
+                    className={`w-full h-full object-cover ${proj.imagePosition ?? 'object-top'} grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 group-hover:brightness-110`}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  {/* Number Badge */}
-                  <div className="absolute top-4 left-4 flex items-center gap-2">
-                    <span className="text-2xl font-serif font-light text-white/80 drop-shadow-lg">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
 
                   {/* Category Tag */}
-                  <div className="absolute top-4 right-4">
-                    <span className="px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-sm text-white/90 text-[10px] font-sans uppercase tracking-wider">
+                  <div className="absolute top-3 right-3">
+                    <span className="px-2 py-0.5 rounded-full bg-white/15 backdrop-blur-sm text-white/90 text-[10px] font-sans uppercase tracking-wider">
                       {proj.category}
                     </span>
                   </div>
 
                   {/* Bottom Info */}
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                     <div className="flex items-end justify-between">
                       <div>
-                        <h3 className="text-lg font-serif font-medium text-white drop-shadow-lg">
+                        <h3 className="text-sm font-serif font-medium text-white drop-shadow-lg line-clamp-1">
                           {proj.name}
                         </h3>
-                        <p className="text-xs text-white/70 font-sans mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <p className="text-xs text-white/70 font-sans mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                           {proj.location}
                         </p>
                       </div>
-                      <span className="w-8 h-8 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                        <i className="ri-arrow-right-up-line text-white text-sm"></i>
+                      <span className="w-7 h-7 flex items-center justify-center rounded-full bg-white/20 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <i className="ri-arrow-right-up-line text-white text-xs"></i>
                       </span>
                     </div>
                   </div>
-                </div>
-
-                {/* Description Below Card */}
-                <div className="p-4 bg-white rounded-b-2xl">
-                  <p className="text-xs text-hulma-brown/70 font-sans leading-relaxed line-clamp-2">
-                    {proj.description}
-                  </p>
                 </div>
               </a>
             ))}

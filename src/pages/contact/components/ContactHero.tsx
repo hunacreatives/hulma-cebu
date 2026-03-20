@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 
 export default function ContactHero() {
@@ -10,33 +9,35 @@ export default function ContactHero() {
   }, []);
 
   return (
-    <section className="relative h-[70vh] min-h-[500px] flex items-end overflow-hidden">
-      {/* Background Image */}
+    <section className="relative h-[44vh] min-h-[320px] flex items-end overflow-hidden">
+      {/* Light warm background */}
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=Elegant%20modern%20interior%20design%20showroom%20with%20warm%20ambient%20lighting%20featuring%20natural%20stone%20walls%20and%20fiberglass%20architectural%20panels%20displayed%20in%20a%20minimalist%20gallery%20setting%20soft%20golden%20hour%20light%20streaming%20through%20large%20windows%20warm%20beige%20and%20brown%20earth%20tones%20sophisticated%20atmosphere&width=1920&height=1080&seq=contact-hero-showroom-001&orientation=landscape"
-          alt="HULMA showroom interior"
-          className="w-full h-full object-cover object-top"
+          src="https://readdy.ai/api/search-image?query=warm%20bright%20minimal%20architectural%20studio%20interior%20soft%20natural%20light%20cream%20white%20walls%20smooth%20plaster%20surface%20airy%20open%20space%20warm%20neutral%20tones%20elegant%20contemporary%20design%20photography&width=1920&height=600&seq=contact-hero-light-v3-001&orientation=landscape"
+          alt=""
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/15 to-black/50"></div>
+        <div className="absolute inset-0" style={{ background: 'rgba(248,244,238,0.82)' }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 60% 70% at 10% 100%, rgba(177,141,117,0.12) 0%, transparent 65%)',
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div
-        className={`relative z-10 w-full px-6 lg:px-12 pb-16 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto">
-          <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white text-sm font-medium mb-6">
-            Get In Touch
-            <span className="w-4 h-4 flex items-center justify-center">
-              <i className="ri-arrow-right-line text-sm"></i>
-            </span>
-          </span>
-          <h1 className="text-4xl md:text-6xl font-serif font-light text-white tracking-tight max-w-2xl">
-            Let&apos;s Bring Your<br />
-            <em className="italic">Vision</em> to Life
+      <div className="relative z-10 w-full px-6 lg:px-12 pb-14">
+        <div className="max-w-6xl mx-auto">
+          <h1
+            className={`font-serif font-light text-hulma-green leading-tight transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ fontSize: 'clamp(1.6rem, 3vw, 2.8rem)' }}
+          >
+            Let's bring your
+            <br />
+            <em className="italic text-hulma-brown">vision</em> to life.
           </h1>
         </div>
       </div>

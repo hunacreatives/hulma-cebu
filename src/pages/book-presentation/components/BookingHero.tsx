@@ -1,38 +1,43 @@
-
 import { useEffect, useState } from 'react';
 
 export default function BookingHero() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
+    const timer = setTimeout(() => setIsVisible(true), 200);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
-    <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[44vh] min-h-[320px] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=Elegant%20modern%20showroom%20interior%20with%20warm%20ambient%20lighting%20natural%20stone%20wall%20panels%20soft%20beige%20tones%20architectural%20presentation%20space%20minimalist%20luxury%20design%20warm%20earthy%20atmosphere%20professional%20setting&width=1920&height=800&seq=booking-hero-001&orientation=landscape"
-          alt="Product presentation showroom"
-          className="w-full h-full object-cover object-top"
+          src="https://readdy.ai/api/search-image?query=elegant%20Filipino%20interior%20design%20showroom%20warm%20wood%20tones%20rattan%20woven%20textures%20natural%20materials%20product%20display%20table%20two%20Filipino%20professionals%20reviewing%20material%20samples%20together%20warm%20ambient%20light%20nipa-inspired%20modern%20contemporary%20space%20Cebu%20Philippines%20earthy%20neutral%20tones%20refined%20artisan%20setting&width=1920&height=600&seq=booking-hero-filipino-v1-001&orientation=landscape"
+          alt=""
+          className="w-full h-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+        <div className="absolute inset-0" style={{ background: 'rgba(248,244,238,0.82)' }} />
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: 'radial-gradient(ellipse 60% 70% at 10% 100%, rgba(177,141,117,0.12) 0%, transparent 65%)',
+          }}
+        />
       </div>
 
-      <div
-        className={`relative z-10 text-center px-6 max-w-3xl mx-auto transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-      >
-        <p className="text-[11px] font-semibold uppercase tracking-[4px] text-white/60 mb-4">
-          Private Viewing
-        </p>
-        <h2 className="text-4xl md:text-5xl font-serif font-light text-white mb-4">
-          Book a Product Presentation
-        </h2>
-        <p className="text-sm text-white/70 max-w-lg mx-auto leading-relaxed">
-          Schedule a private product presentation to experience our architectural fiberglass materials firsthand. Available in-person or virtually.
-        </p>
+      <div className="relative z-10 w-full px-6 lg:px-12 pb-14">
+        <div className="max-w-6xl mx-auto">
+          <h1
+            className={`font-serif font-light text-hulma-green leading-tight transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+            style={{ fontSize: 'clamp(1.6rem, 3vw, 2.8rem)' }}
+          >
+            Book a product
+            <br />
+            <em className="italic text-hulma-brown">presentation.</em>
+          </h1>
+        </div>
       </div>
     </section>
   );

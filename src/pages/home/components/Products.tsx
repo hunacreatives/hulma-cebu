@@ -6,31 +6,34 @@ const products = [
     id: 1,
     name: 'Natural Stone Look',
     image:
-      'https://readdy.ai/api/search-image?query=Natural%20stone%20texture%20fiberglass%20architectural%20panel%20beige%20cream%20limestone%20appearance%20smooth%20refined%20surface%20modern%20premium%20material%20sample%20clean%20minimal%20background%20professional%20product%20photography&width=400&height=400&seq=product-natural-stone-002&orientation=squarish',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d912c870cf912a368974d4fef7a553e3.jpeg',
   },
   {
     id: 2,
     name: 'Terrazzo Look',
     image:
-      'https://readdy.ai/api/search-image?query=Terrazzo%20texture%20fiberglass%20architectural%20panel%20speckled%20aggregate%20pattern%20neutral%20tones%20smooth%20surface%20modern%20premium%20material%20sample%20clean%20minimal%20background%20professional%20product%20photography&width=400&height=400&seq=product-terrazzo-002&orientation=squarish',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7f6d95a8745cc8f0e12e9677cdbc0700.jpeg',
   },
   {
     id: 3,
-    name: 'Organic',
+    name: 'Limestone',
     image:
-      'https://readdy.ai/api/search-image?query=Organic%20texture%20fiberglass%20architectural%20panel%20natural%20flowing%20pattern%20warm%20neutral%20tones%20textured%20surface%20modern%20premium%20material%20sample%20clean%20minimal%20background%20professional%20product%20photography&width=400&height=400&seq=product-organic-002&orientation=squarish',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9bcb8ecbc7371b9a0570cc7d81344810.png',
   },
   {
     id: 4,
-    name: 'Custom Forms',
+    name: 'Custom',
     image:
-      'https://readdy.ai/api/search-image?query=Custom%20fiberglass%20architectural%20element%20sculptural%20form%20modern%20design%20warm%20neutral%20tones%20contemporary%20material%20geometric%20pattern%20clean%20minimal%20background%20professional%20product%20photography&width=400&height=400&seq=product-custom-003&orientation=squarish',
+      'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7cb17a2720703a994ecbebd01424183f.jpeg',
   },
 ];
 
 export default function Products() {
   const [isVisible, setIsVisible] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState<'left' | 'right'>('right');
+  const [animKey, setAnimKey] = useState(0);
+  const [btnActive, setBtnActive] = useState<'prev' | 'next' | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
   const navigate = useNavigate();
 
@@ -61,10 +64,18 @@ export default function Products() {
   };
 
   const handlePrev = () => {
+    setDirection('left');
+    setAnimKey((k) => k + 1);
+    setBtnActive('prev');
+    setTimeout(() => setBtnActive(null), 300);
     setCurrentIndex((prev) => (prev === 0 ? products.length - 1 : prev - 1));
   };
 
   const handleNext = () => {
+    setDirection('right');
+    setAnimKey((k) => k + 1);
+    setBtnActive('next');
+    setTimeout(() => setBtnActive(null), 300);
     setCurrentIndex((prev) => (prev === products.length - 1 ? 0 : prev + 1));
   };
 
@@ -80,57 +91,81 @@ export default function Products() {
     <section
       id="products"
       ref={sectionRef}
-      className="pt-8 pb-24 px-6 lg:px-12 bg-hulma-ghost relative"
+      className="pt-8 pb-14 md:pb-24 px-6 lg:px-12 bg-hulma-ghost relative"
       data-product-shop
     >
       <div className="max-w-7xl mx-auto">
         <h2
-          className={`text-xl md:text-2xl font-serif font-light text-center mb-10 text-hulma-brown transition-all duration-1000 ${
+          className={`text-lg md:text-xl font-serif font-light text-center mb-10 text-hulma-brown transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          Our Materials
+          Discover Our Materials
         </h2>
 
         <div className="relative px-0 md:px-16">
           {/* Left Arrow */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 hidden md:flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-all shadow-lg cursor-pointer"
+            className={`absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 hidden md:flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-all duration-200 shadow-lg cursor-pointer ${
+              btnActive === 'prev' ? 'scale-90 bg-white' : 'scale-100'
+            }`}
             aria-label="Previous products"
           >
-            <i className="ri-arrow-left-s-line text-2xl text-hulma-green"></i>
+            <i className={`ri-arrow-left-s-line text-2xl text-hulma-green transition-transform duration-200 ${btnActive === 'prev' ? '-translate-x-1' : ''}`}></i>
           </button>
 
           {/* Right Arrow */}
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 hidden md:flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-all shadow-lg cursor-pointer"
+            className={`absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 hidden md:flex items-center justify-center rounded-full bg-white/80 hover:bg-white transition-all duration-200 shadow-lg cursor-pointer ${
+              btnActive === 'next' ? 'scale-90 bg-white' : 'scale-100'
+            }`}
             aria-label="Next products"
           >
-            <i className="ri-arrow-right-s-line text-2xl text-hulma-green"></i>
+            <i className={`ri-arrow-right-s-line text-2xl text-hulma-green transition-transform duration-200 ${btnActive === 'next' ? 'translate-x-1' : ''}`}></i>
           </button>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4">
+          <div
+            key={animKey}
+            className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4"
+          >
             {visibleProducts.map((product, index) => (
               <div
-                key={`${product.id}-${currentIndex}-${index}`}
-                className={`group cursor-pointer transition-all duration-700 ${
-                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                key={`${product.id}-${index}`}
+                className={`group cursor-pointer ${
+                  isVisible
+                    ? direction === 'right'
+                      ? 'carousel-card-drift-right'
+                      : 'carousel-card-drift-left'
+                    : 'opacity-0'
                 }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
+                style={{ perspective: '1000px', animationDelay: `${index * 110}ms` }}
                 onClick={handleProductClick}
               >
-                <div className="relative overflow-hidden rounded-3xl bg-hulma-taupe/20 aspect-[4/6] w-full h-auto">
+                <div className="relative overflow-hidden rounded-3xl bg-hulma-taupe/20 aspect-[4/6] w-full h-auto group-hover:[transform:rotateY(2deg)_rotateX(-2deg)] transition-transform duration-500">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute bottom-6 left-6 right-6">
-                    <h3 className="text-base font-medium text-white drop-shadow-lg">
+
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+
+                  {/* Shimmer */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+                    <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                  </div>
+
+                  {/* Name — slides up to center on hover */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-end group-hover:justify-center transition-all duration-500 pb-6 group-hover:pb-0">
+                    <h3 className="text-sm font-medium text-white drop-shadow-lg translate-y-0 group-hover:-translate-y-2 transition-transform duration-500">
                       {product.name}
                     </h3>
+                    <p className="text-[10px] tracking-widest uppercase text-white/80 mt-1 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 delay-75">
+                      Coming Soon
+                    </p>
                   </div>
                 </div>
               </div>

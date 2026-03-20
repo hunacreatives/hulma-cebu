@@ -1,4 +1,3 @@
-
 import { useState, useRef } from 'react';
 
 const projectTypes = [
@@ -83,9 +82,11 @@ export default function ContactForm() {
       className="space-y-6"
     >
       {/* Step Label */}
-      <p className="text-[11px] font-semibold uppercase tracking-[2px] text-hulma-brown/60 mb-2">
-        01 / Your Details
-      </p>
+      <div className="flex items-center gap-4 mb-2">
+        <span className="font-serif font-light text-hulma-green" style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)' }}>
+          Your Details
+        </span>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
@@ -152,9 +153,11 @@ export default function ContactForm() {
       </div>
 
       {/* Step Label */}
-      <p className="text-[11px] font-semibold uppercase tracking-[2px] text-hulma-brown/60 pt-4 mb-2">
-        02 / Project Info
-      </p>
+      <div className="flex items-center gap-4 pt-4 mb-2">
+        <span className="font-serif font-light text-hulma-green" style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)' }}>
+          Project Info
+        </span>
+      </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
@@ -192,9 +195,11 @@ export default function ContactForm() {
       </div>
 
       {/* Step Label */}
-      <p className="text-[11px] font-semibold uppercase tracking-[2px] text-hulma-brown/60 pt-4 mb-2">
-        03 / Your Message
-      </p>
+      <div className="flex items-center gap-4 pt-4 mb-2">
+        <span className="font-serif font-light text-hulma-green" style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)' }}>
+          Your Message
+        </span>
+      </div>
 
       <div>
         <label htmlFor="message" className="block text-xs font-medium text-hulma-green mb-1.5">
@@ -230,12 +235,7 @@ export default function ContactForm() {
             Sending...
           </>
         ) : (
-          <>
-            Send Message
-            <span className="w-4 h-4 flex items-center justify-center">
-              <i className="ri-arrow-right-line text-sm"></i>
-            </span>
-          </>
+          'Send Message'
         )}
       </button>
 

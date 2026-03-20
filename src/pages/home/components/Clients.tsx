@@ -1,4 +1,3 @@
-
 import { useEffect, useRef, useState } from 'react';
 
 const clients = [
@@ -17,22 +16,26 @@ const clients = [
   { id: 13, name: 'Client 13', logo: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/3eed00b508d5dee60aed93dc830e214e.png' },
 ];
 
-const row1 = clients.slice(0, 7);
-const row2 = clients.slice(7);
+const row1 = clients;
 
 interface MarqueeRowProps {
   items: typeof clients;
   direction: 'left' | 'right';
+  isVisible: boolean;
 }
 
-function MarqueeRow({ items, direction }: MarqueeRowProps) {
+function MarqueeRow({ items, direction, isVisible }: MarqueeRowProps) {
   const [isPaused, setIsPaused] = useState(false);
   const doubled = [...items, ...items];
 
   return (
-    <div className="overflow-hidden w-full">
+    <div className="overflow-hidden w-full relative">
+      {/* Fade mask on edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-hulma-green to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-hulma-green to-transparent z-10 pointer-events-none"></div>
+      
       <div
-        className={`flex items-center gap-10 w-max ${
+        className={`flex items-center gap-8 w-max ${
           direction === 'left' ? 'animate-marquee-left' : 'animate-marquee-right'
         } ${isPaused ? '[animation-play-state:paused]' : ''}`}
         onMouseEnter={() => setIsPaused(true)}
@@ -41,12 +44,15 @@ function MarqueeRow({ items, direction }: MarqueeRowProps) {
         {doubled.map((client, index) => (
           <div
             key={`${client.id}-${index}`}
-            className="flex-shrink-0 w-36 h-20 flex items-center justify-center"
+            className={`flex-shrink-0 w-44 h-16 flex items-center justify-center transition-all duration-700 ${
+              isVisible ? 'opacity-60 scale-100' : 'opacity-0 scale-90'
+            }`}
+            style={{ transitionDelay: `${index * 50}ms` }}
           >
             <img
               src={client.logo}
               alt={client.name}
-              className="max-w-full max-h-full object-contain grayscale opacity-60 hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+              className="max-w-full max-h-full object-contain grayscale hover:opacity-100 transition-opacity duration-300 cursor-pointer"
             />
           </div>
         ))}
@@ -79,11 +85,11 @@ export default function Clients() {
   return (
     <section
       ref={sectionRef}
-      className="py-20 bg-hulma-green overflow-hidden"
+      className="py-10 bg-hulma-green overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <h2
-          className={`text-xl md:text-2xl font-serif font-light text-center mb-12 text-hulma-ghost transition-all duration-1000 ${
+          className={`text-lg md:text-xl font-serif font-light text-center mb-6 text-hulma-ghost transition-all duration-1000 ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
@@ -91,14 +97,8 @@ export default function Clients() {
         </h2>
       </div>
 
-      <div
-        className={`flex flex-col gap-8 transition-all duration-1000 ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`}
-        style={{ transitionDelay: '200ms' }}
-      >
-        <MarqueeRow items={row1} direction="left" />
-        <MarqueeRow items={row2} direction="right" />
+      <div className="flex flex-col gap-8">
+        <MarqueeRow items={row1} direction="left" isVisible={isVisible} />
       </div>
     </section>
   );
