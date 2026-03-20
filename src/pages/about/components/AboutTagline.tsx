@@ -24,31 +24,31 @@ export default function AboutTagline() {
       >
         <p
           className="font-serif text-hulma-brown/70 leading-relaxed mb-3"
-          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', textWrap: 'balance' } as React.CSSProperties}
         >
           Most materials ask you to compromise.
         </p>
         <p
           className="font-serif font-semibold text-hulma-green leading-relaxed mb-6"
-          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', textWrap: 'balance' } as React.CSSProperties}
         >
           Fiberglass doesn&apos;t.
         </p>
         <p
           className="font-serif text-hulma-brown/75 leading-relaxed mb-2"
-          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', textWrap: 'balance' } as React.CSSProperties}
         >
           At Hulma, fiberglass is not a substitute—it&apos;s a design tool.
         </p>
         <p
           className="font-serif text-hulma-brown/75 leading-relaxed mb-8"
-          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', textWrap: 'balance' } as React.CSSProperties}
         >
           One that gives form, control, and durability without limits.
         </p>
         <p
           className="font-serif font-semibold text-hulma-green leading-relaxed"
-          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', textWrap: 'balance' } as React.CSSProperties}
         >
           This is where vision meets craft.
         </p>

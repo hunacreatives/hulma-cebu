@@ -85,6 +85,7 @@ export default function OurStory() {
           >
             {/* Headline as quote */}
             <div className="mb-10 relative lg:pl-5">
+              {/* Desktop quote mark — absolute positioned */}
               <span
                 className="hidden lg:block absolute -top-4 -left-1 font-serif text-hulma-orange/30 leading-none select-none"
                 style={{ fontSize: '4rem', lineHeight: 1 }}
@@ -93,21 +94,27 @@ export default function OurStory() {
               </span>
               <div className="flex flex-col gap-1">
                 <h3
-                  className="font-serif font-light text-hulma-green leading-snug"
-                  style={{ fontSize: 'clamp(0.95rem, 3.8vw, 2.1rem)' }}
+                  className="font-serif font-light text-hulma-green leading-snug text-center lg:text-left"
+                  style={{ fontSize: 'clamp(1.05rem, 4.5vw, 2.1rem)' }}
                 >
+                  <span
+                    className="lg:hidden font-serif text-hulma-orange/35 select-none"
+                    style={{ fontSize: 'clamp(1.4rem, 5.5vw, 2.6rem)', lineHeight: 1, verticalAlign: 'middle', marginRight: '0.1em' }}
+                  >
+                    &ldquo;
+                  </span>
                   Not everything should be standard.
                 </h3>
                 <h3
-                  className="font-serif italic text-hulma-brown leading-snug"
-                  style={{ fontSize: 'clamp(0.95rem, 3.8vw, 2.1rem)' }}
+                  className="font-serif italic text-hulma-brown leading-snug text-center lg:text-left"
+                  style={{ fontSize: 'clamp(1.05rem, 4.5vw, 2.1rem)' }}
                 >
                   Especially the spaces we shape.&rdquo;
                 </h3>
               </div>
             </div>
 
-            <div className="w-10 h-px bg-hulma-orange/50 mb-10" />
+            <div className="w-10 h-px bg-hulma-orange/50 mb-10 mx-auto lg:mx-0" />
 
             {/* Body paragraphs */}
             <div className="space-y-5">
@@ -148,7 +155,7 @@ export default function OurStory() {
 
             {/* Stats */}
             <div
-              className={`mt-10 flex gap-10 transition-all duration-700 delay-500 ${
+              className={`mt-10 flex gap-10 justify-center lg:justify-start transition-all duration-700 delay-500 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >

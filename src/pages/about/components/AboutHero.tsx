@@ -66,7 +66,7 @@ export default function AboutHero() {
               className="font-serif font-light text-white leading-tight"
               style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}
             >
-              Hulma
+              Hulma Cebu
             </h1>
           </div>
 

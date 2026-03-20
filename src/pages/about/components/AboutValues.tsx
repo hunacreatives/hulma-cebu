@@ -85,8 +85,10 @@ export default function AboutValues() {
           }`}
         >
           <h2
-            className="font-serif font-light text-hulma-green leading-tight"
-            style={{ fontSize: 'clamp(1.05rem, 1.6vw, 1.5rem)' }}
+            className={`font-serif font-light text-hulma-green leading-tight transition-all duration-700 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
+            }`}
+            style={{ fontSize: 'clamp(1.05rem, 1.6vw, 1.5rem)', textWrap: 'balance' } as React.CSSProperties}
           >
             Three principles that guide{' '}
             <em className="italic text-hulma-brown">every piece we make.</em>

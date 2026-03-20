@@ -72,7 +72,7 @@ export default function AboutCTA() {
               Your vision deserves <br />
               <em className="italic text-hulma-taupe">more than a catalog.</em>
             </h2>
-            <p className="text-sm text-hulma-taupe/50 leading-relaxed max-w-xs mx-auto lg:mx-0">
+            <p className="text-sm text-hulma-taupe/50 leading-relaxed max-w-xs mx-auto lg:mx-0" style={{ textWrap: 'pretty' } as React.CSSProperties}>
               We work directly with architects, designers, and builders from first sketch to finished piece.
             </p>
             <p className="mt-6 text-[10px] tracking-[0.22em] uppercase text-hulma-taupe/25">
