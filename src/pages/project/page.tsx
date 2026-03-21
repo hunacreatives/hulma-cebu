@@ -94,7 +94,7 @@ export default function ProjectDetail() {
 
         {/* Breadcrumb */}
         <div
-          className={`absolute top-28 left-0 right-0 z-10 px-8 lg:px-16 opacity-0-init ${
+          className={`absolute top-20 left-0 right-0 z-10 px-5 lg:px-16 opacity-0-init ${
             isVisible ? 'animate-slide-in-left' : ''
           }`}
         >
@@ -118,12 +118,12 @@ export default function ProjectDetail() {
         </div>
 
         {/* Project Info Overlay */}
-        <div className="absolute bottom-0 left-0 right-0 p-8 lg:p-16">
+        <div className="absolute bottom-0 left-0 right-0 p-5 md:p-8 lg:p-16">
           <div className="max-w-7xl mx-auto">
-            <div className="flex items-end justify-between gap-4">
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between md:gap-4">
               {/* Left: title + location */}
               <div>
-                <h1 className="text-2xl md:text-4xl font-serif font-light text-white mb-3">
+                <h1 className="text-xl md:text-4xl font-serif font-bold text-white mb-2 md:mb-3">
                   {titleWords.map((word, i) => (
                     <span
                       key={i}
@@ -138,7 +138,7 @@ export default function ProjectDetail() {
                   ))}
                 </h1>
                 <div
-                  className={`flex items-center gap-4 text-white/70 text-sm font-sans opacity-0-init ${
+                  className={`flex items-center gap-3 text-white/70 text-xs md:text-sm font-sans opacity-0-init ${
                     isVisible ? 'animate-fade-in animation-delay-800' : ''
                   }`}
                 >
@@ -155,7 +155,7 @@ export default function ProjectDetail() {
 
               {/* Right: category + status tags */}
               <div
-                className={`flex flex-row items-end gap-2 flex-shrink-0 opacity-0-init ${
+                className={`flex flex-row items-start gap-2 flex-shrink-0 opacity-0-init ${
                   isVisible ? 'animate-fade-in animation-delay-400' : ''
                 }`}
               >
@@ -174,19 +174,19 @@ export default function ProjectDetail() {
       </section>
 
       {/* Project Details */}
-      <section className="py-20 px-6 lg:px-16">
+      <section className="py-8 px-5 md:py-10 lg:py-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left - Description */}
             <div
               className={`opacity-0-init ${
                 isVisible ? 'animate-slide-in-left animation-delay-200' : ''
               }`}
             >
-              <h2 className="text-3xl font-serif font-light text-hulma-green mb-6">
+              <h2 className="text-2xl md:text-3xl font-serif font-light text-hulma-green mb-3">
                 About the Project
               </h2>
-              <p className="text-hulma-brown text-base leading-relaxed font-sans mb-8">
+              <p className="text-hulma-brown text-sm leading-relaxed font-sans mb-5 text-justify">
                 {project.description}
               </p>
 
@@ -199,8 +199,8 @@ export default function ProjectDetail() {
                   <span className="text-xs text-hulma-brown/60 font-sans">{project.location}</span>
                 </div>
                 <iframe
-                  title={`Map of ${project.location}`}
-                  src={`https://maps.google.com/maps?q=${encodeURIComponent(project.location)}&z=15&output=embed`}
+                  title={`Map of ${project.name}`}
+                  src={`https://maps.google.com/maps?q=${encodeURIComponent(`${project.name}, ${project.location}`)}&z=15&output=embed`}
                   width="100%"
                   height="260"
                   style={{ border: 0, display: 'block' }}
@@ -213,41 +213,41 @@ export default function ProjectDetail() {
 
             {/* Right - Details Card */}
             <div
-              className={`bg-hulma-ghost rounded-2xl p-8 opacity-0-init ${
+              className={`bg-hulma-ghost rounded-2xl p-5 md:p-6 opacity-0-init ${
                 isVisible ? 'animate-slide-in-right animation-delay-300' : ''
               }`}
             >
-              <h3 className="text-lg font-serif font-medium text-hulma-green mb-6">
+              <h3 className="text-lg font-serif font-medium text-hulma-green mb-4">
                 Project Details
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-2">
                 {/* Project Name */}
-                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-400' : ''}`}>
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-400' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Project Name</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.name}</span>
                 </div>
                 {/* Location */}
-                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-500' : ''}`}>
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-500' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Location</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.location}</span>
                 </div>
                 {/* Category */}
-                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-600' : ''}`}>
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-600' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Category</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.category}</span>
                 </div>
                 {/* Project Type */}
-                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-700' : ''}`}>
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-700' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Project Type</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.projectType}</span>
                 </div>
                 {/* Scope of Work */}
-                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-800' : ''}`}>
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-800' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Scope of Work</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right max-w-[55%]">{project.scope}</span>
                 </div>
                 {/* Status */}
-                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-3 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-900' : ''}`}>
+                <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-900' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Status</span>
                   <span className="text-sm text-hulma-green font-medium font-sans text-right">{project.status}</span>
                 </div>
@@ -266,47 +266,6 @@ export default function ProjectDetail() {
       {project.gallery && project.gallery.length > 0 && (
         <PhotoGallery images={project.gallery} projectName={project.name} />
       )}
-
-      {/* Navigation Between Projects */}
-      <section className="py-4 px-6 lg:px-16 bg-hulma-ghost">
-        <div className="max-w-7xl mx-auto flex items-center justify-between border-t border-hulma-taupe/20 py-6">
-          <button
-            onClick={() => {
-              const prevIndex = currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-              navigate(`/project/${projects[prevIndex].slug}`);
-            }}
-            className="flex items-center gap-3 text-hulma-brown hover:text-hulma-green transition-colors cursor-pointer group"
-          >
-            <span className="w-10 h-10 flex items-center justify-center rounded-full border border-hulma-taupe group-hover:border-hulma-green transition-colors">
-              <i className="ri-arrow-left-s-line text-xl"></i>
-            </span>
-            <div className="text-left">
-              <span className="text-xs text-hulma-brown/50 font-sans block">Previous</span>
-              <span className="text-sm font-medium font-sans">
-                {projects[currentIndex === 0 ? projects.length - 1 : currentIndex - 1].name}
-              </span>
-            </div>
-          </button>
-
-          <button
-            onClick={() => {
-              const nextIndex = currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
-              navigate(`/project/${projects[nextIndex].slug}`);
-            }}
-            className="flex items-center gap-3 text-hulma-brown hover:text-hulma-green transition-colors cursor-pointer group"
-          >
-            <div className="text-right">
-              <span className="text-xs text-hulma-brown/50 font-sans block">Next</span>
-              <span className="text-sm font-medium font-sans">
-                {projects[currentIndex === projects.length - 1 ? 0 : currentIndex + 1].name}
-              </span>
-            </div>
-            <span className="w-10 h-10 flex items-center justify-center rounded-full border border-hulma-taupe group-hover:border-hulma-green transition-colors">
-              <i className="ri-arrow-right-s-line text-xl"></i>
-            </span>
-          </button>
-        </div>
-      </section>
 
       {/* Other Projects Grid */}
       <section className="py-12 px-6 lg:px-16 bg-hulma-ghost">

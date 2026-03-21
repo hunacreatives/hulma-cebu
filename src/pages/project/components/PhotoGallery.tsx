@@ -81,7 +81,7 @@ export default function PhotoGallery({ images, projectName }: PhotoGalleryProps)
 
   const renderCaption = (caption?: string) =>
     caption ? (
-      <div className="absolute bottom-3 left-3 right-3">
+      <div className="absolute bottom-3 left-3 right-3 hidden sm:block">
         <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md border border-white/30">
           <span className="text-white text-xs font-sans tracking-wide">{caption}</span>
         </div>

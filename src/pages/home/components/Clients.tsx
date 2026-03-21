@@ -14,9 +14,12 @@ const clients = [
   { id: 11, name: 'MOD', logo: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de232222583d5b7d529858a2794b0f3a.png' },
   { id: 12, name: 'LK Bakery', logo: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0e4504edafad9f29b3bccab5d057d2a6.png' },
   { id: 13, name: 'Client 13', logo: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/3eed00b508d5dee60aed93dc830e214e.png' },
+  { id: 14, name: 'Client 14', logo: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/5c411155-828a-4662-9ad6-c9d45e39cdbd_18.png?v=0180772e40f29a385692e4963f5d78d4' },
+  { id: 15, name: 'Client 15', logo: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/9ccd21e7-8208-47a8-a0d1-9c1b2ffc08d5_19.png?v=c04a8cad04415fd901faf4ff00984a34' },
 ];
 
-const row1 = clients;
+const row1 = clients.slice(0, 7);
+const row2 = clients.slice(7);
 
 interface MarqueeRowProps {
   items: typeof clients;
@@ -52,7 +55,7 @@ function MarqueeRow({ items, direction, isVisible }: MarqueeRowProps) {
             <img
               src={client.logo}
               alt={client.name}
-              className="max-w-full max-h-full object-contain grayscale hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+              className="max-w-full max-h-full object-contain grayscale opacity-60 hover:brightness-0 hover:invert hover:opacity-100 transition-all duration-300 cursor-pointer"
             />
           </div>
         ))}
@@ -97,8 +100,9 @@ export default function Clients() {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-6">
         <MarqueeRow items={row1} direction="left" isVisible={isVisible} />
+        <MarqueeRow items={row2} direction="right" isVisible={isVisible} />
       </div>
     </section>
   );

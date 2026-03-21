@@ -3,7 +3,8 @@ export const projects = [
     id: 1,
     slug: 'jpark-island-resort-waterpark-casino',
     name: 'Jpark Island Resort & Waterpark - Casino',
-    location: 'Cordova, Cebu',
+    location: 'Maribago, Lapu-Lapu City, Cebu',
+    mapQuery: 'JPark Island Resort and Waterpark Cebu Philippines',
     category: 'Entertainment',
     clientType: 'Entertainment',
     tagline: 'Casino Filipino',
@@ -11,38 +12,24 @@ export const projects = [
     imagePosition: 'object-[center_30%]',
     description:
       'The casino exterior at the resort seamlessly blends grandeur and craftsmanship with its fiberglass architectural accents. Majestic columns, molded to mimic the texture of natural stone, frame the entrance, while the textured facade exudes a refined elegance, all achieved through lightweight yet durable fiberglass. This innovative use of material ensures both aesthetic appeal and structural resilience, welcoming guests with a touch of classic opulence.',
-    year: '2024',
+    year: '2016',
     status: 'Completed',
-    projectType: 'Fiberglass Columns / Architectural Cladding',
-    scope: 'Interior & Exterior Cladding',
+    projectType: 'Fiberglass Pool Accents / Cartoon Characters / Rock Fall Formation / Chess Set / Exterior Mouldings, Bricks',
+    scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7aa1514139808766c8a5947fd5e9846b.jpeg',
-        caption: 'Exterior View',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/598eb7a905b433e1baac5b9dae69bee7.jpeg',
-        caption: 'Casino Entrance',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d9ff6b6d9266051598e56af3bbed5bb2.jpeg',
-        caption: 'Architectural Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ae944a002f04e61d84597b1edc8bdbf6.jpeg',
-        caption: 'Casino Signage',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7ea8c27012d329eb90d74bc4a63c19d4.jpeg',
-        caption: 'Casino Facade',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7aa1514139808766c8a5947fd5e9846b.jpeg', caption: 'Exterior View' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/598eb7a905b433e1baac5b9dae69bee7.jpeg', caption: 'Casino Entrance' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d9ff6b6d9266051598e56af3bbed5bb2.jpeg', caption: 'Architectural Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ae944a002f04e61d84597b1edc8bdbf6.jpeg', caption: 'Casino Signage' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7ea8c27012d329eb90d74bc4a63c19d4.jpeg', caption: 'Casino Facade' },
     ],
   },
   {
     id: 2,
     slug: 'wang-shan-lo-restaurant',
     name: 'Wang Shang Lo Chinese Restaurant',
-    location: 'Crown Regency Hotel & Towers, Cebu',
+    location: 'Crown Regency Hotel & Towers, Cebu City',
+    mapQuery: 'Crown Regency Hotel and Towers Cebu City Philippines',
     category: 'Hospitality',
     clientType: 'HoReCa',
     tagline: 'Wang Shan Lo',
@@ -54,18 +41,9 @@ export const projects = [
     projectType: 'Design / Fabrication / Installation',
     scope: 'Fiberglass Chandeliers / Wall Partitions',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c066dcdf6681da5b5b233748b920fe43.png',
-        caption: 'Interior View',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7cb5089f23e6a1283347272ab46e63dd.png',
-        caption: 'Chandelier Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de9700baf243b74d1800b89e15a878ed.png',
-        caption: 'Partition Detail',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c066dcdf6681da5b5b233748b920fe43.png', caption: 'Interior View' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7cb5089f23e6a1283347272ab46e63dd.png', caption: 'Chandelier Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de9700baf243b74d1800b89e15a878ed.png', caption: 'Partition Detail' },
     ],
   },
   {
@@ -73,6 +51,7 @@ export const projects = [
     slug: 'crown-regency-edge-coaster-seat',
     name: 'Crown Regency Hotel & Towers - Edge Coaster Seat',
     location: 'Osmeña Blvd, Cebu City',
+    mapQuery: 'Crown Regency Hotel and Towers Osmeña Boulevard Cebu City Philippines',
     category: 'Entertainment',
     clientType: 'Entertainment',
     tagline: 'Edge Coaster Seat',
@@ -84,14 +63,8 @@ export const projects = [
     projectType: 'Fiberglass Chair',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c3b2938acdd9cd7e64c0852f947b6842.png',
-        caption: 'Chair Design',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0daa0d7dd2e487ad8b21d0b4ad8895fb.png',
-        caption: 'Installation',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c3b2938acdd9cd7e64c0852f947b6842.png', caption: 'Chair Design' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0daa0d7dd2e487ad8b21d0b4ad8895fb.png', caption: 'Installation' },
     ],
   },
   {
@@ -99,6 +72,7 @@ export const projects = [
     slug: 'happy-play-cafe',
     name: 'Happy Play Cafe',
     location: 'Cebu City',
+    mapQuery: 'Happy Play Cafe Cebu City Philippines',
     category: 'Commercial',
     clientType: 'HoReCa',
     tagline: 'Happy Play',
@@ -110,25 +84,17 @@ export const projects = [
     projectType: 'Fiberglass Wall Panels / Counter Finish',
     scope: 'Interior Wall Panels & Counters',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e71792c5fcac3442be03c11ff24eb609.png',
-        caption: 'Interior View',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7e179eebd29893656cf0945ebfc0e2ca.png',
-        caption: 'Wall Panel Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/067c25688bdfb178a6630a7965a8b294.png',
-        caption: 'Counter Finish',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e71792c5fcac3442be03c11ff24eb609.png', caption: 'Interior View' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7e179eebd29893656cf0945ebfc0e2ca.png', caption: 'Wall Panel Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/067c25688bdfb178a6630a7965a8b294.png', caption: 'Counter Finish' },
     ],
   },
   {
     id: 5,
     slug: 'city-hall-of-justice',
     name: 'City Hall of Justice',
-    location: 'Lapu-Lapu City',
+    location: 'Lapu-Lapu City, Cebu',
+    mapQuery: 'Hall of Justice Lapu-Lapu City Cebu Philippines',
     category: 'Government',
     clientType: 'Government',
     tagline: 'Hall of Justice',
@@ -140,26 +106,11 @@ export const projects = [
     projectType: 'Fiberglass Columns / Moldings / Statue',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/262e81a4b76c14f61e248c2c3589f6fc.png',
-        caption: 'Facade View',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/b63a23cbffc0a4c0c6ad4418daab9864.png',
-        caption: 'Column Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4be4b8ed36d2bcdee2ae7837f8eb59ac.png',
-        caption: 'Pediment',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4d107e7fc143d65ca68e7af6f05b2084.png',
-        caption: 'Main Entrance',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/f311a67df0705a4f2f046300a30cb78e.png',
-        caption: 'Interior View',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/262e81a4b76c14f61e248c2c3589f6fc.png', caption: 'Facade View' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/b63a23cbffc0a4c0c6ad4418daab9864.png', caption: 'Column Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4be4b8ed36d2bcdee2ae7837f8eb59ac.png', caption: 'Pediment' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4d107e7fc143d65ca68e7af6f05b2084.png', caption: 'Main Entrance' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/f311a67df0705a4f2f046300a30cb78e.png', caption: 'Interior View' },
     ],
   },
   {
@@ -167,6 +118,7 @@ export const projects = [
     slug: 'jsu-psu-mariners-court',
     name: "JSU-PSU Mariners' Court",
     location: 'Pier 1, Cebu City',
+    mapQuery: 'Pier 1 Cebu City Philippines',
     category: 'Hospitality',
     clientType: 'Hospitality',
     tagline: "Mariners' Court",
@@ -178,14 +130,8 @@ export const projects = [
     projectType: 'Fiberglass Anchor / Letters',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/83261685db07c5e117a326ace8fddfbc.png',
-        caption: 'Building Exterior',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/a6edd2093b7fcc11e929439797b4e8b7.png',
-        caption: 'Anchor Detail',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/83261685db07c5e117a326ace8fddfbc.png', caption: 'Building Exterior' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/a6edd2093b7fcc11e929439797b4e8b7.png', caption: 'Anchor Detail' },
     ],
   },
   {
@@ -193,6 +139,7 @@ export const projects = [
     slug: 'dosage',
     name: 'Dosage',
     location: 'Cebu City',
+    mapQuery: 'Dosage Cebu City Philippines',
     category: 'Retail',
     clientType: 'Retail',
     tagline: 'Dosage Store',
@@ -204,18 +151,9 @@ export const projects = [
     projectType: 'Fiberglass Storefront Cladding',
     scope: 'Storefront Cladding',
     gallery: [
-      {
-        src: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20modern%20commercial%20building%20storefront%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-dosage-bw-001&orientation=landscape',
-        caption: 'Storefront View',
-      },
-      {
-        src: 'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20retail%20store%20exterior%20fiberglass%20panel%20cladding%20detail%20seamless%20finish%20modern%20architecture%20dramatic%20shadows%20clean%20background&width=600&height=400&seq=inspire-dosage-bw-002&orientation=landscape',
-        caption: 'Panel Detail',
-      },
-      {
-        src: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20storefront%20signage%20area%20with%20fiberglass%20composite%20panels%20sleek%20contemporary%20retail%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-dosage-bw-003&orientation=landscape',
-        caption: 'Signage',
-      },
+      { src: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20modern%20commercial%20building%20storefront%20architectural%20design%20contemporary%20structure%20dramatic%20lighting%20monochrome%20photography%20clean%20composition&width=600&height=400&seq=inspire-dosage-bw-001&orientation=landscape', caption: 'Storefront View' },
+      { src: 'https://readdy.ai/api/search-image?query=Monochrome%20photo%20of%20retail%20store%20exterior%20fiberglass%20panel%20cladding%20detail%20seamless%20finish%20modern%20architecture%20dramatic%20shadows%20clean%20background&width=600&height=400&seq=inspire-dosage-bw-002&orientation=landscape', caption: 'Panel Detail' },
+      { src: 'https://readdy.ai/api/search-image?query=Black%20and%20white%20photograph%20of%20storefront%20signage%20area%20with%20fiberglass%20composite%20panels%20sleek%20contemporary%20retail%20design%20dramatic%20lighting%20monochrome&width=600&height=400&seq=inspire-dosage-bw-003&orientation=landscape', caption: 'Signage' },
     ],
   },
   {
@@ -223,6 +161,7 @@ export const projects = [
     slug: 'kenjelo-farm-recreations-resorts',
     name: 'Kenjelo Farm & Recreations Resorts Corp.',
     location: 'Oroquieta, Misamis Occidental',
+    mapQuery: 'Oroquieta City Misamis Occidental Philippines',
     category: 'Hospitality',
     clientType: 'Hospitality',
     tagline: 'Kenjelo Farm',
@@ -235,18 +174,9 @@ export const projects = [
     projectType: 'Fiberglass Fountain',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de51823d9b4553eb65cadf5dfdb1c249.png',
-        caption: 'Fiberglass Fountain',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/12df40d70231537fd6d8ad65602e1a0d.png',
-        caption: 'Fountain Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0cd03e5c78941a4a497445cdd2515715.png',
-        caption: 'Resort Grounds',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/de51823d9b4553eb65cadf5dfdb1c249.png', caption: 'Fiberglass Fountain' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/12df40d70231537fd6d8ad65602e1a0d.png', caption: 'Fountain Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0cd03e5c78941a4a497445cdd2515715.png', caption: 'Resort Grounds' },
     ],
   },
   {
@@ -254,29 +184,21 @@ export const projects = [
     slug: 'crown-regency-melvins-reef-mini-golf',
     name: "Crown Regency Hotel & Towers - Melvin's Reef Black Light Mini Golf",
     location: 'Osmeña Blvd, Cebu City',
+    mapQuery: 'Crown Regency Hotel and Towers Osmeña Boulevard Cebu City Philippines',
     category: 'Entertainment',
     clientType: 'Entertainment',
     tagline: "Melvin's Reef",
     image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/350f792f56b4b82c8b43ab9858c87a68.png',
     description:
       "A vibrant black light mini golf attraction at Crown Regency Hotel & Towers, featuring custom-fabricated fiberglass signage, themed golf decors, and immersive setups. HULMA brought the underwater world of Melvin's Reef to life through intricately crafted fiberglass sea creatures, signage, and decorative elements — all designed to glow brilliantly under black light, creating a one-of-a-kind entertainment experience.",
-    year: '2011',
+    year: '2015',
     status: 'Completed',
     projectType: 'Fiberglass Signage, Golf Decors, Setups',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/350f792f56b4b82c8b43ab9858c87a68.png',
-        caption: 'Mini Golf Area',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ef6af6babb11c290c360d3c998fffaff.png',
-        caption: 'Signage',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1d25de3ff99af2bcc5e61b2a2064228c.png',
-        caption: 'Decorative Elements',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/350f792f56b4b82c8b43ab9858c87a68.png', caption: 'Mini Golf Area' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ef6af6babb11c290c360d3c998fffaff.png', caption: 'Signage' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1d25de3ff99af2bcc5e61b2a2064228c.png', caption: 'Decorative Elements' },
     ],
   },
   {
@@ -284,6 +206,7 @@ export const projects = [
     slug: 'solea-mactan-resort',
     name: 'Solea Mactan Resort',
     location: 'Cordova, Cebu',
+    mapQuery: 'Solea Mactan Resort Cordova Cebu Philippines',
     category: 'Hospitality',
     clientType: 'Hospitality',
     tagline: 'Solea Mactan Resort',
@@ -296,92 +219,42 @@ export const projects = [
     projectType: 'Fiberglass Slide / Chess Set / Pool Accents',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac9d3589e8bab1f6d21439975cca2b0d.png',
-        caption: 'Fiberglass Slide',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1262736a01f2ef08f760dcef7043410f.png',
-        caption: 'Chess Set',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1f39e11f42bc08f0e1f81e7c85cc8674.png',
-        caption: 'Pool Accents',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/26cd41ccba9f4efbf14a9e5814fc8ef0.png',
-        caption: 'Fiberglass Rocks',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c723f302cba60731442edf47ff090dfa.png',
-        caption: 'Water Slide Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/befe7b3777246215d39a66d25b60eddc.png',
-        caption: 'Chess Set',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/f5ff6968e135448e6a1db54e7012b10b.png',
-        caption: 'Water Slide',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac9d3589e8bab1f6d21439975cca2b0d.png', caption: 'Fiberglass Slide' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1262736a01f2ef08f760dcef7043410f.png', caption: 'Chess Set' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/1f39e11f42bc08f0e1f81e7c85cc8674.png', caption: 'Pool Accents' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/26cd41ccba9f4efbf14a9e5814fc8ef0.png', caption: 'Fiberglass Rocks' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c723f302cba60731442edf47ff090dfa.png', caption: 'Water Slide Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/befe7b3777246215d39a66d25b60eddc.png', caption: 'Chess Set' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/f5ff6968e135448e6a1db54e7012b10b.png', caption: 'Water Slide' },
     ],
   },
   {
     id: 11,
     slug: 'jpark-island-resort-waterpark',
     name: 'Jpark Island Resort & Waterpark',
-    location: 'Cordova, Cebu',
+    location: 'Maribago, Lapu-Lapu City, Cebu',
+    mapQuery: 'JPark Island Resort and Waterpark Cebu Philippines',
     category: 'Entertainment',
     clientType: 'Entertainment',
     tagline: 'Jpark Island Resort',
     image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg',
     description:
-      'A large-scale fiberglass fabrication project for Jpark Island Resort & Waterpark in Cordova, Cebu. HULMA crafted and installed a wide range of custom fiberglass elements including vibrant pool accents, whimsical cartoon characters, dramatic rock fall formations, an oversized chess set, and detailed exterior mouldings and bricks — all designed to enhance the resort\'s immersive tropical theme and withstand the demands of a high-traffic waterpark environment.',
+      'A large-scale fiberglass fabrication project for Jpark Island Resort & Waterpark in Maribago, Lapu-Lapu City, Cebu. HULMA crafted and installed a wide range of custom fiberglass elements including vibrant pool accents, whimsical cartoon characters, dramatic rock fall formations, an oversized chess set, and detailed exterior mouldings and bricks — all designed to enhance the resort\'s immersive tropical theme and withstand the demands of a high-traffic waterpark environment.',
     year: '2016',
     status: 'Completed',
-    projectType: 'Fiberglass Chess Set',
+    projectType: 'Fiberglass Pool Accents / Cartoon Characters / Rock Fall Formation / Chess Set / Exterior Mouldings, Bricks',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg',
-        caption: 'Amazon River',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d93853705b68edd9ade5a273d45a6bca.jpeg',
-        caption: 'Amazon River',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0bc996f7ee802ab405ec87a23b343eeb.jpeg',
-        caption: "Toddler's Pool",
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c768494704e36d0a100613260bd5193d.jpeg',
-        caption: "Toddler's Pool",
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/a186a005db99a3ed8c3975f266ebf780.jpeg',
-        caption: 'Wave Pool',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d4398baff2fe06303ecd9ddb9120e1fa.jpeg',
-        caption: 'Wave Pool',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9bfdaa96471b3beb748a56ee752b2b89.jpeg',
-        caption: 'Exterior Moulding',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/739333a154336e6f614e4c29073a477d.jpeg',
-        caption: 'Exterior Moulding',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e23d5211dce66ccd57b162670ed66653.jpeg',
-        caption: 'Outdoor Chess Area',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9c59c9bfe7abec023ada5c6a2be3eb51.jpeg',
-        caption: 'Outdoor Chess Area',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg', caption: 'Amazon River' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d93853705b68edd9ade5a273d45a6bca.jpeg', caption: 'Amazon River' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/0bc996f7ee802ab405ec87a23b343eeb.jpeg', caption: "Toddler's Pool" },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c768494704e36d0a100613260bd5193d.jpeg', caption: "Toddler's Pool" },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/a186a005db99a3ed8c3975f266ebf780.jpeg', caption: 'Wave Pool' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d4398baff2fe06303ecd9ddb9120e1fa.jpeg', caption: 'Wave Pool' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9bfdaa96471b3beb748a56ee752b2b89.jpeg', caption: 'Exterior Moulding' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/739333a154336e6f614e4c29073a477d.jpeg', caption: 'Exterior Moulding' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/e23d5211dce66ccd57b162670ed66653.jpeg', caption: 'Outdoor Chess Area' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9c59c9bfe7abec023ada5c6a2be3eb51.jpeg', caption: 'Outdoor Chess Area' },
     ],
   },
   {
@@ -389,6 +262,7 @@ export const projects = [
     slug: 'beast-crew',
     name: 'Beast Crew',
     location: 'Elizabeth Mall (E-Mall), Cebu City',
+    mapQuery: 'Elizabeth Mall E-Mall Cebu City Philippines',
     category: 'Retail',
     clientType: 'Retail',
     tagline: 'Beast Crew',
@@ -400,18 +274,9 @@ export const projects = [
     projectType: 'Fiberglass Travertine Pedestal',
     scope: 'Fabrication / Installation',
     gallery: [
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d68124ba1ae666388b243f7ae597eaa0.jpeg',
-        caption: 'Store Interior',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c4a85b65506f4729b2b0e2f83dd0da25.jpeg',
-        caption: 'Travertine Pedestal Detail',
-      },
-      {
-        src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac39a42f3ea611821548d18df64a9d77.jpeg',
-        caption: 'Pedestal Display Setup',
-      },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/d68124ba1ae666388b243f7ae597eaa0.jpeg', caption: 'Store Interior' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/c4a85b65506f4729b2b0e2f83dd0da25.jpeg', caption: 'Travertine Pedestal Detail' },
+      { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/ac39a42f3ea611821548d18df64a9d77.jpeg', caption: 'Pedestal Display Setup' },
     ],
   },
 ];

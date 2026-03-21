@@ -99,7 +99,7 @@ export default function WhatWeDo() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
           {capabilities.map((item, index) => (
             <a
               key={item.id}
@@ -111,7 +111,7 @@ export default function WhatWeDo() {
             >
               {/* Glassmorphism card */}
               <div
-                className="relative w-full aspect-square rounded-2xl overflow-hidden"
+                className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden"
                 style={{
                   border: '1px solid rgba(255,255,255,0.18)',
                   backdropFilter: 'blur(12px)',

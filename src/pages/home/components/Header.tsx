@@ -651,7 +651,7 @@ function ProductsDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
       <div className="w-64 p-4 flex-shrink-0">
         <div className="relative w-full h-full rounded-xl overflow-hidden min-h-[220px]">
           <img
-            src="https://readdy.ai/api/search-image?query=Terracotta%20fiberglass%20architectural%20panel%20texture%20warm%20earthy%20orange%20red%20tones%20natural%20clay%20appearance%20smooth%20surface%20modern%20material%20sample%20clean%20simple%20background%20product%20photography&width=400&height=500&seq=product-terracotta-001&orientation=portrait"
+            src="https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/9bcb8ecbc7371b9a0570cc7d81344810.png"
             alt="Featured product"
             className="w-full h-full object-cover object-top"
           />

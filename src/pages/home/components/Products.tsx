@@ -151,19 +151,19 @@ export default function Products() {
                   />
 
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/45 transition-all duration-400" />
 
                   {/* Shimmer */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
                     <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
                   </div>
 
-                  {/* Name — slides up to center on hover */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-end group-hover:justify-center transition-all duration-500 pb-6 group-hover:pb-0">
-                    <h3 className="text-sm font-medium text-white drop-shadow-lg translate-y-0 group-hover:-translate-y-2 transition-transform duration-500">
+                  {/* Name centered by default, nudges up on hover; Coming Soon fades in centered */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center">
+                    <h3 className="text-sm font-medium text-white drop-shadow-lg group-hover:-translate-y-3 transition-transform duration-500">
                       {product.name}
                     </h3>
-                    <p className="text-[10px] tracking-widest uppercase text-white/80 mt-1 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 delay-75">
+                    <p className="text-[10px] tracking-widest uppercase text-white/70 mt-1 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 delay-100">
                       Coming Soon
                     </p>
                   </div>

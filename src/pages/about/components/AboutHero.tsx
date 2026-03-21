@@ -30,7 +30,7 @@ export default function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/2b737cdd-8cb5-4b4e-902e-2867de4d98dc_Screenshot-2026-03-21-at-1.12.11AM.png?v=53419895d211149b2c69eacaf48eb2f9"
+          src="https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/9d32fd30-bfcf-404e-ad45-fbc99c035bb8_Hulma-Website-About-Us.png?v=b3994982ee30a541212f8a4ba5f2a5c4"
           alt="HULMA fiberglass manufacturing workshop"
           className="w-full h-full object-cover object-center transition-none"
           style={{ filter: `blur(${scrollBlur}px)`, transform: 'scale(1.05)' }}
@@ -63,7 +63,7 @@ export default function AboutHero() {
               About
             </p>
             <h1
-              className="font-serif font-light text-white leading-tight"
+              className="font-serif font-bold text-white leading-tight"
               style={{ fontSize: 'clamp(1.8rem, 3.5vw, 3rem)' }}
             >
               Hulma Cebu
