@@ -99,8 +99,8 @@ export default function AboutCTA() {
                       ? '1px solid rgba(177,141,117,0.55)'
                       : '1px solid rgba(191,184,174,0.13)',
                     boxShadow: isHovered
-                      ? '0 0 35px rgba(177,141,117,0.28), inset 0 1px 0 rgba(255,255,255,0.06)'
-                      : 'none',
+                      ? '0 0 35px rgba(177,141,117,0.28), inset 0 1px 0 rgba(255,255,255,0.12)'
+                      : 'inset 0 1px 0 rgba(255,255,255,0.04)',
                     transform: isHovered ? 'scale(1.025)' : 'scale(1)',
                     transition: 'all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)',
                     backdropFilter: 'blur(16px)',
@@ -109,6 +109,27 @@ export default function AboutCTA() {
                   onMouseEnter={() => setHoveredCard(i)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
+                  {/* Glass shimmer sweep */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      background: 'linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.13) 50%, transparent 60%)',
+                      transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)',
+                      transition: isHovered ? 'transform 0.55s ease' : 'none',
+                    }}
+                  />
+
+                  {/* Top edge highlight */}
+                  <div
+                    className="absolute inset-x-0 top-0 h-px pointer-events-none"
+                    style={{
+                      background: isHovered
+                        ? 'linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)'
+                        : 'linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent)',
+                      transition: 'background 0.35s ease',
+                    }}
+                  />
+
                   {isHovered && (
                     <div
                       className="absolute left-4 top-1/2 -translate-y-1/2 w-20 h-20 rounded-full pointer-events-none"
