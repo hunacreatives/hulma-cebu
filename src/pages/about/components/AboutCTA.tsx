@@ -38,6 +38,17 @@ export default function AboutCTA() {
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden" style={{ background: '#2A2E2A' }}>
+      {/* Glass shine keyframes */}
+      <style>{`
+        @keyframes glass-shine {
+          0% { transform: translateX(-120%) skewX(-15deg); }
+          100% { transform: translateX(220%) skewX(-15deg); }
+        }
+        .cta-card-shine {
+          animation: glass-shine 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+      `}</style>
+
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -99,8 +110,8 @@ export default function AboutCTA() {
                       ? '1px solid rgba(177,141,117,0.55)'
                       : '1px solid rgba(191,184,174,0.13)',
                     boxShadow: isHovered
-                      ? '0 0 35px rgba(177,141,117,0.28), inset 0 1px 0 rgba(255,255,255,0.12)'
-                      : 'inset 0 1px 0 rgba(255,255,255,0.04)',
+                      ? '0 0 35px rgba(177,141,117,0.28), inset 0 1px 0 rgba(255,255,255,0.06)'
+                      : 'none',
                     transform: isHovered ? 'scale(1.025)' : 'scale(1)',
                     transition: 'all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1)',
                     backdropFilter: 'blur(16px)',
@@ -109,24 +120,26 @@ export default function AboutCTA() {
                   onMouseEnter={() => setHoveredCard(i)}
                   onMouseLeave={() => setHoveredCard(null)}
                 >
-                  {/* Glass shimmer sweep */}
-                  <div
-                    className="absolute inset-0 pointer-events-none"
-                    style={{
-                      background: 'linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.13) 50%, transparent 60%)',
-                      transform: isHovered ? 'translateX(100%)' : 'translateX(-100%)',
-                      transition: isHovered ? 'transform 0.55s ease' : 'none',
-                    }}
-                  />
+                  {/* Glass shine sweep */}
+                  {isHovered && (
+                    <div
+                      className="cta-card-shine absolute inset-0 pointer-events-none z-20"
+                      style={{
+                        background: 'linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.12) 50%, rgba(255,255,255,0.06) 55%, transparent 70%)',
+                        borderRadius: 'inherit',
+                      }}
+                    />
+                  )}
 
                   {/* Top edge highlight */}
                   <div
-                    className="absolute inset-x-0 top-0 h-px pointer-events-none"
+                    className="absolute top-0 left-0 right-0 pointer-events-none z-10"
                     style={{
+                      height: '1px',
                       background: isHovered
                         ? 'linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)'
-                        : 'linear-gradient(90deg, transparent, rgba(255,255,255,0.07), transparent)',
-                      transition: 'background 0.35s ease',
+                        : 'transparent',
+                      transition: 'background 0.4s ease',
                     }}
                   />
 
