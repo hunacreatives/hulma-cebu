@@ -94,7 +94,7 @@ export default function ProjectDetail() {
 
         {/* Breadcrumb */}
         <div
-          className={`absolute top-20 left-0 right-0 z-10 px-5 lg:px-16 opacity-0-init ${
+          className={`absolute top-28 left-0 right-0 z-10 px-5 lg:px-16 opacity-0-init ${
             isVisible ? 'animate-slide-in-left' : ''
           }`}
         >

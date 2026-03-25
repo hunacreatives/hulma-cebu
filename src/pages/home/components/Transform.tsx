@@ -54,18 +54,18 @@ export default function Transform() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/30"></div>
       </div>
 
-      {/* Content with glass card animation */}
+      {/* Content with glass card */}
       <div
         className={`relative z-10 max-w-3xl mx-auto text-center transition-all duration-1000 ${
           isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
         }`}
       >
         <div
-          className="rounded-3xl px-6 md:px-10 py-5 transition-all duration-700"
+          className="rounded-3xl px-6 md:px-10 py-5"
           style={{
-            background: isVisible ? 'rgba(255, 255, 255, 0.12)' : 'rgba(255, 255, 255, 0.05)',
-            backdropFilter: isVisible ? 'blur(20px)' : 'blur(5px)',
-            WebkitBackdropFilter: isVisible ? 'blur(20px)' : 'blur(5px)',
+            background: 'rgba(255, 255, 255, 0.12)',
+            backdropFilter: 'blur(20px)',
+            WebkitBackdropFilter: 'blur(20px)',
             border: '1px solid rgba(255, 255, 255, 0.25)',
             boxShadow: '0 16px 48px rgba(0, 0, 0, 0.1)',
           }}
@@ -87,10 +87,10 @@ export default function Transform() {
             </Link>
             <Link
               to="/request-samples"
-              className="w-full sm:w-auto relative px-6 py-3 bg-white text-hulma-green rounded-full text-xs font-medium hover:bg-hulma-ghost transition-all whitespace-nowrap cursor-pointer tracking-wide overflow-hidden group text-center"
+              className="w-full sm:w-auto relative px-6 py-3 bg-white text-hulma-green rounded-full text-xs font-medium hover:bg-hulma-taupe hover:text-hulma-brown hover:scale-105 active:scale-95 transition-all duration-200 whitespace-nowrap cursor-pointer tracking-wide overflow-hidden group text-center"
             >
               <span className="relative z-10">Request Product Samples</span>
-              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-hulma-brown/10 to-transparent"></div>
             </Link>
           </div>
         </div>

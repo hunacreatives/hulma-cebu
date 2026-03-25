@@ -13,7 +13,7 @@ export default function AboutPage() {
   const [isVisible, setIsVisible] = useState(false);
 
   useSEO({
-    title: 'About HULMA - Fiberglass Innovation & Architectural Excellence in Cebu',
+    title: 'About HULMA',
     description: 'Discover HULMA\'s story of crafting premium fiberglass architectural materials in Cebu. Learn about our commitment to innovation, quality, and sustainable design solutions for modern architecture.',
     keywords: 'about HULMA, fiberglass manufacturer Cebu, architectural materials company, building materials innovation',
     canonical: '/about',

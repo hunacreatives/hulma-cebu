@@ -16,8 +16,7 @@ const values = [
     tagline: 'What you draw is what we build.',
     description:
       "Fiberglass lets us bend, curve, texture, and scale without forcing the design to compromise. What you draw is what we build. No shortcuts, no substitutions.",
-    image:
-      'https://readdy.ai/api/search-image?query=Filipino%20craftsmen%20workers%20in%20workshop%20fabricating%20large%20curved%20fiberglass%20architectural%20panels%20hands%20on%20work%20molding%20shaping%20material%20warm%20workshop%20lighting%20Cebu%20Philippines%20artisan%20manufacturing%20authentic%20industrial%20setting%20brown%20skin%20workers&width=700&height=500&seq=about-value-freedom-ph-001&orientation=landscape',
+    image: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/8967e121-7367-4bcd-b123-7c4d4ddc044e_Screenshot-2026-03-26-at-3.06.20AM.png?v=4913c2d863c00d14640cbd35ac64e17a',
     icon: 'ri-shape-line',
   },
   {
