@@ -375,15 +375,24 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
 
             {/* Products with submenu */}
             <div>
-              <button
-                className="flex items-center justify-between w-full px-6 py-3.5 text-sm font-medium text-hulma-green hover:bg-hulma-ghost transition-colors cursor-pointer"
-                onClick={() => setMobileSubmenu(mobileSubmenu === 'products' ? null : 'products')}
-              >
-                <span>Products</span>
-                <span className={`w-5 h-5 flex items-center justify-center transition-transform duration-300 ${mobileSubmenu === 'products' ? 'rotate-180' : ''}`}>
-                  <i className="ri-arrow-down-s-line text-sm"></i>
-                </span>
-              </button>
+              <div className="flex items-center justify-between hover:bg-hulma-ghost transition-colors">
+                <a
+                  href="/#products"
+                  onClick={(e) => handleNavClick(e, '/', '#products')}
+                  className="flex-1 px-6 py-3.5 text-sm font-medium text-hulma-green cursor-pointer"
+                >
+                  Products
+                </a>
+                <button
+                  className="px-4 py-3.5 text-hulma-green cursor-pointer"
+                  onClick={() => setMobileSubmenu(mobileSubmenu === 'products' ? null : 'products')}
+                  aria-label="Toggle products submenu"
+                >
+                  <span className={`w-5 h-5 flex items-center justify-center transition-transform duration-300 ${mobileSubmenu === 'products' ? 'rotate-180' : ''}`}>
+                    <i className="ri-arrow-down-s-line text-sm"></i>
+                  </span>
+                </button>
+              </div>
               <div className={`overflow-hidden transition-all duration-300 ${mobileSubmenu === 'products' ? 'max-h-[500px]' : 'max-h-0'}`}>
                 <div className="bg-hulma-ghost/50 py-2 px-6">
                   <p className="text-[11px] font-semibold uppercase tracking-widest text-hulma-brown/60 mb-2 mt-1">Material Look</p>
@@ -425,15 +434,24 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
 
             {/* Get Inspired with submenu */}
             <div>
-              <button
-                className="flex items-center justify-between w-full px-6 py-3.5 text-sm font-medium text-hulma-green hover:bg-hulma-ghost transition-colors cursor-pointer"
-                onClick={() => setMobileSubmenu(mobileSubmenu === 'inspired' ? null : 'inspired')}
-              >
-                <span>Get Inspired</span>
-                <span className={`w-5 h-5 flex items-center justify-center transition-transform duration-300 ${mobileSubmenu === 'inspired' ? 'rotate-180' : ''}`}>
-                  <i className="ri-arrow-down-s-line text-sm"></i>
-                </span>
-              </button>
+              <div className="flex items-center justify-between hover:bg-hulma-ghost transition-colors">
+                <a
+                  href="/projects"
+                  onClick={(e) => handleNavClick(e, '/projects')}
+                  className="flex-1 px-6 py-3.5 text-sm font-medium text-hulma-green cursor-pointer"
+                >
+                  Get Inspired
+                </a>
+                <button
+                  className="px-4 py-3.5 text-hulma-green cursor-pointer"
+                  onClick={() => setMobileSubmenu(mobileSubmenu === 'inspired' ? null : 'inspired')}
+                  aria-label="Toggle inspired submenu"
+                >
+                  <span className={`w-5 h-5 flex items-center justify-center transition-transform duration-300 ${mobileSubmenu === 'inspired' ? 'rotate-180' : ''}`}>
+                    <i className="ri-arrow-down-s-line text-sm"></i>
+                  </span>
+                </button>
+              </div>
               <div className={`overflow-hidden transition-all duration-300 ${mobileSubmenu === 'inspired' ? 'max-h-[400px]' : 'max-h-0'}`}>
                 <div className="bg-hulma-ghost/50 py-2 px-6">
                   <p className="text-[11px] font-semibold uppercase tracking-widest text-hulma-brown/60 mb-2 mt-1">By Category</p>

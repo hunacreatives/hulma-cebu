@@ -81,7 +81,7 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen">
-      <Header />
+      <Header forceDark={project.slug === 'city-hall-of-justice'} />
 
       {/* Hero Banner */}
       <section className="relative w-full h-[70vh] overflow-hidden">

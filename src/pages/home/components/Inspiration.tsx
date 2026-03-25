@@ -110,19 +110,20 @@ export default function Inspiration() {
                 onMouseEnter={() => setHoveredId(project.id)}
                 onMouseLeave={() => setHoveredId(null)}
               >
-                <div className="relative aspect-[3/2] w-full h-auto overflow-hidden">
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.name}
                     className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110"
                   />
                   <div
-                    className={`absolute inset-0 bg-gradient-to-t from-black/60 to-transparent transition-all duration-500 ${
-                      hoveredId === project.id ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    className={`absolute inset-0 bg-gradient-to-t from-black/55 to-transparent transition-all duration-500 ${
+                      hoveredId === project.id ? 'opacity-100' : 'opacity-0'
                     }`}
                   >
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <span className="text-white text-sm font-medium">{project.name}</span>
+                    <div className="absolute bottom-0 left-0 right-0 p-3">
+                      <span className="text-white text-[11px] font-medium leading-tight block">{project.name}</span>
+                      <span className="text-white/70 text-[10px] mt-0.5 block">{project.location}</span>
                     </div>
                   </div>
                 </div>
