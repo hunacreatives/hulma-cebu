@@ -38,7 +38,7 @@ export default function AboutTagline() {
           className="font-serif text-hulma-brown/75 leading-snug mb-0.5"
           style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)', textWrap: 'balance' } as React.CSSProperties}
         >
-          At Hulma, fiberglass is not a substitute—it&apos;s a design tool.
+          At Hulma, fiberglass is not a substitute, it&apos;s a design tool.
         </p>
         <p
           className="font-serif text-hulma-brown/75 leading-snug mb-2.5"

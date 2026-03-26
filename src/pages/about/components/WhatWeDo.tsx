@@ -89,7 +89,7 @@ export default function WhatWeDo() {
             </h2>
           </div>
           <p
-            className={`text-sm text-hulma-brown/60 max-w-xs leading-relaxed lg:text-right transition-all duration-700 delay-300 ${
+            className={`text-sm text-hulma-brown/60 max-w-xl leading-relaxed lg:text-right transition-all duration-700 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >

@@ -46,9 +46,12 @@ export default function ContactForm() {
       body.append('projectType', formData.projectType);
       body.append('message', formData.message);
 
-      const res = await fetch('https://readdy.ai/api/form/d6etc0rv53dtlm7j9d90', {
+      const res = await fetch('https://formspree.io/f/mykbzgny', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json',
+        },
         body: body.toString(),
       });
 
@@ -77,7 +80,6 @@ export default function ContactForm() {
     <form
       ref={formRef}
       id="contact-form"
-      data-readdy-form
       onSubmit={handleSubmit}
       className="space-y-6"
     >

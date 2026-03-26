@@ -176,7 +176,7 @@ export default function ProjectDetail() {
       {/* Project Details */}
       <section className="py-8 px-5 md:py-10 lg:py-12 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-stretch">
             {/* Left - Description */}
             <div
               className={`opacity-0-init ${
@@ -213,14 +213,14 @@ export default function ProjectDetail() {
 
             {/* Right - Details Card */}
             <div
-              className={`bg-hulma-ghost rounded-2xl p-5 md:p-6 opacity-0-init ${
+              className={`bg-hulma-ghost rounded-2xl p-5 md:p-6 opacity-0-init flex flex-col ${
                 isVisible ? 'animate-slide-in-right animation-delay-300' : ''
               }`}
             >
               <h3 className="text-lg font-serif font-medium text-hulma-green mb-4">
                 Project Details
               </h3>
-              <div className="space-y-2">
+              <div className="flex-1 flex flex-col justify-between">
                 {/* Project Name */}
                 <div className={`flex justify-between items-start border-b border-hulma-taupe/30 pb-2 opacity-0-init ${isVisible ? 'animate-fade-up animation-delay-400' : ''}`}>
                   <span className="text-sm text-hulma-brown/60 font-sans">Project Name</span>

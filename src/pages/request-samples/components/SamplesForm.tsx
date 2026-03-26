@@ -120,9 +120,12 @@ export default function SamplesForm() {
       body.append('city', formData.city);
       body.append('notes', formData.notes);
 
-      const res = await fetch('https://readdy.ai/api/form/d6etlc6qd308q1a0arjg', {
+      const res = await fetch('https://formspree.io/f/mvzvgpwb', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Accept': 'application/json',
+        },
         body: body.toString(),
       });
 
@@ -280,7 +283,7 @@ export default function SamplesForm() {
             style={{ transitionDelay: '400ms' }}
           >
             <div className="rounded-2xl p-8 bg-white h-full" style={{ border: '1px solid rgba(191,184,174,0.25)' }}>
-              <form id="samples-form" data-readdy-form onSubmit={handleSubmit} className="space-y-5">
+              <form id="samples-form" onSubmit={handleSubmit} className="space-y-5">
 
                 <SectionLabel>Your Details</SectionLabel>
 

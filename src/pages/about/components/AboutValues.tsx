@@ -171,13 +171,12 @@ export default function AboutValues() {
                     }}
                   >
                     <div className="flex items-center gap-2 mb-3">
-                      <div className="w-5 h-px bg-hulma-orange" />
                       <span className="text-[10px] tracking-[0.22em] uppercase text-hulma-brown/50">
                         Principle 0{value.id}
                       </span>
                     </div>
                     <h3
-                      className="font-serif font-light text-hulma-green mb-1 leading-snug"
+                      className="font-serif font-bold text-hulma-green mb-1 leading-snug"
                       style={{ fontSize: 'clamp(0.9rem, 1.2vw, 1.1rem)' }}
                     >
                       {value.title}
@@ -246,7 +245,7 @@ export default function AboutValues() {
                       <span className="text-[10px] tracking-[0.2em] uppercase text-hulma-brown/40 block mb-0.5">
                         Principle 0{value.id}
                       </span>
-                      <p className="text-sm font-medium text-hulma-green leading-snug">{value.title}</p>
+                      <p className="text-sm font-bold text-hulma-green leading-snug">{value.title}</p>
                     </div>
                   </div>
                   <div

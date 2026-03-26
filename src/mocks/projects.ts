@@ -14,7 +14,7 @@ export const projects = [
       'The casino exterior at the resort seamlessly blends grandeur and craftsmanship with its fiberglass architectural accents. Majestic columns, molded to mimic the texture of natural stone, frame the entrance, while the textured facade exudes a refined elegance, all achieved through lightweight yet durable fiberglass. This innovative use of material ensures both aesthetic appeal and structural resilience, welcoming guests with a touch of classic opulence.',
     year: '2016',
     status: 'Completed',
-    projectType: 'Fiberglass Pool Accents / Cartoon Characters / Rock Fall Formation / Chess Set / Exterior Mouldings, Bricks',
+    projectType: 'Fiberglass Exterior Mouldings / Columns',
     scope: 'Fabrication / Installation',
     gallery: [
       { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/7aa1514139808766c8a5947fd5e9846b.jpeg', caption: 'Exterior View' },
@@ -242,7 +242,7 @@ export const projects = [
     id: 11,
     slug: 'jpark-island-resort-waterpark',
     name: 'Jpark Island Resort & Waterpark',
-    location: 'Maribago, Lapu-Lapu City, Cebu',
+    location: 'Wang Shang Lo',
     mapQuery: 'JPark Island Resort and Waterpark Cebu Philippines',
     category: 'Entertainment',
     clientType: 'Entertainment',
@@ -250,9 +250,9 @@ export const projects = [
     image: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg',
     description:
       'A large-scale fiberglass fabrication project for Jpark Island Resort & Waterpark in Maribago, Lapu-Lapu City, Cebu. HULMA crafted and installed a wide range of custom fiberglass elements including vibrant pool accents, whimsical cartoon characters, dramatic rock fall formations, an oversized chess set, and detailed exterior mouldings and bricks — all designed to enhance the resort\'s immersive tropical theme and withstand the demands of a high-traffic waterpark environment.',
-    year: '2016',
+    year: '2011',
     status: 'Completed',
-    projectType: 'Fiberglass Pool Accents / Cartoon Characters / Rock Fall Formation / Chess Set / Exterior Mouldings, Bricks',
+    projectType: 'Fiberglass Exterior Mouldings / Columns',
     scope: 'Fabrication / Installation',
     gallery: [
       { src: 'https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/63ee27539f8cd1d1ef00b5b4266d9dff.jpeg', caption: 'Amazon River' },

@@ -53,19 +53,19 @@ export default function OurStory() {
 
       {/* ── Main split layout ── */}
       <div className="max-w-7xl mx-auto pb-12 md:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 lg:gap-14 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-10 lg:gap-14 items-stretch">
 
-          {/* LEFT — sticky image panel */}
+          {/* LEFT — image panel */}
           <div
-            className={`lg:sticky lg:top-24 transition-all duration-1000 delay-100 ${
+            className={`transition-all duration-1000 delay-100 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'
             }`}
           >
-            <div className="relative rounded-2xl overflow-hidden w-full">
+            <div className="relative rounded-2xl overflow-hidden w-full h-full min-h-[480px] lg:h-[620px]">
               <img
                 src="https://static.readdy.ai/image/08981d36cd0b73cf08022d4d82071d03/4d2efdee661260035aaa5af8c591651d.png"
                 alt="Raul S. Masaya, Founder of HULMA Fiberglass Cebu"
-                className="w-full h-auto block"
+                className="w-full h-full object-cover object-top block"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-hulma-green/70 via-hulma-green/10 to-transparent pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 px-7 py-6">
@@ -79,7 +79,7 @@ export default function OurStory() {
 
           {/* RIGHT — text content */}
           <div
-            className={`transition-all duration-1000 delay-200 ${
+            className={`lg:max-h-[620px] lg:overflow-y-auto lg:pt-5 transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
             }`}
           >
@@ -95,11 +95,11 @@ export default function OurStory() {
               <div className="flex flex-col gap-1">
                 <h3
                   className="font-serif font-light text-hulma-green leading-snug text-center lg:text-left"
-                  style={{ fontSize: 'clamp(1.05rem, 4.5vw, 2.1rem)' }}
+                  style={{ fontSize: 'clamp(0.95rem, 2vw, 1.35rem)' }}
                 >
                   <span
                     className="lg:hidden font-serif text-hulma-orange/35 select-none"
-                    style={{ fontSize: 'clamp(1.4rem, 5.5vw, 2.6rem)', lineHeight: 1, verticalAlign: 'middle', marginRight: '0.1em' }}
+                    style={{ fontSize: 'clamp(1.2rem, 4vw, 2rem)', lineHeight: 1, verticalAlign: 'middle', marginRight: '0.1em' }}
                   >
                     &ldquo;
                   </span>
@@ -107,7 +107,7 @@ export default function OurStory() {
                 </h3>
                 <h3
                   className="font-serif italic text-hulma-brown leading-snug text-center lg:text-left"
-                  style={{ fontSize: 'clamp(1.05rem, 4.5vw, 2.1rem)' }}
+                  style={{ fontSize: 'clamp(0.95rem, 2vw, 1.35rem)' }}
                 >
                   Especially the spaces we shape.&rdquo;
                 </h3>
@@ -162,7 +162,7 @@ export default function OurStory() {
               {stats.map((s) => (
                 <div key={s.label}>
                   <p
-                    className="font-serif font-light text-hulma-green leading-none"
+                    className="font-serif font-bold text-hulma-green leading-none"
                     style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.2rem)' }}
                   >
                     {s.value}
