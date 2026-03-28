@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /contact
+Allow: /projects
+Allow: /category/
+Allow: /project/
+Disallow: /book-presentation
+Disallow: /request-samples
+
+Sitemap: https://example.com/sitemap.xml
