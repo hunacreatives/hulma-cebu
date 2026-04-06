@@ -136,7 +136,7 @@ export default function AboutValues() {
                     className="font-serif font-light text-xs tracking-widest"
                     style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)', color: 'rgba(63,68,63,0.4)' }}
                   >
-                    0{value.id}
+                    {value.id}
                   </span>
                   <div
                     className="w-9 h-9 flex items-center justify-center rounded-full"
@@ -172,7 +172,7 @@ export default function AboutValues() {
                   >
                     <div className="flex items-center gap-2 mb-3">
                       <span className="text-[10px] tracking-[0.22em] uppercase text-hulma-brown/50">
-                        Principle 0{value.id}
+                        Principle {value.id}
                       </span>
                     </div>
                     <h3
@@ -198,7 +198,7 @@ export default function AboutValues() {
                       WebkitBackdropFilter: 'blur(10px)',
                     }}
                   >
-                    <span className="font-serif font-light text-hulma-green text-xs">0{value.id}</span>
+                    <span className="font-serif font-light text-hulma-green text-xs">{value.id}</span>
                   </div>
                 </div>
               </div>
@@ -243,7 +243,7 @@ export default function AboutValues() {
                     </div>
                     <div>
                       <span className="text-[10px] tracking-[0.2em] uppercase text-hulma-brown/40 block mb-0.5">
-                        Principle 0{value.id}
+                        Principle {value.id}
                       </span>
                       <p className="text-sm font-bold text-hulma-green leading-snug">{value.title}</p>
                     </div>

@@ -27,7 +27,7 @@ export const projects = [
   {
     id: 2,
     slug: 'wang-shan-lo-restaurant',
-    name: 'Wang Shang Lo Chinese Restaurant',
+    name: 'Wang Shan Lo Chinese Restaurant',
     location: 'Crown Regency Hotel & Towers, Cebu City',
     mapQuery: 'Crown Regency Hotel and Towers Cebu City Philippines',
     category: 'Hospitality',
@@ -159,6 +159,7 @@ export const projects = [
     scope: 'Fabrication / Installation',
     gallery: [
       { src: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/4a2e3709-aaa3-4216-9bd8-6dc0e9f0e6fb_new-hulma_5.png?v=46ecae83de54f5d935109fafa3f4092a', caption: 'Kiosk Overview' },
+      { src: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/26e031c9-d61b-41d7-ba10-c7069b6a9929_new-hulma-.png?v=0171503f43650ad1ce8a0543f208ce20', caption: 'Kiosk Detail' },
       { src: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/37f7cbc4-ffab-4279-8b37-4e89eceef9f2_new-hulma_1.png?v=91e4246775c0ab03ca76f66c3db4d1b0', caption: 'Fiberglass Rock Detail' },
       { src: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/5b655e31-f12a-4e21-8778-6526ae958a6a_new-hulma_2.png?v=2e16fb6200384ba2da789cd791e33500', caption: 'Counter Base' },
       { src: 'https://storage.readdy-site.link/project_files/b63dedce-304e-445f-9039-a113450b67ef/0c57dcc6-30e0-45a6-9f40-c58f2426bdcd_new-hulma_3.png?v=8816bf02c4f58d4bd1be8aae527e0f36', caption: 'LED Light Trough' },
