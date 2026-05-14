@@ -1,74 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core pages -->
   <url>
-    <loc>https://example.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://example.com/about</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/about</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/contact</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/contact</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://example.com/projects</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/projects</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://example.com/category/series</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/book-presentation</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/request-samples</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Category pages -->
+  <url>
+    <loc>https://hulmacebu.com/category/series</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/category/material</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/category/material</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Project pages -->
+  <url>
+    <loc>https://hulmacebu.com/project/jpark-island-resort-waterpark-casino</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/wang-shan-lo-restaurant</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/crown-regency-edge-coaster-seat</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/happy-play-cafe-sm-jmall</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/city-hall-of-justice</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/jsu-psu-mariners-court</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/dosage</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/kenjelo-farm-recreations-resorts</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/crown-regency-melvins-reef-mini-golf</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/solea-mactan-resort</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/jpark-island-resort-waterpark</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/beast-crew</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/lk-bakery</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://hulmacebu.com/project/happy-play-cafe-robinsons-galleria</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog posts -->
+  <url>
+    <loc>https://hulmacebu.com/blog</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://example.com/project/1</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/blog/fiberglass-cladding-modern-architecture</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/project/2</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/blog/fiberglass-panels-vs-traditional-materials</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/project/3</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/blog/architectural-fiberglass-design-possibilities</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://example.com/project/4</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://example.com/project/5</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://example.com/project/6</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://hulmacebu.com/blog/sustainable-building-fiberglass-environmental-benefits</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

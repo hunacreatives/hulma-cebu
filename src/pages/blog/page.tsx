@@ -3,12 +3,30 @@ import { Link } from "react-router-dom";
 import { blogs } from "../../mocks/blogs";
 import Header from "../home/components/Header";
 import Footer from "../home/components/Footer";
+import { useSEO } from "../../utils/seo";
 
 export default function BlogPage() {
   const [visible, setVisible] = useState(false);
 
+  useSEO({
+    title: 'Journal — Fiberglass Insights & Project Stories | Hulma Cebu',
+    description: 'Explore HULMA Cebu\'s blog for architectural fiberglass insights, project case studies, material comparisons, and design inspiration for commercial and residential projects in the Philippines.',
+    keywords: 'fiberglass blog, architectural materials Philippines, fiberglass cladding, custom fabrication insights, Cebu architecture, building materials guide',
+    schema: {
+      '@context': 'https://schema.org',
+      '@type': 'Blog',
+      name: 'HULMA Cebu Journal',
+      url: 'https://hulmacebu.com/blog',
+      description: 'Fiberglass insights, project stories, and architectural material guides from HULMA Cebu.',
+      publisher: {
+        '@type': 'Organization',
+        name: 'HULMA Cebu',
+        url: 'https://hulmacebu.com',
+      },
+    },
+  });
+
   useEffect(() => {
-    document.title = "Journal | HULMA Fiberglass Cebu";
     window.scrollTo(0, 0);
     const t = setTimeout(() => setVisible(true), 80);
     return () => clearTimeout(t);

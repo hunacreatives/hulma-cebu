@@ -11,7 +11,7 @@ interface SEOProps {
 
 export function useSEO({ title, description, keywords, ogImage, schema }: SEOProps) {
   const location = useLocation();
-  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://example.com';
+  const siteUrl = import.meta.env.VITE_SITE_URL || 'https://hulmacebu.com';
   const canonicalUrl = `${siteUrl}${location.pathname}`;
 
   useEffect(() => {

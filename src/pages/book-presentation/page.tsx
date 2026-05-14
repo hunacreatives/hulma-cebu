@@ -4,12 +4,18 @@ import Header from '../home/components/Header';
 import Footer from '../home/components/Footer';
 import BookingHero from './components/BookingHero';
 import BookingForm from './components/BookingForm';
+import { useSEO } from '../../utils/seo';
 
 export default function BookPresentationPage() {
   const [isVisible, setIsVisible] = useState(false);
 
+  useSEO({
+    title: 'Book a Product Presentation — Hulma Cebu',
+    description: 'Schedule a private product presentation to experience HULMA Cebu\'s architectural fiberglass materials in person or virtually. Available for architects, designers, and developers.',
+    keywords: 'product presentation, material consultation, architectural fiberglass, design consultation, Cebu fiberglass showroom',
+  });
+
   useEffect(() => {
-    // Ensure the component is visible after mount and scroll to top
     setIsVisible(true);
     window.scrollTo(0, 0);
   }, []);
