@@ -63,7 +63,7 @@ export default function OurStory() {
           >
             <div className="relative rounded-2xl overflow-hidden w-full h-full min-h-[480px] lg:h-[620px]">
               <img
-                src="/images/4d2efdee661260035aaa5af8c591651d.png"
+                src="/images/4d2efdee661260035aaa5af8c591651d.webp"
                 alt="Raul S. Masaya, Founder of HULMA Fiberglass Cebu"
                 className="w-full h-full object-cover object-top block"
               />

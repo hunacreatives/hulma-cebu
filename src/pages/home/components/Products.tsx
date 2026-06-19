@@ -6,25 +6,25 @@ const products = [
     id: 1,
     name: 'Natural Stone Look',
     image:
-      '/images/d912c870cf912a368974d4fef7a553e3.jpeg',
+      '/images/d912c870cf912a368974d4fef7a553e3.webp',
   },
   {
     id: 2,
     name: 'Terrazzo Look',
     image:
-      '/images/7f6d95a8745cc8f0e12e9677cdbc0700.jpeg',
+      '/images/7f6d95a8745cc8f0e12e9677cdbc0700.webp',
   },
   {
     id: 3,
     name: 'Limestone',
     image:
-      '/images/9bcb8ecbc7371b9a0570cc7d81344810.png',
+      '/images/9bcb8ecbc7371b9a0570cc7d81344810.webp',
   },
   {
     id: 4,
     name: 'Custom',
     image:
-      '/images/7cb17a2720703a994ecbebd01424183f.jpeg',
+      '/images/7cb17a2720703a994ecbebd01424183f.webp',
   },
 ];
 

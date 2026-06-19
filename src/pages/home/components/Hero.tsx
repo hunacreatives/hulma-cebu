@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="/images/4d5ac0876686ef10bdd779de2ab9c5e7.png"
+          src="/images/4d5ac0876686ef10bdd779de2ab9c5e7.webp"
           alt="Modern architectural interior"
           className="w-full h-full object-cover object-top animate-ken-burns"
         />

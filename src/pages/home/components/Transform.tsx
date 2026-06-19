@@ -46,7 +46,7 @@ export default function Transform() {
       {/* Background Image with parallax */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/images/1767797f3b50420e55aa0e9afa4e86cb.jpeg"
+          src="/images/1767797f3b50420e55aa0e9afa4e86cb.webp"
           alt="Natural stone texture"
           className="w-full h-full object-cover object-center transition-transform duration-100"
           style={{ transform: `scale(1.2) translateY(${Math.max(-10, Math.min(10, scrollY * 0.15))}px)` }}

@@ -7,7 +7,7 @@ const values = [
     tagline: 'Every piece begins with your idea.',
     description:
       "We don't work from catalogs. Every piece is made to order, built from drawings, sketches, and real project needs. Your idea is the starting point, not a limitation.",
-    image: '/images/333f9e1132674a880ff8d1df9b813467.png',
+    image: '/images/333f9e1132674a880ff8d1df9b813467.webp',
     icon: 'ri-tools-line',
   },
   {
@@ -16,7 +16,7 @@ const values = [
     tagline: 'What you draw is what we build.',
     description:
       "Fiberglass lets us bend, curve, texture, and scale without forcing the design to compromise. What you draw is what we build. No shortcuts, no substitutions.",
-    image: '/images/8967e121-7367-4bcd-b123-7c4d4ddc044e_Screenshot-2026-03-26-at-3.06.20AM.png',
+    image: '/images/8967e121-7367-4bcd-b123-7c4d4ddc044e_Screenshot-2026-03-26-at-3.06.20AM.webp',
     icon: 'ri-shape-line',
   },
   {

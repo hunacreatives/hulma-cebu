@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-row items-start gap-6 lg:gap-8 flex-shrink-0">
             <a href="/" className="cursor-pointer self-start">
               <img
-                src="/images/a8afafe632f6fe43b8ba47586ff5e10a.png"
+                src="/images/a8afafe632f6fe43b8ba47586ff5e10a.webp"
                 alt="HULMA - Your Vision, Our Craft"
                 className="h-16 w-auto object-contain"
               />
@@ -91,7 +91,7 @@ export default function Footer() {
           <div className="flex items-start justify-between mb-6">
             <a href="/" className="cursor-pointer">
               <img
-                src="/images/a8afafe632f6fe43b8ba47586ff5e10a.png"
+                src="/images/a8afafe632f6fe43b8ba47586ff5e10a.webp"
                 alt="HULMA - Your Vision, Our Craft"
                 className="h-12 w-auto object-contain"
               />

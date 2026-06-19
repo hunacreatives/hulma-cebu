@@ -30,7 +30,7 @@ export default function AboutHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/images/9d32fd30-bfcf-404e-ad45-fbc99c035bb8_Hulma-Website-About-Us.png"
+          src="/images/9d32fd30-bfcf-404e-ad45-fbc99c035bb8_Hulma-Website-About-Us.webp"
           alt="HULMA fiberglass manufacturing workshop"
           className="w-full h-full object-cover object-center transition-none"
           style={{ filter: `blur(${scrollBlur}px)`, transform: 'scale(1.05)' }}

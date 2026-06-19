@@ -167,8 +167,8 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
   const contactHoverBg = showSolidBg ? '#3F443F' : 'rgba(255, 255, 255, 0.35)';
 
   const logoSrc = showSolidBg 
-    ? '/images/305588e21288d5abdb78f9019557dda5.png'
-    : '/images/f80f0ad8019cef13d6a90e36f07c49f1.png';
+    ? '/images/305588e21288d5abdb78f9019557dda5.webp'
+    : '/images/f80f0ad8019cef13d6a90e36f07c49f1.webp';
 
   const activeTextClass = (dropdown: DropdownType) =>
     activeDropdown === dropdown ? (showSolidBg ? 'text-hulma-orange' : 'text-white') : '';
@@ -200,7 +200,7 @@ export default function Header({ forceDark = false }: { forceDark?: boolean }) {
               >
                 <h1>
                   <img
-                    src={mobileMenuOpen ? '/images/305588e21288d5abdb78f9019557dda5.png' : logoSrc}
+                    src={mobileMenuOpen ? '/images/305588e21288d5abdb78f9019557dda5.webp' : logoSrc}
                     alt="HULMA"
                     className="h-12 w-auto transition-all duration-500"
                   />
@@ -669,7 +669,7 @@ function ProductsDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
       <div className="w-64 p-4 flex-shrink-0">
         <div className="relative w-full h-full rounded-xl overflow-hidden min-h-[220px]">
           <img
-            src="/images/9bcb8ecbc7371b9a0570cc7d81344810.png"
+            src="/images/9bcb8ecbc7371b9a0570cc7d81344810.webp"
             alt="Featured product"
             className="w-full h-full object-cover object-top"
           />

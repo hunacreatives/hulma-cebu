@@ -1,21 +1,21 @@
 import { useEffect, useRef, useState } from 'react';
 
 const clients = [
-  { id: 1, name: 'Crown Regency', logo: '/images/09c23f55db03c7cfa00145638ec8abc0.png' },
-  { id: 2, name: 'Solea', logo: '/images/3e5b0662d1dc97f7dea0b82a9e779aaf.png' },
-  { id: 3, name: 'Kenjelo', logo: '/images/65065cc48ce03baeaea2017b3b57459e.png' },
-  { id: 4, name: 'Casino Filipino', logo: '/images/80f4e57b674cab0da4a90ec4763318a2.png' },
-  { id: 5, name: 'Mango Daycare', logo: '/images/84cebfa8ea5718f488e60bf15bc17ea5.png' },
-  { id: 6, name: 'Dosage', logo: '/images/631aa53423aa4567025fc5fb19af8810.png' },
-  { id: 7, name: 'Fifties Cafe', logo: '/images/2a621138e7eba8f5e79035fba28b1e50.png' },
-  { id: 8, name: 'Palace Casino', logo: '/images/cd9eacbe9268de453b5a7a3b385be8b4.png' },
-  { id: 9, name: 'FS Architects', logo: '/images/a1aa46be0122728e3a9a1d2f871f77db.png' },
-  { id: 10, name: 'Kite PH', logo: '/images/115feb98ba44fb7d99600f4a95b5236a.png' },
-  { id: 11, name: 'MOD', logo: '/images/de232222583d5b7d529858a2794b0f3a.png' },
-  { id: 12, name: 'LK Bakery', logo: '/images/0e4504edafad9f29b3bccab5d057d2a6.png' },
-  { id: 13, name: 'Client 13', logo: '/images/3eed00b508d5dee60aed93dc830e214e.png' },
-  { id: 14, name: 'Client 14', logo: '/images/5c411155-828a-4662-9ad6-c9d45e39cdbd_18.png' },
-  { id: 15, name: 'Client 15', logo: '/images/9ccd21e7-8208-47a8-a0d1-9c1b2ffc08d5_19.png' },
+  { id: 1, name: 'Crown Regency', logo: '/images/09c23f55db03c7cfa00145638ec8abc0.webp' },
+  { id: 2, name: 'Solea', logo: '/images/3e5b0662d1dc97f7dea0b82a9e779aaf.webp' },
+  { id: 3, name: 'Kenjelo', logo: '/images/65065cc48ce03baeaea2017b3b57459e.webp' },
+  { id: 4, name: 'Casino Filipino', logo: '/images/80f4e57b674cab0da4a90ec4763318a2.webp' },
+  { id: 5, name: 'Mango Daycare', logo: '/images/84cebfa8ea5718f488e60bf15bc17ea5.webp' },
+  { id: 6, name: 'Dosage', logo: '/images/631aa53423aa4567025fc5fb19af8810.webp' },
+  { id: 7, name: 'Fifties Cafe', logo: '/images/2a621138e7eba8f5e79035fba28b1e50.webp' },
+  { id: 8, name: 'Palace Casino', logo: '/images/cd9eacbe9268de453b5a7a3b385be8b4.webp' },
+  { id: 9, name: 'FS Architects', logo: '/images/a1aa46be0122728e3a9a1d2f871f77db.webp' },
+  { id: 10, name: 'Kite PH', logo: '/images/115feb98ba44fb7d99600f4a95b5236a.webp' },
+  { id: 11, name: 'MOD', logo: '/images/de232222583d5b7d529858a2794b0f3a.webp' },
+  { id: 12, name: 'LK Bakery', logo: '/images/0e4504edafad9f29b3bccab5d057d2a6.webp' },
+  { id: 13, name: 'Client 13', logo: '/images/3eed00b508d5dee60aed93dc830e214e.webp' },
+  { id: 14, name: 'Client 14', logo: '/images/5c411155-828a-4662-9ad6-c9d45e39cdbd_18.webp' },
+  { id: 15, name: 'Client 15', logo: '/images/9ccd21e7-8208-47a8-a0d1-9c1b2ffc08d5_19.webp' },
 ];
 
 const row1 = clients.slice(0, 7);
