@@ -154,7 +154,13 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-5 border-t border-hulma-taupe/30 flex items-center justify-center">
+        <div className="pt-5 border-t border-hulma-taupe/30 flex flex-col-reverse gap-1.5 sm:flex-row items-center justify-between">
+          <p className="text-[10px] text-hulma-brown/50">
+            Website by{' '}
+            <a href="https://hunacreatives.com" target="_blank" rel="noopener noreferrer nofollow" className="hover:text-hulma-green transition-colors cursor-pointer">
+              Huna Creatives
+            </a>
+          </p>
           <p className="text-[10px] text-hulma-brown/50">
             © {new Date().getFullYear()} HULMA. All rights reserved.
           </p>
