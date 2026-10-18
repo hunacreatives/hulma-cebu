@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { projects } from '../../../mocks/projects';
+import { useProjects } from '../../../lib/cms';
 
 export default function Inspiration() {
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredId, setHoveredId] = useState<number | null>(null);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
+  const { projects: allProjects } = useProjects();
+  // Featured projects lead the carousel.
+  const projects = [...allProjects.filter((p) => p.featured), ...allProjects.filter((p) => !p.featured)];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState<'left' | 'right'>('right');
   const [animKey, setAnimKey] = useState(0);

@@ -1,6 +1,8 @@
+import { useSiteSettings } from '../../../lib/cms';
 import { useEffect, useRef, useState } from 'react';
 
 export default function BookingForm() {
+  const settings = useSiteSettings();
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -39,7 +41,7 @@ export default function BookingForm() {
           style={{ border: '1px solid rgba(191,184,174,0.25)' }}
         >
           <iframe
-            src="https://calendly.com/hulmacebu/30min"
+            src={settings.calendlyUrl}
             width="100%"
             height="700"
             frameBorder="0"

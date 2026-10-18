@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { projects } from '../../mocks/projects';
+import { useProjects } from '../../lib/cms';
 
 interface SearchModalProps {
   isOpen: boolean;
@@ -32,15 +32,6 @@ const productSuggestions: SearchResult[] = [
   { name: 'Brown', type: 'Color', subtext: 'Products', path: '/coming-soon', icon: 'ri-palette-line' },
 ];
 
-const projectSuggestions: SearchResult[] = projects.map((p) => ({
-  name: p.name,
-  type: p.category,
-  subtext: p.location,
-  path: `/project/${p.slug}`,
-  icon: 'ri-building-line',
-}));
-
-const allSuggestions: SearchResult[] = [...productSuggestions, ...projectSuggestions];
 
 const quickSearches = ['Natural Stone', 'Terrazzo', 'Organic', 'Hospitality', 'Retail', 'Entertainment'];
 
@@ -49,6 +40,17 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
   const [filteredResults, setFilteredResults] = useState<SearchResult[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
+  const { projects } = useProjects();
+  const allSuggestions: SearchResult[] = [
+    ...productSuggestions,
+    ...projects.map((p) => ({
+      name: p.name,
+      type: p.category,
+      subtext: p.location,
+      path: `/project/${p.slug}`,
+      icon: 'ri-building-line',
+    })),
+  ];
 
   useEffect(() => {
     if (isOpen) {
@@ -85,7 +87,8 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       );
       setFilteredResults(filtered.slice(0, 10));
     }
-  }, [searchQuery]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchQuery, projects]);
 
   const handleResultClick = (path: string) => {
     onClose();

@@ -1,4 +1,15 @@
+import { useProjectCategories, useSiteSettings } from '../../../lib/cms';
+
 export default function Footer() {
+  const settings = useSiteSettings();
+  const categories = useProjectCategories();
+  const socials = ([
+    ['Facebook', settings.facebook, 'ri-facebook-fill'],
+    ['Instagram', settings.instagram, 'ri-instagram-line'],
+    ['TikTok', settings.tiktok, 'ri-tiktok-fill'],
+    ['LinkedIn', settings.linkedin, 'ri-linkedin-fill'],
+  ] as const).filter(([, href]) => href);
+
   return (
     <footer id="about" className="bg-hulma-ghost pt-10 pb-5 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
@@ -20,24 +31,17 @@ export default function Footer() {
                 Get in Touch
               </h4>
               <a
-                href="mailto:hulmacebu@gmail.com"
+                href={`mailto:${settings.email}`}
                 className="text-xs text-hulma-brown/70 hover:text-hulma-green transition-colors block mb-3 cursor-pointer"
               >
-                hulmacebu@gmail.com
+                {settings.email}
               </a>
               <div className="flex items-center gap-1 -ml-2.5">
-                <a href="https://www.facebook.com/hulmacebu/" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="Facebook">
-                  <i className="ri-facebook-fill text-base" />
-                </a>
-                <a href="https://www.instagram.com/hulmafiberglasscebu/" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="Instagram">
-                  <i className="ri-instagram-line text-base" />
-                </a>
-                <a href="https://www.tiktok.com/@hulmacebu" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="TikTok">
-                  <i className="ri-tiktok-fill text-base" />
-                </a>
-                <a href="https://www.linkedin.com/company/hulmafiberglasscebu" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="LinkedIn">
-                  <i className="ri-linkedin-fill text-base" />
-                </a>
+                {socials.map(([label, href, icon]) => (
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label={label}>
+                    <i className={`${icon} text-base`} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -71,15 +75,12 @@ export default function Footer() {
             <div className="flex flex-row items-center gap-0">
               <span className="text-[11px] font-semibold text-hulma-brown tracking-wider uppercase w-20 flex-shrink-0">Projects</span>
               <div className="flex flex-wrap items-center gap-y-1">
-                <a href="/projects?category=Entertainment" className="text-xs text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Entertainment</a>
-                <span className="mx-1.5 text-hulma-brown/25">|</span>
-                <a href="/projects?category=Hospitality" className="text-xs text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Hospitality</a>
-                <span className="mx-1.5 text-hulma-brown/25">|</span>
-                <a href="/projects?category=Commercial" className="text-xs text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Commercial</a>
-                <span className="mx-1.5 text-hulma-brown/25">|</span>
-                <a href="/projects?category=Government" className="text-xs text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Government</a>
-                <span className="mx-1.5 text-hulma-brown/25">|</span>
-                <a href="/projects?category=Retail" className="text-xs text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Retail</a>
+                {categories.map((cat, i) => (
+                  <span key={cat} className="flex items-center">
+                    {i > 0 && <span className="mx-1.5 text-hulma-brown/25">|</span>}
+                    <a href={`/projects?category=${encodeURIComponent(cat)}`} className="text-xs text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">{cat}</a>
+                  </span>
+                ))}
               </div>
             </div>
           </div>
@@ -98,24 +99,17 @@ export default function Footer() {
             </a>
             <div className="text-right">
               <a
-                href="mailto:hulmacebu@gmail.com"
+                href={`mailto:${settings.email}`}
                 className="text-xs text-hulma-brown/70 hover:text-hulma-green transition-colors block mb-2 cursor-pointer"
               >
-                hulmacebu@gmail.com
+                {settings.email}
               </a>
               <div className="flex items-center justify-end gap-0.5">
-                <a href="https://www.facebook.com/hulmacebu/" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="Facebook">
-                  <i className="ri-facebook-fill text-sm" />
-                </a>
-                <a href="https://www.instagram.com/hulmafiberglasscebu/" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="Instagram">
-                  <i className="ri-instagram-line text-sm" />
-                </a>
-                <a href="https://www.tiktok.com/@hulmacebu" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="TikTok">
-                  <i className="ri-tiktok-fill text-sm" />
-                </a>
-                <a href="https://www.linkedin.com/company/hulmafiberglasscebu" target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label="LinkedIn">
-                  <i className="ri-linkedin-fill text-sm" />
-                </a>
+                {socials.map(([label, href, icon]) => (
+                  <a key={label} href={href} target="_blank" rel="noopener noreferrer nofollow" className="w-7 h-7 flex items-center justify-center text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer" aria-label={label}>
+                    <i className={`${icon} text-sm`} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -143,11 +137,9 @@ export default function Footer() {
             <div>
               <span className="text-[10px] font-semibold text-hulma-brown tracking-wider uppercase block mb-2">Projects</span>
               <ul className="flex flex-col gap-1.5">
-                <li><a href="/projects?category=Entertainment" className="text-[11px] text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Entertainment</a></li>
-                <li><a href="/projects?category=Hospitality" className="text-[11px] text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Hospitality</a></li>
-                <li><a href="/projects?category=Commercial" className="text-[11px] text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Commercial</a></li>
-                <li><a href="/projects?category=Government" className="text-[11px] text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Government</a></li>
-                <li><a href="/projects?category=Retail" className="text-[11px] text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">Retail</a></li>
+                {categories.map((cat) => (
+                  <li key={cat}><a href={`/projects?category=${encodeURIComponent(cat)}`} className="text-[11px] text-hulma-brown/60 hover:text-hulma-green transition-colors cursor-pointer">{cat}</a></li>
+                ))}
               </ul>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { projects } from '../../../mocks/projects';
+import { useProjects, useProjectCategories } from '../../../lib/cms';
 import SearchModal from '../../../components/feature/SearchModal';
 
 const productMenuData = {
@@ -26,17 +26,11 @@ const productMenuData = {
   ],
 };
 
-const inspiredCategories = [
-  'Entertainment',
-  'Hospitality',
-  'Commercial',
-  'Retail',
-  'Government',
-];
 
 type DropdownType = 'products' | 'inspired' | 'about' | 'contact' | null;
 
 export default function Header({ forceDark = false }: { forceDark?: boolean }) {
+  const inspiredCategories = useProjectCategories();
   const [hidden, setHidden] = useState(false);
   const [pastHero, setPastHero] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<DropdownType>(null);
@@ -684,7 +678,10 @@ function ProductsDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
 }
 
 function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof useNavigate>; onClose: () => void }) {
-  const featuredProjects = projects.slice(0, 4);
+  const { projects } = useProjects();
+  const inspiredCategories = useProjectCategories();
+  const featured = projects.filter((p) => p.featured);
+  const featuredProjects = (featured.length ? featured : projects).slice(0, 4);
 
   const handleProjectClick = (e: React.MouseEvent<HTMLAnchorElement>, projectSlug: string) => {
     e.preventDefault();
@@ -757,7 +754,8 @@ function InspiredDropdown({ navigate, onClose }: { navigate: ReturnType<typeof u
                   <img
                     src={project.image}
                     alt={project.name}
-                    className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                    style={{ objectPosition: project.imagePosition || 'top' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>

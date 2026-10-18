@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSEO } from '../../utils/seo';
-import { projects } from '../../mocks/projects';
+import { useProjects } from '../../lib/cms';
 import Header from '../home/components/Header';
 import Footer from '../home/components/Footer';
 import PhotoGallery from './components/PhotoGallery';
@@ -12,8 +12,8 @@ export default function ProjectDetail() {
   const [isVisible, setIsVisible] = useState(false);
   const [moreProjectsPage, setMoreProjectsPage] = useState(0);
 
+  const { projects, ready } = useProjects();
   const project = projects.find((p) => p.slug === slug);
-  const currentIndex = projects.findIndex((p) => p.slug === slug);
   const otherProjects = projects.filter((p) => p.slug !== slug);
 
   const ITEMS_PER_PAGE = 6;
@@ -25,10 +25,10 @@ export default function ProjectDetail() {
 
   useSEO({
     title: project
-      ? `${project.name} - ${project.location} | HULMA Project Portfolio`
+      ? project.seoTitle || `${project.name} - ${project.location} | HULMA Project Portfolio`
       : 'Project Not Found | HULMA',
     description: project
-      ? `${project.description} Discover how HULMA's premium fiberglass materials transformed this ${project.category} project in ${project.location}.`
+      ? project.seoDescription || `${project.description} Discover how HULMA's premium fiberglass materials transformed this ${project.category} project in ${project.location}.`
       : 'Project not found',
     keywords: project
       ? `${project.name}, HULMA project, ${project.category}, ${project.location}, fiberglass architecture`
@@ -61,6 +61,10 @@ export default function ProjectDetail() {
     return () => clearTimeout(timer);
   }, [slug]);
 
+  if (!project && !ready) {
+    return <div className="min-h-screen bg-white" />;
+  }
+
   if (!project) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-hulma-ghost">
@@ -81,14 +85,15 @@ export default function ProjectDetail() {
 
   return (
     <div className="bg-white min-h-screen">
-      <Header forceDark={project.slug === 'city-hall-of-justice'} />
+      <Header forceDark={project.darkHeader} />
 
       {/* Hero Banner */}
       <section className="relative w-full h-[70vh] overflow-hidden">
         <img
           src={project.image}
-          alt={project.name}
-          className={`w-full h-full object-cover ${project.imagePosition ?? 'object-top'} animate-ken-burns`}
+          alt={project.imageAlt || project.name}
+          className="w-full h-full object-cover animate-ken-burns"
+          style={{ objectPosition: project.imagePosition || 'top' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
 
@@ -314,7 +319,8 @@ export default function ProjectDetail() {
                   <img
                     src={proj.image}
                     alt={proj.name}
-                    className={`w-full h-full object-cover ${proj.imagePosition ?? 'object-top'} grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 group-hover:brightness-110`}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                    style={{ objectPosition: proj.imagePosition || 'top' }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500" />
 

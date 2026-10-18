@@ -1,11 +1,9 @@
-// src/routes/index.tsx   (rename the file from .ts to .tsx)
-
-import React from "react";
+import { lazy, Suspense, type ReactNode } from "react";
+import { Navigate } from "react-router-dom";
 import type { RouteObject } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 import Home from "../pages/home/page";
 import ProjectDetail from "../pages/project/page";
-import CategoryPage from "../pages/category/page";
 import AboutPage from "../pages/about/page";
 import InspirationPage from "../pages/inspiration/page";
 import ContactPage from "../pages/contact/page";
@@ -14,6 +12,22 @@ import RequestSamplesPage from "../pages/request-samples/page";
 import BlogPage from "../pages/blog/page";
 import BlogDetailPage from "../pages/blog/[slug]/page";
 import ComingSoonPage from "../pages/coming-soon/page";
+import { AdminGate } from "../pages/admin/auth";
+
+// The website admin (hulmacebu.com/admin) loads on demand, so visitors never download it.
+const AdminLogin = lazy(() => import("../pages/admin/login/page"));
+const ProjectsAdmin = lazy(() => import("../pages/admin/projects/page"));
+const ProjectEditor = lazy(() => import("../pages/admin/projects/edit"));
+const EnquiriesAdmin = lazy(() => import("../pages/admin/enquiries/page"));
+const SettingsAdmin = lazy(() => import("../pages/admin/settings/page"));
+
+const adminLoading = (
+  <div className="flex h-screen items-center justify-center bg-white">
+    <i className="ri-loader-4-line animate-spin text-2xl text-gray-300" />
+  </div>
+);
+const page = (el: ReactNode) => <Suspense fallback={adminLoading}>{el}</Suspense>;
+const admin = (el: ReactNode) => page(<AdminGate>{el}</AdminGate>);
 
 const routes: RouteObject[] = [
   {
@@ -68,6 +82,12 @@ const routes: RouteObject[] = [
     path: "/request-samples",
     element: <RequestSamplesPage />,
   },
+  { path: "/admin/login", element: page(<AdminLogin />) },
+  { path: "/admin", element: admin(<Navigate to="/admin/projects" replace />) },
+  { path: "/admin/projects", element: admin(<ProjectsAdmin />) },
+  { path: "/admin/projects/:id", element: admin(<ProjectEditor />) },
+  { path: "/admin/enquiries", element: admin(<EnquiriesAdmin />) },
+  { path: "/admin/settings", element: admin(<SettingsAdmin />) },
   {
     path: "*",
     element: <NotFound />,

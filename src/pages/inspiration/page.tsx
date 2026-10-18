@@ -3,14 +3,14 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import { useSEO } from '../../utils/seo';
 import Header from '../home/components/Header';
 import Footer from '../home/components/Footer';
-import { projects } from '../../mocks/projects';
+import { useProjects, type Project } from '../../lib/cms';
 
 function ProjectCard({
   project,
   index,
   isVisible,
 }: {
-  project: (typeof projects)[0];
+  project: Project;
   index: number;
   isVisible: boolean;
 }) {
@@ -32,7 +32,8 @@ function ProjectCard({
         <img
           src={project.image}
           alt={project.name}
-          className={`w-full h-full object-cover ${project.imagePosition ?? 'object-top'} grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 group-hover:brightness-110`}
+          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+          style={{ objectPosition: project.imagePosition || 'top' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent rounded-xl opacity-100 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/0 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -71,7 +72,8 @@ export default function InspirationPage() {
   const sectionRef = useRef<HTMLElement>(null);
   const [searchParams] = useSearchParams();
 
-  const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category)))];
+  const { projects } = useProjects();
+  const categories = ['All', ...Array.from(new Set(projects.map((p) => p.category).filter(Boolean)))];
 
   const handleSort = (opt: 'date' | 'alpha') => {
     if (sortBy === opt) {
