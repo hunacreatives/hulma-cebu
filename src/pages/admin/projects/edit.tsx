@@ -398,8 +398,12 @@ export default function ProjectEditor() {
           <div className="space-y-5">
             <div className={`${card} space-y-4 p-5`}>
               <FormSection title="On the website">
-                <Toggle checked={draft.published} onChange={(v) => set('published', v)} label="Show on website" />
-                <Toggle checked={draft.featured} onChange={(v) => set('featured', v)} label="Featured" />
+                <div>
+                  <Toggle checked={draft.published} onChange={(v) => set('published', v)} label="Show on website" />
+                </div>
+                <div>
+                  <Toggle checked={draft.featured} onChange={(v) => set('featured', v)} label="Featured" />
+                </div>
                 <p className="-mt-1 text-[11px] text-gray-400">Featured projects appear in the menu and lead the homepage.</p>
               </FormSection>
             </div>
@@ -419,7 +423,9 @@ export default function ProjectEditor() {
                 <Field label="Describe the photo" hint="Read by Google and screen readers.">
                   <TextInput value={draft.cover_alt ?? ''} onChange={(e) => set('cover_alt', e.target.value)} />
                 </Field>
-                <Toggle checked={draft.dark_header} onChange={(v) => set('dark_header', v)} label="Dark menu text" />
+                <div>
+                  <Toggle checked={draft.dark_header} onChange={(v) => set('dark_header', v)} label="Dark menu text" />
+                </div>
                 <p className="-mt-1 text-[11px] text-gray-400">Turn on if the top of the cover photo is light.</p>
               </FormSection>
             </div>

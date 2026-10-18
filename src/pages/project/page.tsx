@@ -2,6 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { useSEO } from '../../utils/seo';
 import { useProjects } from '../../lib/cms';
+import { supabase } from '../../lib/supabase';
 import Header from '../home/components/Header';
 import Footer from '../home/components/Footer';
 import PhotoGallery from './components/PhotoGallery';
@@ -61,7 +62,24 @@ export default function ProjectDetail() {
     return () => clearTimeout(timer);
   }, [slug]);
 
-  if (!project && !ready) {
+  // A project whose web address was changed: send old links to the new one.
+  const [rename, setRename] = useState<{ from: string; to: string | null } | null>(null);
+  const renamedTo = rename && rename.from === slug ? rename.to : undefined;
+  useEffect(() => {
+    if (!ready || project || !slug) return;
+    supabase
+      .from('site_projects')
+      .select('slug')
+      .contains('old_slugs', [slug])
+      .limit(1)
+      .maybeSingle()
+      .then(({ data }) => setRename({ from: slug, to: data?.slug ?? null }));
+  }, [ready, project, slug]);
+  useEffect(() => {
+    if (renamedTo) navigate(`/project/${renamedTo}`, { replace: true });
+  }, [renamedTo, navigate]);
+
+  if (!project && (!ready || renamedTo === undefined || renamedTo)) {
     return <div className="min-h-screen bg-white" />;
   }
 

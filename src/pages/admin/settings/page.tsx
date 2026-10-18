@@ -10,15 +10,15 @@ const FIELDS: { title: string; hint?: string; fields: [keyof SiteSettings, strin
     hint: 'Shown on the Contact page and in the footer.',
     fields: [
       ['email', 'Email'],
-      ['phone', 'Phone', 'e.g. +63 922 013 6834'],
-      ['hours', 'Opening hours', 'e.g. Mon – Sat: 10:00 AM – 5:00 PM'],
+      ['phone', 'Phone'],
+      ['hours', 'Opening hours'],
     ],
   },
   {
     title: 'Location',
     fields: [
       ['address', 'Address'],
-      ['addressLine2', 'Second line', 'e.g. Philippines'],
+      ['addressLine2', 'Second line'],
       ['mapQuery', 'Place to show on the map', 'What you’d type into Google Maps to find the workshop.'],
     ],
   },
