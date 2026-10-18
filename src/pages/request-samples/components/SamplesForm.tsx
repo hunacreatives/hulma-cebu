@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { supabase } from '../../../lib/supabase';
 
 const materialOptions = [
   'Natural Stone Look',
@@ -107,29 +108,18 @@ export default function SamplesForm() {
     setSubmitStatus('idle');
 
     try {
-      const body = new URLSearchParams();
-      body.append('firstName', formData.firstName);
-      body.append('lastName', formData.lastName);
-      body.append('email', formData.email);
-      body.append('phone', formData.phone);
-      body.append('company', formData.company);
-      body.append('projectType', formData.projectType);
-      body.append('materials', selectedMaterials.join(', '));
-      body.append('colors', selectedColors.join(', '));
-      body.append('shippingAddress', formData.shippingAddress);
-      body.append('city', formData.city);
-      body.append('notes', formData.notes);
-
-      const res = await fetch('https://formspree.io/f/mvzvgpwb', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json',
+      const website = ((e.currentTarget as HTMLFormElement).elements.namedItem('website') as HTMLInputElement | null)?.value ?? '';
+      const { error } = await supabase.functions.invoke('submit-contact', {
+        body: {
+          form: 'samples',
+          ...formData,
+          materials: selectedMaterials,
+          colors: selectedColors,
+          website,
         },
-        body: body.toString(),
       });
 
-      if (res.ok) {
+      if (!error) {
         setSubmitStatus('success');
         setFormData({ firstName: '', lastName: '', email: '', phone: '', company: '', projectType: '', shippingAddress: '', city: '', notes: '' });
         setSelectedMaterials([]);
@@ -284,6 +274,8 @@ export default function SamplesForm() {
           >
             <div className="rounded-2xl p-8 bg-white h-full" style={{ border: '1px solid rgba(191,184,174,0.25)' }}>
               <form id="samples-form" onSubmit={handleSubmit} className="space-y-5">
+                {/* Honeypot: hidden from people, filled in by spam bots */}
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
 
                 <SectionLabel>Your Details</SectionLabel>
 

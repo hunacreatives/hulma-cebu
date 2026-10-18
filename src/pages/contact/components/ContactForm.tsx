@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { supabase } from '../../../lib/supabase';
 
 const projectTypes = [
   'Hospitality',
@@ -37,25 +38,12 @@ export default function ContactForm() {
     setSubmitStatus('idle');
 
     try {
-      const body = new URLSearchParams();
-      body.append('firstName', formData.firstName);
-      body.append('lastName', formData.lastName);
-      body.append('email', formData.email);
-      body.append('phone', formData.phone);
-      body.append('company', formData.company);
-      body.append('projectType', formData.projectType);
-      body.append('message', formData.message);
-
-      const res = await fetch('https://formspree.io/f/mykbzgny', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Accept': 'application/json',
-        },
-        body: body.toString(),
+      const website = (formRef.current?.elements.namedItem('website') as HTMLInputElement | null)?.value ?? '';
+      const { error } = await supabase.functions.invoke('submit-contact', {
+        body: { form: 'contact', ...formData, website },
       });
 
-      if (res.ok) {
+      if (!error) {
         setSubmitStatus('success');
         setFormData({
           firstName: '',
@@ -83,6 +71,9 @@ export default function ContactForm() {
       onSubmit={handleSubmit}
       className="space-y-6"
     >
+      {/* Honeypot: hidden from people, filled in by spam bots */}
+      <input type="text" name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="hidden" />
+
       {/* Step Label */}
       <div className="flex items-center gap-4 mb-2">
         <span className="font-serif font-light text-hulma-green" style={{ fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)' }}>
