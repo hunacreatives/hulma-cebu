@@ -24,7 +24,7 @@ export default function Home() {
       name: 'HULMA Cebu',
       url: 'https://hulmacebu.com',
       logo: 'https://hulmacebu.com/images/39c992fc-c8b4-46e8-8a17-1e16cdb8536c_Hulma-Icon-Brown.webp',
-      image: 'https://hulmacebu.com/images/305588e21288d5abdb78f9019557dda5.webp',
+      image: 'https://www.hulmacebu.com/images/og-image.jpg',
       description: 'Architectural fiberglass manufacturer in Cebu specializing in custom fabrication for commercial, hospitality, and residential projects. Terracotta, limestone, sandstone, and custom fiberglass finishes.',
       telephone: '+63-922-013-6834',
       email: 'hulmacebu@gmail.com',

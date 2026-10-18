@@ -12,7 +12,7 @@ export default function BookingHero() {
     <section className="relative h-[44vh] min-h-[320px] flex items-end overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=elegant%20Filipino%20interior%20design%20showroom%20warm%20wood%20tones%20rattan%20woven%20textures%20natural%20materials%20product%20display%20table%20two%20Filipino%20professionals%20reviewing%20material%20samples%20together%20warm%20ambient%20light%20nipa-inspired%20modern%20contemporary%20space%20Cebu%20Philippines%20earthy%20neutral%20tones%20refined%20artisan%20setting&width=1920&height=600&seq=booking-hero-filipino-v1-001&orientation=landscape"
+          src="/images/site/booking-hero-filipino-v1-001.webp"
           alt=""
           className="w-full h-full object-cover object-center"
         />

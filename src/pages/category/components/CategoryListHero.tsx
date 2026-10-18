@@ -15,7 +15,7 @@ export default function CategoryListHero({ title }: CategoryListHeroProps) {
   return (
     <div className="relative w-full h-[70vh] min-h-[500px] overflow-hidden">
       <img
-        src="https://readdy.ai/api/search-image?query=Dramatic%20close%20up%20of%20textured%20fiberglass%20architectural%20panels%20in%20warm%20earthy%20terracotta%20and%20brown%20tones%20arranged%20in%20layered%20composition%20showing%20material%20depth%20and%20craftsmanship%20with%20soft%20directional%20lighting%20and%20clean%20modern%20aesthetic&width=1600&height=800&seq=cat-list-hero-001&orientation=landscape"
+        src="/images/site/cat-list-hero-001.webp"
         alt={title}
         className="w-full h-full object-cover object-top"
       />

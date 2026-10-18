@@ -13,7 +13,7 @@ export default function ContactHero() {
       {/* Light warm background */}
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=warm%20bright%20minimal%20architectural%20studio%20interior%20soft%20natural%20light%20cream%20white%20walls%20smooth%20plaster%20surface%20airy%20open%20space%20warm%20neutral%20tones%20elegant%20contemporary%20design%20photography&width=1920&height=600&seq=contact-hero-light-v3-001&orientation=landscape"
+          src="/images/site/contact-hero-light-v3-001.webp"
           alt=""
           className="w-full h-full object-cover object-center"
         />

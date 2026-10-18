@@ -26,7 +26,7 @@ const values = [
     description:
       'With over 30 years of experience, we work closely with architects, designers, and builders to deliver project-specific solutions. We are partners in the process, not just suppliers.',
     image:
-      'https://readdy.ai/api/search-image?query=Architects%20and%20designers%20reviewing%20architectural%20material%20samples%20together%20in%20modern%20studio%20collaborative%20meeting%20warm%20lighting%20professional%20team%20discussion%20fiberglass%20panels%20on%20table%20warm%20brown%20neutral%20tones&width=700&height=500&seq=about-value-collab-001&orientation=landscape',
+      '/images/site/about-value-collab-001.webp',
     icon: 'ri-team-line',
   },
 ];

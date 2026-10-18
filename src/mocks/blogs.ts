@@ -58,7 +58,7 @@ export const blogs: Blog[] = [
       ],
       conclusion: "Fiberglass cladding from HULMA Cebu represents the convergence of design innovation and practical performance for the Philippine market. As architectural demands continue to evolve in Cebu and beyond, this versatile material positions itself as an essential tool in the modern architect's palette, enabling bold visions while delivering reliable, long-lasting results suited to our tropical environment. Ready to transform your project with premium fiberglass cladding? Visit HULMA Cebu today to explore our complete range of architectural solutions designed specifically for the Philippine climate and construction industry."
     },
-    coverImage: "https://readdy.ai/api/search-image?query=Modern%20architectural%20building%20facade%20in%20Cebu%20Philippines%20featuring%20innovative%20fiberglass%20cladding%20panels%20with%20clean%20geometric%20patterns%20and%20contemporary%20design%20elements%2C%20showcasing%20textured%20surfaces%20in%20neutral%20tones%20against%20tropical%20blue%20sky%2C%20professional%20architectural%20photography%20with%20sharp%20details%20and%20dramatic%20lighting&width=800&height=600&seq=blog1cover&orientation=landscape",
+    coverImage: "/images/site/blog1cover.webp",
     tags: ["Fiberglass Cladding Cebu", "Modern Architecture Philippines", "Building Materials Cebu"],
     date: "2026-03-10",
     readTime: "6 min read",
@@ -110,7 +110,7 @@ export const blogs: Blog[] = [
       ],
       conclusion: "While traditional materials maintain certain niche advantages, HULMA Cebu's fiberglass panels offer superior performance across most criteria that matter to modern construction projects in the Philippines. The combination of reduced weight, lower costs, minimal maintenance in tropical conditions, and unlimited design flexibility makes our fiberglass panels the logical choice for forward-thinking architectural projects in Cebu. Ready to experience the HULMA Cebu difference? Contact us today to discuss your project requirements and discover how our fiberglass solutions can deliver exceptional results for your Philippine construction needs."
     },
-    coverImage: "https://readdy.ai/api/search-image?query=Side%20by%20side%20comparison%20of%20building%20materials%20in%20Cebu%20Philippines%20showing%20fiberglass%20panels%20alongside%20traditional%20stone%20wood%20and%20metal%20cladding%20samples%2C%20arranged%20on%20a%20clean%20white%20surface%20with%20professional%20studio%20lighting%2C%20detailed%20textures%20visible%2C%20architectural%20material%20showcase%20photography%20with%20tropical%20context&width=800&height=600&seq=blog2cover&orientation=landscape",
+    coverImage: "/images/site/blog2cover.webp",
     tags: ["Fiberglass Panels Philippines", "Material Comparison Cebu", "Construction Materials"],
     date: "2026-02-24",
     readTime: "8 min read",
@@ -162,7 +162,7 @@ export const blogs: Blog[] = [
       ],
       conclusion: "HULMA Cebu's architectural fiberglass represents a paradigm shift in how designers approach facade design and architectural expression in the Philippines. By removing traditional constraints of weight, cost, and fabrication complexity, discover our materials empowers architects to pursue bold visions while maintaining practical project requirements suited to the tropical climate. As design ambitions continue to evolve in Cebu and throughout the Philippines, HULMA Cebu's architectural fiberglass positions itself as an essential enabler of contemporary architectural innovation. Ready to bring your architectural vision to life? Visit HULMA Cebu today to explore our comprehensive range of architectural fiberglass solutions and discover how we can transform your next project in the Philippines."
     },
-    coverImage: "https://readdy.ai/api/search-image?query=Stunning%20contemporary%20building%20in%20Cebu%20Philippines%20showcasing%20diverse%20architectural%20fiberglass%20applications%20including%20curved%20panels%20textured%20surfaces%20and%20custom%20molded%20elements%2C%20modern%20tropical%20design%20with%20dramatic%20angles%20and%20innovative%20facade%20treatment%2C%20professional%20architectural%20photography%20with%20blue%20sky%20background&width=800&height=600&seq=blog3cover&orientation=landscape",
+    coverImage: "/images/site/blog3cover.webp",
     tags: ["Architectural Fiberglass Cebu", "Design Innovation Philippines", "Project Applications"],
     date: "2026-02-07",
     readTime: "7 min read",
@@ -214,7 +214,7 @@ export const blogs: Blog[] = [
       ],
       conclusion: "HULMA Cebu's fiberglass materials align well with sustainable construction objectives through favorable lifecycle environmental impacts, energy efficiency contributions, exceptional durability in tropical conditions, and improving recyclability. As the construction industry in the Philippines continues prioritizing sustainability, our fiberglass environmental credentials position it as a responsible choice for projects pursuing green building certifications and broader environmental goals in Cebu. Ready to build sustainably with HULMA Cebu? Contact us today to learn how our eco-friendly fiberglass solutions can help your project achieve green building certifications while delivering superior performance in the Philippine climate. Visit our showroom in Cebu to explore our complete range of sustainable architectural materials."
     },
-    coverImage: "https://readdy.ai/api/search-image?query=Eco-friendly%20sustainable%20building%20in%20Cebu%20Philippines%20with%20green%20architecture%20featuring%20fiberglass%20cladding%2C%20surrounded%20by%20tropical%20vegetation%20and%20palm%20trees%2C%20modern%20environmentally%20conscious%20design%20with%20solar%20panels%20and%20green%20elements%2C%20bright%20daylight%20photography%20emphasizing%20sustainability%20in%20tropical%20setting&width=800&height=600&seq=blog4cover&orientation=landscape",
+    coverImage: "/images/site/blog4cover.webp",
     tags: ["Sustainable Building Cebu", "Green Construction Philippines", "Environmental Benefits"],
     date: "2026-01-19",
     readTime: "7 min read",

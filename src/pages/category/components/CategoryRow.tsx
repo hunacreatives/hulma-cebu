@@ -31,10 +31,10 @@ export default function CategoryRow({ category, index }: CategoryRowProps) {
   }, []);
 
   const lifestyleImages = [
-    'https://readdy.ai/api/search-image?query=Modern%20minimalist%20interior%20with%20vertical%20fluted%20natural%20stone%20wall%20panels%20warm%20ambient%20lighting%20contemporary%20furniture%20with%20wooden%20dining%20table%20and%20designer%20pendant%20lamp%20earth%20tones%20elegant%20architectural%20design%20photography%20wide%20angle%20shot&width=1400&height=700&seq=cat-row-stone-001&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=Contemporary%20interior%20space%20with%20colorful%20terrazzo%20textured%20wall%20panels%20warm%20ambient%20lighting%20modern%20furniture%20with%20sleek%20console%20table%20and%20decorative%20pendant%20lamp%20neutral%20earth%20tones%20elegant%20architectural%20design%20photography%20wide%20angle%20shot&width=1400&height=700&seq=cat-row-terrazzo-001&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=Warm%20modern%20interior%20with%20vertical%20wood%20grain%20fluted%20wall%20panels%20honey%20oak%20tones%20ambient%20lighting%20contemporary%20furniture%20with%20round%20dining%20table%20and%20designer%20ceiling%20lamp%20organic%20natural%20aesthetic%20architectural%20design%20photography%20wide%20angle%20shot&width=1400&height=700&seq=cat-row-organic-001&orientation=landscape',
-    'https://readdy.ai/api/search-image?query=Modern%20outdoor%20patio%20area%20with%20dark%20brown%20vertical%20ribbed%20composite%20wall%20cladding%20panels%20contemporary%20outdoor%20lounge%20furniture%20with%20green%20tropical%20plants%20warm%20golden%20hour%20lighting%20architectural%20exterior%20design%20photography%20wide%20angle%20shot&width=1400&height=700&seq=cat-row-hybrid-001&orientation=landscape',
+    '/images/site/cat-row-stone-001.webp',
+    '/images/site/cat-row-terrazzo-001.webp',
+    '/images/site/cat-row-organic-001.webp',
+    '/images/site/cat-row-hybrid-001.webp',
   ];
 
   return (

@@ -33,7 +33,7 @@ export default function ComingSoonPage() {
         {/* Left — Image Panel */}
         <div className="hidden lg:block lg:w-1/2 relative overflow-hidden">
           <img
-            src="https://readdy.ai/api/search-image?query=Close%20up%20of%20luxurious%20architectural%20fiberglass%20panel%20surface%20with%20subtle%20organic%20texture%2C%20warm%20cream%20and%20sand%20tones%2C%20soft%20directional%20light%20casting%20gentle%20shadows%20across%20the%20relief%2C%20premium%20material%20detail%20shot%2C%20minimalist%20studio%20photography%2C%20depth%20and%20tactility%2C%20no%20people&width=960&height=1200&seq=coming-soon-left-panel-v2&orientation=portrait"
+            src="/images/site/coming-soon-left-panel-v2.webp"
             alt="HULMA material texture"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />

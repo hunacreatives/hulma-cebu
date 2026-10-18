@@ -52,7 +52,7 @@ export default function AboutCTA() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=Abstract%20warm%20beige%20stone%20texture%20close%20up%20natural%20organic%20surface%20soft%20diffused%20light%20minimal%20architectural%20material%20background%20earthy%20warm%20tones%20sophisticated%20atmosphere&width=1920&height=600&seq=about-cta-v2-bg-001&orientation=landscape"
+          src="/images/site/about-cta-v2-bg-001.webp"
           alt=""
           className="w-full h-full object-cover object-center opacity-15"
         />

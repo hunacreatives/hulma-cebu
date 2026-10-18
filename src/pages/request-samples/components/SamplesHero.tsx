@@ -13,7 +13,7 @@ export default function SamplesHero() {
       {/* Light warm background */}
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=collection%20of%20premium%20fiberglass%20material%20sample%20swatches%20arranged%20on%20clean%20surface%20earthy%20warm%20tones%20beige%20brown%20cream%20textured%20architectural%20material%20palette%20elegant%20product%20photography%20soft%20natural%20light%20minimal%20background&width=1920&height=600&seq=samples-hero-materials-v1-001&orientation=landscape"
+          src="/images/site/samples-hero-materials-v1-001.webp"
           alt=""
           className="w-full h-full object-cover object-center"
         />

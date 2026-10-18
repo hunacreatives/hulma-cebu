@@ -40,84 +40,84 @@ export const productCategories: ProductCategory[] = [
     specification:
       'Material: Fiberglass Reinforced Polymer (FRP) | Thickness: 8mm - 12mm | Panel Size: 600mm x 1200mm (standard) | Weight: 3.5 kg/sqm | Fire Rating: Class A | UV Resistance: High | Installation: Adhesive or mechanical fixing | Finish: Matte textured | Colors: 12 standard options, custom available',
     heroImage:
-      'https://readdy.ai/api/search-image?query=Close%20up%20of%20natural%20red%20terracotta%20stone%20tiles%20arranged%20in%20rows%20showing%20texture%20and%20warm%20earthy%20tones%20architectural%20material%20photography%20with%20soft%20lighting%20and%20clean%20composition&width=1400&height=600&seq=cat-hero-stone-001&orientation=landscape',
+      '/images/site/cat-hero-stone-001.webp',
     image:
-      'https://readdy.ai/api/search-image?query=Closeup%20of%20various%20natural%20stone%20material%20samples%20arranged%20artistically%20showing%20different%20textures%20colors%20and%20patterns%20including%20marble%20travertine%20and%20slate%20warm%20studio%20lighting%20architectural%20material%20photography&width=700&height=500&seq=cat-stone-detail-001&orientation=landscape',
+      '/images/site/cat-stone-detail-001.webp',
     lifestyleImage:
-      'https://readdy.ai/api/search-image?query=Modern%20luxury%20living%20room%20interior%20with%20natural%20stone%20textured%20wall%20panels%20warm%20ambient%20lighting%20contemporary%20furniture%20earth%20tones%20elegant%20architectural%20design%20photography%20wide%20angle&width=1400&height=600&seq=cat-stone-lifestyle-001&orientation=landscape',
+      '/images/site/cat-stone-lifestyle-001.webp',
     subCategories: ['Fluted Out Mosaic', 'Fluted In Mosaic', 'Concave Strip'],
     products: [
       {
         id: 'ns-001',
         name: 'Slab Strip | Gray Travertine',
         subCategory: 'Fluted Out Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20gray%20travertine%20stone%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20composition%20showing%20natural%20stone%20texture%20and%20veining&width=300&height=300&seq=ns-gray-trav-001&orientation=squarish',
+        image: '/images/site/ns-gray-trav-001.webp',
       },
       {
         id: 'ns-002',
         name: 'Slab Strip | Red Travertine',
         subCategory: 'Fluted Out Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20red%20travertine%20stone%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20composition%20showing%20warm%20reddish%20stone%20texture&width=300&height=300&seq=ns-red-trav-001&orientation=squarish',
+        image: '/images/site/ns-red-trav-001.webp',
       },
       {
         id: 'ns-003',
         name: 'Slab Strip | White Travertine',
         subCategory: 'Fluted Out Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20white%20travertine%20stone%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20composition%20showing%20light%20cream%20stone%20texture&width=300&height=300&seq=ns-white-trav-001&orientation=squarish',
+        image: '/images/site/ns-white-trav-001.webp',
       },
       {
         id: 'ns-004',
         name: 'Fluted In Mosaic | Verde Green Marble',
         subCategory: 'Fluted In Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20verde%20green%20marble%20mosaic%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20composition%20showing%20deep%20green%20stone%20pattern&width=300&height=300&seq=ns-verde-001&orientation=squarish',
+        image: '/images/site/ns-verde-001.webp',
       },
       {
         id: 'ns-005',
         name: 'Fluted In Mosaic | White Travertine',
         subCategory: 'Fluted In Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20white%20travertine%20fluted%20mosaic%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20vertical%20ribbed%20texture&width=300&height=300&seq=ns-fluted-white-001&orientation=squarish',
+        image: '/images/site/ns-fluted-white-001.webp',
       },
       {
         id: 'ns-006',
         name: 'Fluted In Mosaic | Volakas White',
         subCategory: 'Fluted In Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20volakas%20white%20marble%20fluted%20mosaic%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20elegant%20white%20marble%20with%20gray%20veining&width=300&height=300&seq=ns-volakas-001&orientation=squarish',
+        image: '/images/site/ns-volakas-001.webp',
       },
       {
         id: 'ns-007',
         name: 'Fluted In Mosaic | Red Travertine',
         subCategory: 'Fluted In Mosaic',
-        image: 'https://readdy.ai/api/search-image?query=Single%20red%20travertine%20fluted%20mosaic%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20warm%20terracotta%20toned%20ribbed%20texture&width=300&height=300&seq=ns-fluted-red-001&orientation=squarish',
+        image: '/images/site/ns-fluted-red-001.webp',
       },
       {
         id: 'ns-008',
         name: 'Concave Strip | Jade Green Marble',
         subCategory: 'Concave Strip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20jade%20green%20marble%20concave%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20curved%20green%20stone%20surface&width=300&height=300&seq=ns-jade-001&orientation=squarish',
+        image: '/images/site/ns-jade-001.webp',
       },
       {
         id: 'ns-009',
         name: 'Concave Strip | White Travertine',
         subCategory: 'Concave Strip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20white%20travertine%20concave%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20curved%20cream%20stone%20surface&width=300&height=300&seq=ns-concave-white-001&orientation=squarish',
+        image: '/images/site/ns-concave-white-001.webp',
       },
       {
         id: 'ns-010',
         name: 'Concave Strip | Gray Travertine',
         subCategory: 'Concave Strip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20gray%20travertine%20concave%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20curved%20gray%20stone%20surface&width=300&height=300&seq=ns-concave-gray-001&orientation=squarish',
+        image: '/images/site/ns-concave-gray-001.webp',
       },
       {
         id: 'ns-011',
         name: 'Concave Strip | Black Marquina',
         subCategory: 'Concave Strip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20black%20marquina%20marble%20concave%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20curved%20dark%20stone%20with%20white%20veining&width=300&height=300&seq=ns-black-marq-001&orientation=squarish',
+        image: '/images/site/ns-black-marq-001.webp',
       },
       {
         id: 'ns-012',
         name: 'Concave Strip | Red Travertine',
         subCategory: 'Concave Strip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20red%20travertine%20concave%20strip%20tile%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20curved%20warm%20reddish%20stone%20surface&width=300&height=300&seq=ns-concave-red-001&orientation=squarish',
+        image: '/images/site/ns-concave-red-001.webp',
       },
     ],
     faqs: [
@@ -140,60 +140,60 @@ export const productCategories: ProductCategory[] = [
     specification:
       'Material: Fiberglass Reinforced Polymer (FRP) with embedded aggregates | Thickness: 10mm - 15mm | Panel Size: 600mm x 600mm / 600mm x 1200mm | Weight: 4.2 kg/sqm | Fire Rating: Class A | UV Resistance: High | Installation: Adhesive or mechanical fixing | Finish: Polished or matte | Colors: 8 standard patterns, custom available',
     heroImage:
-      'https://readdy.ai/api/search-image?query=Close%20up%20of%20colorful%20terrazzo%20surface%20with%20scattered%20stone%20chips%20in%20warm%20earth%20tones%20beige%20cream%20and%20brown%20fragments%20embedded%20in%20smooth%20surface%20architectural%20material%20photography&width=1400&height=600&seq=cat-hero-terrazzo-001&orientation=landscape',
+      '/images/site/cat-hero-terrazzo-001.webp',
     image:
-      'https://readdy.ai/api/search-image?query=Closeup%20of%20terrazzo%20material%20samples%20showing%20colorful%20stone%20chip%20patterns%20in%20warm%20earth%20tones%20arranged%20on%20studio%20surface%20architectural%20material%20photography%20warm%20lighting&width=700&height=500&seq=cat-terrazzo-detail-001&orientation=landscape',
+      '/images/site/cat-terrazzo-detail-001.webp',
     lifestyleImage:
-      'https://readdy.ai/api/search-image?query=Modern%20minimalist%20interior%20with%20terrazzo%20accent%20wall%20warm%20ambient%20lighting%20contemporary%20furniture%20neutral%20earth%20tones%20elegant%20architectural%20design%20photography%20wide%20angle&width=1400&height=600&seq=cat-terrazzo-lifestyle-001&orientation=landscape',
+      '/images/site/cat-terrazzo-lifestyle-001.webp',
     subCategories: ['Classic Chip', 'Fine Grain', 'Bold Aggregate'],
     products: [
       {
         id: 'tz-001',
         name: 'Classic Chip | Warm Ivory',
         subCategory: 'Classic Chip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20terrazzo%20tile%20sample%20with%20warm%20ivory%20base%20and%20scattered%20stone%20chips%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-ivory-001&orientation=squarish',
+        image: '/images/site/tz-ivory-001.webp',
       },
       {
         id: 'tz-002',
         name: 'Classic Chip | Rose Quartz',
         subCategory: 'Classic Chip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20terrazzo%20tile%20sample%20with%20soft%20pink%20rose%20quartz%20chips%20on%20cream%20base%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-rose-001&orientation=squarish',
+        image: '/images/site/tz-rose-001.webp',
       },
       {
         id: 'tz-003',
         name: 'Classic Chip | Charcoal Blend',
         subCategory: 'Classic Chip',
-        image: 'https://readdy.ai/api/search-image?query=Single%20terrazzo%20tile%20sample%20with%20dark%20charcoal%20and%20gray%20stone%20chips%20on%20white%20base%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-charcoal-001&orientation=squarish',
+        image: '/images/site/tz-charcoal-001.webp',
       },
       {
         id: 'tz-004',
         name: 'Fine Grain | Sand Dune',
         subCategory: 'Fine Grain',
-        image: 'https://readdy.ai/api/search-image?query=Single%20fine%20grain%20terrazzo%20tile%20sample%20with%20sandy%20beige%20tiny%20aggregate%20particles%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-sand-001&orientation=squarish',
+        image: '/images/site/tz-sand-001.webp',
       },
       {
         id: 'tz-005',
         name: 'Fine Grain | Ocean Mist',
         subCategory: 'Fine Grain',
-        image: 'https://readdy.ai/api/search-image?query=Single%20fine%20grain%20terrazzo%20tile%20sample%20with%20soft%20gray%20and%20white%20tiny%20aggregate%20particles%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-ocean-001&orientation=squarish',
+        image: '/images/site/tz-ocean-001.webp',
       },
       {
         id: 'tz-006',
         name: 'Bold Aggregate | Earth Tone',
         subCategory: 'Bold Aggregate',
-        image: 'https://readdy.ai/api/search-image?query=Single%20bold%20aggregate%20terrazzo%20tile%20sample%20with%20large%20brown%20and%20beige%20stone%20pieces%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-earth-001&orientation=squarish',
+        image: '/images/site/tz-earth-001.webp',
       },
       {
         id: 'tz-007',
         name: 'Bold Aggregate | Midnight',
         subCategory: 'Bold Aggregate',
-        image: 'https://readdy.ai/api/search-image?query=Single%20bold%20aggregate%20terrazzo%20tile%20sample%20with%20large%20dark%20stone%20pieces%20on%20black%20base%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-midnight-001&orientation=squarish',
+        image: '/images/site/tz-midnight-001.webp',
       },
       {
         id: 'tz-008',
         name: 'Bold Aggregate | Coral Reef',
         subCategory: 'Bold Aggregate',
-        image: 'https://readdy.ai/api/search-image?query=Single%20bold%20aggregate%20terrazzo%20tile%20sample%20with%20warm%20coral%20and%20cream%20large%20stone%20pieces%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal&width=300&height=300&seq=tz-coral-001&orientation=squarish',
+        image: '/images/site/tz-coral-001.webp',
       },
     ],
     faqs: [
@@ -215,48 +215,48 @@ export const productCategories: ProductCategory[] = [
     specification:
       'Material: Fiberglass Reinforced Polymer (FRP) | Thickness: 6mm - 10mm | Panel Size: 300mm x 2400mm (plank) / 600mm x 1200mm (panel) | Weight: 3.0 kg/sqm | Fire Rating: Class A | UV Resistance: High | Installation: Tongue-and-groove or adhesive | Finish: Textured matte | Colors: 10 standard wood tones, custom available',
     heroImage:
-      'https://readdy.ai/api/search-image?query=Close%20up%20of%20warm%20honey%20toned%20wood%20grain%20fluted%20panels%20with%20vertical%20ribbed%20texture%20natural%20organic%20material%20architectural%20photography%20soft%20lighting&width=1400&height=600&seq=cat-hero-organic-001&orientation=landscape',
+      '/images/site/cat-hero-organic-001.webp',
     image:
-      'https://readdy.ai/api/search-image?query=Closeup%20of%20organic%20wood%20grain%20material%20samples%20showing%20different%20warm%20tones%20and%20textures%20arranged%20artistically%20on%20studio%20surface%20architectural%20material%20photography&width=700&height=500&seq=cat-organic-detail-001&orientation=landscape',
+      '/images/site/cat-organic-detail-001.webp',
     lifestyleImage:
-      'https://readdy.ai/api/search-image?query=Modern%20spa%20interior%20with%20organic%20wood%20textured%20wall%20panels%20warm%20ambient%20lighting%20natural%20materials%20contemporary%20design%20photography%20wide%20angle&width=1400&height=600&seq=cat-organic-lifestyle-001&orientation=landscape',
+      '/images/site/cat-organic-lifestyle-001.webp',
     subCategories: ['Wood Grain', 'Bamboo Weave', 'Botanical'],
     products: [
       {
         id: 'og-001',
         name: 'Wood Grain | Honey Oak',
         subCategory: 'Wood Grain',
-        image: 'https://readdy.ai/api/search-image?query=Single%20honey%20oak%20wood%20grain%20fiberglass%20panel%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20warm%20golden%20wood%20texture&width=300&height=300&seq=og-honey-001&orientation=squarish',
+        image: '/images/site/og-honey-001.webp',
       },
       {
         id: 'og-002',
         name: 'Wood Grain | Walnut',
         subCategory: 'Wood Grain',
-        image: 'https://readdy.ai/api/search-image?query=Single%20dark%20walnut%20wood%20grain%20fiberglass%20panel%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20rich%20brown%20wood%20texture&width=300&height=300&seq=og-walnut-001&orientation=squarish',
+        image: '/images/site/og-walnut-001.webp',
       },
       {
         id: 'og-003',
         name: 'Wood Grain | Ash White',
         subCategory: 'Wood Grain',
-        image: 'https://readdy.ai/api/search-image?query=Single%20ash%20white%20wood%20grain%20fiberglass%20panel%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20light%20pale%20wood%20texture&width=300&height=300&seq=og-ash-001&orientation=squarish',
+        image: '/images/site/og-ash-001.webp',
       },
       {
         id: 'og-004',
         name: 'Bamboo Weave | Natural',
         subCategory: 'Bamboo Weave',
-        image: 'https://readdy.ai/api/search-image?query=Single%20natural%20bamboo%20weave%20textured%20fiberglass%20panel%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20woven%20pattern&width=300&height=300&seq=og-bamboo-001&orientation=squarish',
+        image: '/images/site/og-bamboo-001.webp',
       },
       {
         id: 'og-005',
         name: 'Bamboo Weave | Smoked',
         subCategory: 'Bamboo Weave',
-        image: 'https://readdy.ai/api/search-image?query=Single%20smoked%20dark%20bamboo%20weave%20textured%20fiberglass%20panel%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20dark%20woven%20pattern&width=300&height=300&seq=og-smoked-001&orientation=squarish',
+        image: '/images/site/og-smoked-001.webp',
       },
       {
         id: 'og-006',
         name: 'Botanical | Fern Leaf',
         subCategory: 'Botanical',
-        image: 'https://readdy.ai/api/search-image?query=Single%20botanical%20fern%20leaf%20embossed%20fiberglass%20panel%20sample%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20organic%20leaf%20pattern&width=300&height=300&seq=og-fern-001&orientation=squarish',
+        image: '/images/site/og-fern-001.webp',
       },
     ],
     faqs: [
@@ -277,42 +277,42 @@ export const productCategories: ProductCategory[] = [
     specification:
       'Material: Fiberglass + WPC Composite | Thickness: 12mm - 20mm | Panel Size: 190mm x 2900mm (plank) / 200mm x 2900mm (plank) | Weight: 5.8 kg/sqm | Fire Rating: Class B1 | UV Resistance: Very High | Installation: Clip system or mechanical fixing | Finish: Textured or smooth | Colors: 6 standard options, custom available',
     heroImage:
-      'https://readdy.ai/api/search-image?query=Close%20up%20of%20dark%20brown%20vertical%20ribbed%20composite%20outdoor%20wall%20panels%20modern%20architectural%20exterior%20material%20photography%20dramatic%20lighting%20showing%20texture%20detail&width=1400&height=600&seq=cat-hero-hybrid-001&orientation=landscape',
+      '/images/site/cat-hero-hybrid-001.webp',
     image:
-      'https://readdy.ai/api/search-image?query=Closeup%20of%20dark%20composite%20WPC%20outdoor%20panel%20material%20samples%20showing%20ribbed%20texture%20and%20cross%20section%20arranged%20on%20studio%20surface%20architectural%20material%20photography&width=700&height=500&seq=cat-hybrid-detail-001&orientation=landscape',
+      '/images/site/cat-hybrid-detail-001.webp',
     lifestyleImage:
-      'https://readdy.ai/api/search-image?query=Modern%20outdoor%20patio%20with%20dark%20vertical%20ribbed%20composite%20wall%20panels%20contemporary%20outdoor%20furniture%20green%20tropical%20plants%20warm%20ambient%20lighting%20architectural%20design%20photography%20wide%20angle&width=1400&height=600&seq=cat-hybrid-lifestyle-001&orientation=landscape',
+      '/images/site/cat-hybrid-lifestyle-001.webp',
     subCategories: ['Outdoor Panels', 'Accessories'],
     products: [
       {
         id: 'hy-001',
         name: 'WPC Outdoor Half Round 4-Strip 200mm',
         subCategory: 'Outdoor Panels',
-        image: 'https://readdy.ai/api/search-image?query=Single%20dark%20brown%20WPC%20outdoor%20composite%20panel%20with%20half%20round%20profile%20four%20strips%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20cross%20section&width=300&height=300&seq=hy-halfround-001&orientation=squarish',
+        image: '/images/site/hy-halfround-001.webp',
       },
       {
         id: 'hy-002',
         name: 'WPC Outdoor Pillow 6-Strip 190mm',
         subCategory: 'Outdoor Panels',
-        image: 'https://readdy.ai/api/search-image?query=Single%20dark%20brown%20WPC%20outdoor%20composite%20panel%20with%20pillow%20profile%20six%20strips%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20ribbed%20surface&width=300&height=300&seq=hy-pillow-001&orientation=squarish',
+        image: '/images/site/hy-pillow-001.webp',
       },
       {
         id: 'hy-003',
         name: 'WPC Outdoor C-2 Strip 190mm',
         subCategory: 'Outdoor Panels',
-        image: 'https://readdy.ai/api/search-image?query=Single%20dark%20brown%20WPC%20outdoor%20composite%20panel%20with%20C%20profile%20two%20strips%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20angular%20profile&width=300&height=300&seq=hy-cstrip-001&orientation=squarish',
+        image: '/images/site/hy-cstrip-001.webp',
       },
       {
         id: 'hy-004',
         name: 'WPC Outdoor Keel 2m',
         subCategory: 'Accessories',
-        image: 'https://readdy.ai/api/search-image?query=Single%20dark%20brown%20WPC%20outdoor%20keel%20mounting%20bracket%20accessory%20on%20pure%20white%20background%20architectural%20material%20product%20photography%20clean%20minimal%20showing%20structural%20support%20piece&width=300&height=300&seq=hy-keel-001&orientation=squarish',
+        image: '/images/site/hy-keel-001.webp',
       },
       {
         id: 'hy-005',
         name: 'WPC Outdoor Clip Set',
         subCategory: 'Accessories',
-        image: 'https://readdy.ai/api/search-image?query=Small%20metal%20and%20plastic%20clip%20fastener%20set%20for%20WPC%20outdoor%20panels%20on%20pure%20white%20background%20product%20photography%20clean%20minimal%20showing%20installation%20hardware&width=300&height=300&seq=hy-clip-001&orientation=squarish',
+        image: '/images/site/hy-clip-001.webp',
       },
     ],
     faqs: [

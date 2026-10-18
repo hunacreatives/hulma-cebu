@@ -4,42 +4,42 @@ const capabilities = [
   {
     id: 1,
     title: 'Architectural Elements & Facade Details',
-    image: 'https://readdy.ai/api/search-image?query=Architectural%20fiberglass%20facade%20detail%20panel%20installed%20on%20modern%20building%20exterior%20warm%20brown%20terracotta%20tones%20clean%20lines%20contemporary%20design%20close-up%20shot%20warm%20natural%20lighting&width=400&height=350&seq=about-wwd-facade-001&orientation=landscape',
+    image: '/images/site/about-wwd-facade-001.webp',
   },
   {
     id: 2,
     title: 'Props, Decors & Sculpture Installations',
-    image: 'https://readdy.ai/api/search-image?query=Interior%20wall%20cladding%20decorative%20fiberglass%20panels%20modern%20hotel%20lobby%20warm%20ambient%20lighting%20elegant%20design%20textured%20surface%20warm%20neutral%20brown%20tones%20contemporary%20architecture&width=400&height=350&seq=about-wwd-interior-001&orientation=landscape',
+    image: '/images/site/about-wwd-interior-001.webp',
   },
   {
     id: 3,
     title: 'Safari Animals & More',
-    image: 'https://readdy.ai/api/search-image?query=Large%20fiberglass%20animal%20sculptures%20safari%20themed%20elephant%20giraffe%20realistic%20detailed%20artistic%20fabrication%20warm%20studio%20lighting%20brown%20earth%20tones%20workshop%20setting%20display%20pieces&width=400&height=350&seq=about-wwd-safari-001&orientation=landscape',
+    image: '/images/site/about-wwd-safari-001.webp',
   },
   {
     id: 4,
     title: 'Sculptural Installations',
-    image: 'https://readdy.ai/api/search-image?query=Abstract%20fiberglass%20sculptural%20installation%20modern%20art%20piece%20smooth%20white%20organic%20curved%20forms%20contemporary%20gallery%20setting%20soft%20lighting%20minimalist%20elegant%20design%20warm%20neutral%20background&width=400&height=350&seq=about-wwd-sculpture-001&orientation=landscape',
+    image: '/images/site/about-wwd-sculpture-001.webp',
   },
   {
     id: 5,
     title: 'Indoor & Outdoor Garden Pots',
-    image: 'https://readdy.ai/api/search-image?query=Modern%20fiberglass%20garden%20pots%20and%20bollards%20outdoor%20landscape%20design%20contemporary%20planters%20geometric%20shapes%20warm%20earth%20tones%20garden%20setting%20natural%20lighting%20green%20plants&width=400&height=350&seq=about-wwd-garden-001&orientation=landscape',
+    image: '/images/site/about-wwd-garden-001.webp',
   },
   {
     id: 6,
     title: 'Holiday Themed Decors',
-    image: 'https://readdy.ai/api/search-image?query=Fiberglass%20dome%20canopy%20pergola%20structure%20modern%20architectural%20outdoor%20covering%20curved%20elegant%20design%20warm%20lighting%20contemporary%20building%20exterior%20warm%20brown%20tones&width=400&height=350&seq=about-wwd-domes-001&orientation=landscape',
+    image: '/images/site/about-wwd-domes-001.webp',
   },
   {
     id: 7,
     title: 'Indoor & Outdoor Custom Furniture',
-    image: 'https://readdy.ai/api/search-image?query=Modern%20fiberglass%20outdoor%20furniture%20chairs%20tables%20sleek%20contemporary%20design%20poolside%20resort%20setting%20warm%20ambient%20lighting%20elegant%20minimalist%20warm%20neutral%20tones&width=400&height=350&seq=about-wwd-furniture-001&orientation=landscape',
+    image: '/images/site/about-wwd-furniture-001.webp',
   },
   {
     id: 8,
     title: 'Custom Forms from Your Drawings or Concepts',
-    image: 'https://readdy.ai/api/search-image?query=Custom%20fiberglass%20mold%20being%20created%20from%20architectural%20drawings%20blueprints%20workshop%20fabrication%20process%20unique%20shapes%20warm%20lighting%20artisan%20craftsmanship%20warm%20brown%20tones%20industrial%20setting&width=400&height=350&seq=about-wwd-custom-001&orientation=landscape',
+    image: '/images/site/about-wwd-custom-001.webp',
   },
 ];
 

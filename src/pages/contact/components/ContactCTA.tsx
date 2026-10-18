@@ -22,7 +22,7 @@ export default function ContactCTA() {
       {/* Light warm textured background */}
       <div className="absolute inset-0">
         <img
-          src="https://readdy.ai/api/search-image?query=close%20up%20natural%20stone%20wall%20surface%20textured%20rough%20hewn%20sandstone%20limestone%20warm%20beige%20tan%20cream%20tones%20subtle%20organic%20pattern%20architectural%20material%20elegant%20minimal%20background%20soft%20diffused%20light%20no%20harsh%20shadows&width=1920&height=400&seq=cta-stone-bg-001&orientation=landscape"
+          src="/images/site/cta-stone-bg-001.webp"
           alt=""
           className="w-full h-full object-cover object-center"
         />
